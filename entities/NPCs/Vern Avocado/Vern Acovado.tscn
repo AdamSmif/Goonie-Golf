@@ -1,0 +1,144 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Enemies+Allies/Vern Avocado/Vern Avocado1.png" type="Texture" id=1]
+[ext_resource path="res://Enemies+Allies/Vern Avocado/Vern Avocado2.png" type="Texture" id=2]
+[ext_resource path="res://Enemies+Allies/Vern Avocado/Vern Acovado.gd" type="Script" id=3]
+[ext_resource path="res://UI/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 160.2
+
+[sub_resource type="DynamicFont" id=3]
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 4 )
+
+[sub_resource type="Theme" id=6]
+default_font = SubResource( 5 )
+
+[sub_resource type="Animation" id=7]
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, -1, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RichTextLabel2:visible_characters")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3.5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, -1, 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("RichTextLabel3:visible_characters")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 7, 9.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, -1, 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 9.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[node name="Vern Acovado" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = 16.0
+margin_top = -80.0
+margin_right = 208.0
+margin_bottom = -32.0
+theme = SubResource( 4 )
+color = Color( 0, 0, 0, 0.792157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 24.0
+margin_top = -72.0
+margin_right = 216.0
+margin_bottom = -32.0
+theme = SubResource( 6 )
+visible_characters = 0
+text = "I used to be the greatest golfer in all the land"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 24.0
+margin_top = -72.0
+margin_right = 216.0
+margin_bottom = -32.0
+theme = SubResource( 6 )
+visible_characters = 0
+text = "I even got a hole in one one time!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+margin_left = 24.0
+margin_top = -72.0
+margin_right = 216.0
+margin_bottom = -32.0
+theme = SubResource( 6 )
+visible_characters = 0
+text = "No one was there to see it but trust me it happened!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Talk = SubResource( 7 )
+
+[node name="TalkTween" type="Tween" parent="."]

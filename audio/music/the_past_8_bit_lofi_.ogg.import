@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/the_past_8_bit_lofi_.ogg-1eacdddf68c2593583ba2fcdf5dbd453.oggstr"
+
+[deps]
+
+source_file="res://audio/music/the_past_8_bit_lofi_.ogg"
+dest_files=[ "res://.import/the_past_8_bit_lofi_.ogg-1eacdddf68c2593583ba2fcdf5dbd453.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

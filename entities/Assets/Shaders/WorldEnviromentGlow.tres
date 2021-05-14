@@ -1,0 +1,13 @@
+[gd_resource type="Environment" format=2]
+
+[resource]
+background_mode = 4
+ambient_light_color = Color( 0.8, 0.137255, 0.839216, 1 )
+fog_sun_amount = 0.15
+fog_depth_begin = 1460.5
+glow_enabled = true
+glow_intensity = 0.79
+glow_strength = 0.8
+glow_bloom = 0.27
+glow_blend_mode = 0
+glow_hdr_threshold = 0.23

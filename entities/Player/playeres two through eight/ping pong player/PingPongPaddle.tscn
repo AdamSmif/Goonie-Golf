@@ -1,0 +1,39 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://entities/Player/playeres two through eight/ping pong player/pingpongpaddle1.png" type="Texture" id=1]
+[ext_resource path="res://entities/Player/playeres two through eight/ping pong player/pingpongpaddle2.png" type="Texture" id=2]
+[ext_resource path="res://entities/Player/playeres two through eight/ping pong player/pingpongpaddle3.png" type="Texture" id=3]
+[ext_resource path="res://entities/Player/playeres two through eight/ping pong player/pingpongpaddle4.png" type="Texture" id=4]
+[ext_resource path="res://entities/Player/playeres two through eight/ping pong player/pingpongpaddle5.png" type="Texture" id=5]
+[ext_resource path="res://entities/Player/playeres two through eight/ping pong player/pingpongpaddle6.png" type="Texture" id=6]
+[ext_resource path="res://entities/Player/playeres two through eight/all players/PlayersTwoThroughEight.gd" type="Script" id=7]
+[ext_resource path="res://engine/Animations/GrowPlayer.anim" type="Animation" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 12.1156
+
+[node name="PingPongPaddle" type="KinematicBody2D"]
+collision_layer = 64
+script = ExtResource( 7 )
+id = 3
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.899345, -2.54813 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/GrowPlayer = ExtResource( 8 )

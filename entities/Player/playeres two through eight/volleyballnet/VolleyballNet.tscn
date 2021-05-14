@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://entities/Player/playeres two through eight/all players/PlayersTwoThroughEight.gd" type="Script" id=1]
+[ext_resource path="res://entities/Player/playeres two through eight/volleyballnet/volleyballnet.png" type="Texture" id=2]
+[ext_resource path="res://engine/Animations/GrowPlayer.anim" type="Animation" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30.5541, 7.62219 )
+
+[node name="VolleyballNet" type="KinematicBody2D"]
+collision_layer = 64
+collision_mask = 3
+script = ExtResource( 1 )
+id = 6
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.104668, -4.18695 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/GrowPlayer = ExtResource( 3 )

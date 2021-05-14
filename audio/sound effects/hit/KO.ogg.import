@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/KO.ogg-dfb2a0819c5c7107b29388bae318e96f.oggstr"
+
+[deps]
+
+source_file="res://audio/sound effects/hit/KO.ogg"
+dest_files=[ "res://.import/KO.ogg-dfb2a0819c5c7107b29388bae318e96f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

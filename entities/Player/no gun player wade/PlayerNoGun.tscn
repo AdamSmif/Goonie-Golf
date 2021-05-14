@@ -1,0 +1,199 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://entities/Player/no gun player wade/player1_fall1.png" type="Texture" id=1]
+[ext_resource path="res://entities/Player/no gun player wade/player1_jump1.png" type="Texture" id=2]
+[ext_resource path="res://entities/Assets/explosion/explosion6.png" type="Texture" id=3]
+[ext_resource path="res://entities/Player/no gun player wade/player1_run2.png" type="Texture" id=4]
+[ext_resource path="res://entities/Player/no gun player wade/player1_jump2.png" type="Texture" id=5]
+[ext_resource path="res://entities/Player/no gun player wade/player1_run4.png" type="Texture" id=6]
+[ext_resource path="res://entities/Player/no gun player wade/player_idleframe.png" type="Texture" id=7]
+[ext_resource path="res://entities/Player/no gun player wade/player1_run3.png" type="Texture" id=8]
+[ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.gd" type="Script" id=9]
+[ext_resource path="res://audio/sound effects/Jump.wav" type="AudioStream" id=10]
+[ext_resource path="res://audio/sound effects/coin/Coin.wav" type="AudioStream" id=11]
+[ext_resource path="res://entities/Player/no gun player wade/player1_run1.png" type="Texture" id=12]
+[ext_resource path="res://entities/Player/no gun player wade/player1_fallspoked.png" type="Texture" id=13]
+[ext_resource path="res://engine/Animations/Hit.tres" type="Animation" id=14]
+[ext_resource path="res://engine/Collisions/Hurtbox.tscn" type="PackedScene" id=15]
+[ext_resource path="res://entities/Player/player camera/PlayerCamera.tscn" type="PackedScene" id=16]
+[ext_resource path="res://entities/Player/playerskateboard wade/playerskateboard1.png" type="Texture" id=17]
+[ext_resource path="res://entities/Player/playerskateboard wade/playerskateboard2.png" type="Texture" id=18]
+[ext_resource path="res://audio/sound effects/hit/hit.ogg" type="AudioStream" id=19]
+[ext_resource path="res://entities/Player/player stats wade/PlayerStats.tscn" type="PackedScene" id=20]
+[ext_resource path="res://entities/Assets/explosion/explosion5.png" type="Texture" id=21]
+[ext_resource path="res://entities/Assets/explosion/explosion2.png" type="Texture" id=22]
+[ext_resource path="res://entities/Assets/explosion/explosion1.png" type="Texture" id=23]
+[ext_resource path="res://entities/Assets/explosion/explosion3.png" type="Texture" id=25]
+[ext_resource path="res://entities/Assets/explosion/explosion4.png" type="Texture" id=26]
+[ext_resource path="res://engine/day night cycle/DayNightGradient.tres" type="Gradient" id=27]
+[ext_resource path="res://engine/day night cycle/LightSource.tscn" type="PackedScene" id=28]
+[ext_resource path="res://engine/day night cycle/daycycle.tscn" type="PackedScene" id=29]
+[ext_resource path="res://entities/Player/no gun player wade/player1_idle1.png" type="Texture" id=30]
+[ext_resource path="res://entities/Player/no gun player wade/player1_idle2.png" type="Texture" id=31]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ null ],
+"loop": true,
+"name": "up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "idle",
+"speed": 0.5
+}, {
+"frames": [ null ],
+"loop": true,
+"name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "move",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "skate",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "boom",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "down",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 18.0369 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 7.89791, 8.27244 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
+length = 10.0
+
+[sub_resource type="Animation" id=5]
+length = 0.35
+
+[sub_resource type="Animation" id=6]
+length = 0.5
+
+[node name="PlayerNoGun" type="KinematicBody2D" groups=[
+"Saved",
+]]
+collision_mask = 18
+script = ExtResource( 9 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "boom"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.0153142, 6.85169 )
+scale = Vector2( 0.75, 0.5 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hurtbox" parent="." instance=ExtResource( 15 )]
+collision_layer = 128
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( -0.00325012, 7.91791 )
+shape = SubResource( 3 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 17, 11 )
+
+[node name="Position2DLeft" type="Position2D" parent="."]
+visible = false
+position = Vector2( -17, 11 )
+
+[node name="Position2DRight" type="Position2D" parent="."]
+visible = false
+position = Vector2( 17, 11 )
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 250, 0 )
+stream = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BottleSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="GotHitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 19 )
+attenuation = 0.31864
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[node name="DiscTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="GameOverTimer" type="Timer" parent="."]
+
+[node name="PlayerCamera" parent="." instance=ExtResource( 16 )]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Hit = ExtResource( 14 )
+anims/idle = SubResource( 4 )
+anims/run = SubResource( 5 )
+anims/throw = SubResource( 6 )
+
+[node name="PlayerStats" parent="." instance=ExtResource( 20 )]
+
+[node name="LightSource" parent="." instance=ExtResource( 28 )]
+position = Vector2( 0, 8 )
+
+[node name="daycycle" parent="." instance=ExtResource( 29 )]
+col = ExtResource( 27 )
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="DiscTimer" to="." method="_on_DiscTimer_timeout"]
+[connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]
+[connection signal="no_health" from="PlayerStats" to="." method="_on_PlayerStats_no_health"]
+
+[editable path="Hurtbox"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Jeremy-Blake-Powerup_.ogg-79f2f41e24ac3de0b629f19bbeef35cf.oggstr"
+
+[deps]
+
+source_file="res://audio/music/Jeremy-Blake-Powerup_.ogg"
+dest_files=[ "res://.import/Jeremy-Blake-Powerup_.ogg-79f2f41e24ac3de0b629f19bbeef35cf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

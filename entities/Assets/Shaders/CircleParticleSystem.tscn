@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+lifetime_randomness = 0.02
+emission_shape = 1
+emission_sphere_radius = 11.38
+flag_disable_z = true
+direction = Vector3( 10, 0, 0 )
+spread = 4.13
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.1
+radial_accel = 59.46
+color = Color( 0.219608, 0.0352941, 0.266667, 1 )
+hue_variation = 0.11
+hue_variation_random = 0.3
+
+[node name="CircleParticleSystem" type="Node2D"]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+amount = 16
+preprocess = 12.57
+speed_scale = 1.34
+randomness = 0.02
+fixed_fps = 60
+process_material = SubResource( 1 )

@@ -1,0 +1,39 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Player/golfcartplayer/golfcartplayer2.png" type="Texture" id=1]
+[ext_resource path="res://Player/golfcartplayer/golfcartplayer1.png" type="Texture" id=2]
+[ext_resource path="res://Player/golfcartplayer/golfcartplayer4.png" type="Texture" id=3]
+[ext_resource path="res://Player/golfcartplayer/golfcartplayer3.png" type="Texture" id=4]
+[ext_resource path="res://Player/golfcartplayer/GolfCartPlayer.gd" type="Script" id=5]
+[ext_resource path="res://Assets/light/LightSource.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/light/daycycle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/light/Seasons/winter.tres" type="Gradient" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.5284, 14.4808 )
+
+[node name="GolfCartPlayer" type="KinematicBody2D"]
+script = ExtResource( 5 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.541107, 1.35275 )
+shape = SubResource( 2 )
+
+[node name="daycycle" parent="." instance=ExtResource( 7 )]
+position = Vector2( 315.874, -1.80499 )
+col = ExtResource( 8 )
+
+[node name="LightSource" parent="." instance=ExtResource( 6 )]
+position = Vector2( -0.837006, 2.1066 )

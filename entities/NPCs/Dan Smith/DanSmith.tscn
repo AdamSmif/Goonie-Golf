@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Enemies+Allies/DanSmith/DanSmith2.png" type="Texture" id=1]
+[ext_resource path="res://Enemies+Allies/DanSmith/DanSmith1.png" type="Texture" id=2]
+[ext_resource path="res://Enemies+Allies/DanSmith/DanSmith.png" type="Texture" id=3]
+[ext_resource path="res://Enemies+Allies/DanSmith/DanSmith.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24.0947, 48.2052 )
+
+[node name="DanSmith" type="KinematicBody2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+frame = 1
+speed_scale = 0.25
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2.91884, -1.93122 )
+shape = SubResource( 2 )

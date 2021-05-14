@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/this-place-might-get-spooky.ogg-da2a05440764b55ec7bbfa5c892f0289.oggstr"
+
+[deps]
+
+source_file="res://audio/music/this-place-might-get-spooky.ogg"
+dest_files=[ "res://.import/this-place-might-get-spooky.ogg-da2a05440764b55ec7bbfa5c892f0289.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

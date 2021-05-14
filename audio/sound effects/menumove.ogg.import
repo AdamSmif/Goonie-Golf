@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/menumove.ogg-200bcdb7068366b26e9299be00fe281a.oggstr"
+
+[deps]
+
+source_file="res://audio/sound effects/menumove.ogg"
+dest_files=[ "res://.import/menumove.ogg-200bcdb7068366b26e9299be00fe281a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player/pogostick/pogostick.png" type="Texture" id=1]
+[ext_resource path="res://Player/pogostick/PogostickPlayer.gd" type="Script" id=2]
+[ext_resource path="res://Player/PlayerCamera.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/light/LightSource.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/light/daycycle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/light/DayNightGradient.tres" type="Gradient" id=6]
+[ext_resource path="res://Player/pogostick/pogostick2.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "shocked",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8.68362, 17.3786 )
+
+[node name="PogostickPlayer" type="KinematicBody2D"]
+collision_mask = 18
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+speed_scale = 0.1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 3.41749, 12.3884 )
+shape = SubResource( 2 )
+
+[node name="PlayerCamera" parent="." instance=ExtResource( 3 )]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[node name="daycycle" parent="." instance=ExtResource( 5 )]
+col = ExtResource( 6 )
+
+[node name="LightSource" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3.23422, 10.5756 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

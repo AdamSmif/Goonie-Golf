@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/circletree/circletree1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/circletree/circletree2.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 17.9936
+height = 33.6724
+
+[node name="CircleTree" type="StaticBody2D"]
+scale = Vector2( 2, 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.12
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.251656, -6.86161 )
+rotation = 1.5708
+shape = SubResource( 2 )

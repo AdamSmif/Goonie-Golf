@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Dreamstate.ogg-ce2e55e24d9747ede5568940471341a7.oggstr"
+
+[deps]
+
+source_file="res://audio/music/Dreamstate.ogg"
+dest_files=[ "res://.import/Dreamstate.ogg-ce2e55e24d9747ede5568940471341a7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://engine/Collisions/Hitbox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/Player/discs/rightdisc/discright.png" type="Texture" id=2]
+[ext_resource path="res://entities/Player/discs/rightdisc/DiscRight.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.89132, 0.92074 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.40864, 2.04224 )
+
+[node name="DiscRight" type="KinematicBody2D"]
+collision_layer = 32
+collision_mask = 17
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="Hitbox" parent="." instance=ExtResource( 1 )]
+collision_mask = 256
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2( 0, -0.263882 )
+shape = SubResource( 2 )
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
+
+[editable path="Hitbox"]
