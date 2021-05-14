@@ -44,7 +44,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Goonie Golf"
+config/name="Super Goonie Golf"
 config/icon="res://icon.png"
 config/windows_native_icon="res://entities/Assets/icon/icon-export.ico"
 
