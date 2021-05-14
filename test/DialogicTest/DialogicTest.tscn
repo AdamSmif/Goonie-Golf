@@ -19,7 +19,7 @@ position = Vector2( 688, 240 )
 position = Vector2( -200, 136 )
 
 [node name="Sprite" parent="Player/ParallaxBackground" index="0"]
-position = Vector2( 890.721, 339.757 )
+position = Vector2( 876.721, 325.757 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
