@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Dialog"
+length = 15.0
+
+[node name="Dialog System" type="YSort"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 16.0
+margin_top = -112.0
+margin_right = 168.0
+margin_bottom = -17.0
+color = Color( 0, 0, 0, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text1" type="RichTextLabel" parent="."]
+margin_left = 24.0
+margin_top = -104.0
+margin_right = 160.0
+margin_bottom = -24.0
+theme = SubResource( 4 )
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text2" type="RichTextLabel" parent="."]
+margin_left = 24.0
+margin_top = -104.0
+margin_right = 160.0
+margin_bottom = -24.0
+theme = SubResource( 4 )
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text3" type="RichTextLabel" parent="."]
+margin_left = 24.0
+margin_top = -104.0
+margin_right = 160.0
+margin_bottom = -24.0
+theme = SubResource( 4 )
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Dialog = SubResource( 5 )

@@ -53,14 +53,17 @@ config/windows_native_icon="res://entities/Assets/icon/icon-export.ico"
 DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
 MusicController="*res://engine/Autoloads/MusicController.gd"
 PlayerStats="*res://entities/Player/player stats wade/PlayerStats.tscn"
+Pause="*res://ui/HUD/Pause.tscn"
 
 [display]
 
 window/size/width=640
 window/size/height=360
 window/size/test_width=1280
-window/size/test_height=720
+window/size/test_height=760
 mouse_cursor/custom_image="res://entities/Assets/mouseicon/mouseicon.png"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [editor_plugins]
 
@@ -338,6 +341,10 @@ shoot_7={
 "events": [  ]
 }
 shoot_8={
+"deadzone": 0.5,
+"events": [  ]
+}
+talk={
 "deadzone": 0.5,
 "events": [  ]
 }

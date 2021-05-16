@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://test/DialogicTest/DialogicTest.gd" type="Script" id=1]
 [ext_resource path="res://entities/Player/main player wade/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://entities/Assets/Background/HD Backgrounds/Rainier (Sourdough Ridge)-62.jpg" type="Texture" id=3]
+[ext_resource path="res://entities/Assets/Background/City/city.png" type="Texture" id=3]
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=4]
 [ext_resource path="res://test/DialogicTest/NPCDialogicTest/NPCDialogicTest.tscn" type="PackedScene" id=5]
+[ext_resource path="res://entities/NPCs/ADefaultNPC/defaultNPC.tscn" type="PackedScene" id=6]
 
 [node name="DialogicTest" type="Node2D"]
 script = ExtResource( 1 )
@@ -19,8 +20,35 @@ position = Vector2( 688, 240 )
 position = Vector2( -200, 136 )
 
 [node name="Sprite" parent="Player/ParallaxBackground" index="0"]
-position = Vector2( 876.721, 325.757 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( -40, 176 )
+scale = Vector2( 7, 7 )
 texture = ExtResource( 3 )
 
+[node name="Sprite2" parent="Player/ParallaxBackground" index="1"]
+position = Vector2( 408, 176 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" parent="Player/ParallaxBackground" index="2"]
+position = Vector2( 856, 176 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 3 )
+
+[node name="defaultNPC" parent="." instance=ExtResource( 6 )]
+position = Vector2( -370.076, 271.656 )
+
+[node name="AnimatedSprite" parent="defaultNPC" index="0"]
+frame = 1
+
+[node name="Text1" parent="defaultNPC/DialogSystem" index="1"]
+text = "How ya doing?"
+
+[node name="Text2" parent="defaultNPC/DialogSystem" index="2"]
+text = "What a cool sytem!"
+
+[node name="Text3" parent="defaultNPC/DialogSystem" index="3"]
+text = ""
+
 [editable path="Player"]
+
+[editable path="defaultNPC"]

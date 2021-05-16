@@ -1,11 +1,8 @@
-[gd_scene load_steps=4 format=2]
-
-[ext_resource path="res://Enemies+Allies/Vern Avocado/Vern Avocado1.png" type="Texture" id=1]
-[ext_resource path="res://Enemies+Allies/Vern Avocado/Vern Avocado2.png" type="Texture" id=2]
+[gd_scene load_steps=2 format=2]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [ null, null ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
