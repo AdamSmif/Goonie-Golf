@@ -2,7 +2,6 @@
 
 [ext_resource path="res://audio/sound effects/hit/hit.ogg" type="AudioStream" id=1]
 
-
 [node name="GotHitSound" type="AudioStreamPlayer2D"]
 stream = ExtResource( 1 )
 attenuation = 0.31864
