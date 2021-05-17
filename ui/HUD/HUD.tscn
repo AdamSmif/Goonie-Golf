@@ -1,17 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://UI/HUD/HUD.gd" type="Script" id=1]
-[ext_resource path="res://Assets/bottle.png" type="Texture" id=2]
+[ext_resource path="res://entities/Assets/Bottle/bottle.png" type="Texture" id=2]
 [ext_resource path="res://UI/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Player/disc.png" type="Texture" id=4]
-[ext_resource path="res://icon.png" type="Texture" id=5]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0, 0, 0.235294 )
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+[ext_resource path="res://entities/Player/discs/leftdisc/disc left.png" type="Texture" id=4]
+[ext_resource path="res://entities/Assets/icon/icon.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 3 )
@@ -26,13 +19,11 @@ default_font = SubResource( 3 )
 script = ExtResource( 1 )
 bottle_world_scene = "res://Levels/World.tscn"
 
-[node name="Panel" type="Panel" parent="."]
-visible = false
-margin_left = 8.21465
+[node name="ColorRect" type="ColorRect" parent="."]
 margin_top = 8.0
-margin_right = 96.2146
-margin_bottom = 48.0
-custom_styles/panel = SubResource( 1 )
+margin_right = 112.0
+margin_bottom = 56.0
+color = Color( 0, 0, 0, 0.407843 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -62,11 +53,10 @@ __meta__ = {
 }
 
 [node name="Bottles2" type="Label" parent="."]
-visible = false
-margin_left = 64.0
-margin_top = 16.0
-margin_right = 113.391
-margin_bottom = 46.0
+margin_left = 88.0
+margin_top = 8.0
+margin_right = 137.391
+margin_bottom = 38.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "/8"
@@ -89,46 +79,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HealthCircle3" type="Panel" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -317.0
-margin_top = 7.0
-margin_right = -236.0
-margin_bottom = 53.0
-custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HealthCircle4" type="Panel" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -320.0
-margin_top = 8.0
-margin_right = -288.0
-margin_bottom = 40.0
-custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="HealthCircle5" type="Panel" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -256.0
-margin_top = 8.0
-margin_right = -224.0
-margin_bottom = 40.0
-custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
 [node name="Disc" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
@@ -143,35 +93,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DiscCircle" type="Panel" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = 227.0
-margin_top = 1.0
-margin_right = 307.0
-margin_bottom = 41.0
-custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="disc" type="Sprite" parent="."]
 position = Vector2( 32, 48 )
 texture = ExtResource( 4 )
-
-[node name="TextDisplayer" type="RichTextLabel" parent="."]
-visible = false
-margin_left = 490.962
-margin_top = 4.51251
-margin_right = 530.962
-margin_bottom = 44.5125
-text = "text"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ms" type="Timer" parent="TextDisplayer"]
 
 [node name="icon" type="Sprite" parent="."]
 position = Vector2( 16, 24 )

@@ -55,7 +55,7 @@ var vel := Vector2(0, 0)
 export (int, 0, 200) var push = 5    
 
 # Spawn Other Players
-var otherplayers = preload("res://entities/Player/playeres two through eight/all players/AllPlayers.tscn")
+var otherplayers = preload("res://entities/Player/otherplayers/AllOtheerPlayers.tscn")
 
 func _ready():
 	stats.connect("no_health", self, "queue_free")
@@ -67,28 +67,28 @@ func _physics_process(_delta):
 	
 # Spawn All Players
 	if Input.is_action_just_pressed("ui_accept"):
-		$AllPlayers/GolfballPlayer.visible = true
-		$AllPlayers/PingPongPaddle.visible = true
-		$AllPlayers/rollerblades.visible = true
-		$AllPlayers/TennisBall.visible = true
-		$AllPlayers/VolleyballNet.visible = true
-		$AllPlayers/FootballGuy.visible = true
-		$AllPlayers/BaseballBat.visible = true
+		$AllOtheerPlayers/OtherPlayers2.visible = true
+		$AllOtheerPlayers/OtherPlayers3.visible = true
+		$AllOtheerPlayers/OtherPlayers4.visible = true
+		$AllOtheerPlayers/OtherPlayers5.visible = true
+		$AllOtheerPlayers/OtherPlayers6.visible = true
+		$AllOtheerPlayers/OtherPlayers7.visible = true
+		$AllOtheerPlayers/OtherPlayers8.visible = true
 # Spawn Other Players
 	if Input.is_action_just_pressed("grow_2"):
-		$AllPlayers/GolfballPlayer.visible = true
+		$AllPlayers/OtherPlayers2.visible = true
 	elif Input.is_action_just_pressed("grow_3"):
-		$AllPlayers/PingPongPaddle.visible = true
+		$AllPlayers/OtherPlayers3.visible = true
 	elif Input.is_action_just_pressed("grow_4"):
-		$AllPlayers/rollerblades.visible = true
+		$AllPlayers/OtherPlayers4.visible = true
 	elif Input.is_action_just_pressed("grow_5"):
-		$AllPlayers/TennisBall.visible = true
+		$AllPlayers/OtherPlayers5.visible = true
 	elif Input.is_action_just_pressed("grow_6"):
-		$AllPlayers/VolleyballNet.visible = true
+		$AllPlayers/OtherPlayers6.visible = true
 	elif Input.is_action_just_pressed("grow_7"):
-		$AllPlayers/FootballGuy.visible = true
+		$AllPlayers/OtherPlayers7.visible = true
 	elif Input.is_action_just_pressed("grow_8"):
-		$AllPlayers/BaseballBat.visible = true
+		$AllPlayers/OtherPlayers8.visible = true
 
 # Throw
 	if Input.is_action_just_pressed("throwright_%s" % id) and discDelayTimer.is_stopped():
@@ -251,18 +251,18 @@ func _on_Hurtbox_area_entered(area):
 		$Sprite.play("boom")
 		motion.x = 0
 		$Timer.start()
-		get_tree().change_scene("res://UI/PlayerKO.tscn")
+		get_tree().change_scene("res://ui/game_over/PlayerKO.tscn")
 	
 
 
 func _on_GameOverTimer_timeout():
-	get_tree().change_scene("res://UI/PlayerKO.tscn")
+	get_tree().change_scene("res://ui/game_over/PlayerKO.tscn")
 
 
 func _on_PlayerStats_no_health():
 	$Sprite.play("boom")
 	motion.x = 0
-	get_tree().change_scene("res://UI/PlayerKO.tscn")
+	get_tree().change_scene("res://ui/game_over/PlayerKO.tscn")
 	
 
 ### Save Data ####
