@@ -51,10 +51,10 @@ config/windows_native_icon="res://entities/Assets/icon/icon-export.ico"
 [autoload]
 
 DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
-MusicController="*res://engine/Autoloads/MusicController.gd"
 PlayerStats="*res://entities/Player/player stats wade/PlayerStats.tscn"
 Pause="*res://ui/HUD/Pause.tscn"
 Global="*res://engine/Autoloads/Global.gd"
+MusicController="*res://engine/Autoloads/MusicController.tscn"
 
 [display]
 
