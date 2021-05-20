@@ -1,9 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://UI/winstonicon.png" type="Texture" id=1]
+[ext_resource path="res://ui/splash screen/winstonicon.png" type="Texture" id=1]
 [ext_resource path="res://UI/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://UI/UI Animations/FadeBlackBar.tres" type="Animation" id=3]
-[ext_resource path="res://UI/FluffyDogMediaSplashScreen.gd" type="Script" id=4]
+[ext_resource path="res://ui/splash screen/FluffyDogMediaSplashScreen.gd" type="Script" id=4]
+
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
