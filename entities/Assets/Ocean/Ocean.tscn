@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Ocean/ocean2.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Ocean/ocean1.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Ocean/ocean3.png" type="Texture" id=3]
+[ext_resource path="res://entities/Assets/Ocean/ocean2.png" type="Texture" id=1]
+[ext_resource path="res://entities/Assets/Ocean/ocean1.png" type="Texture" id=2]
+[ext_resource path="res://entities/Assets/Ocean/ocean3.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -14,5 +14,6 @@ animations = [ {
 
 [node name="Ocean" type="AnimatedSprite"]
 frames = SubResource( 1 )
+frame = 1
 speed_scale = 0.25
 playing = true

@@ -12,9 +12,6 @@ export(String, FILE, "*.tscn") var to_options_scene
 #To Minigames
 export(String, FILE, "*.tscn") var to_minigames_scene
 
-var current_selection = 0
-
-# current selector 0 starts at start
 
 func _ready():
 	MusicController.play_menu_music()

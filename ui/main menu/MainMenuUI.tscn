@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Assets/nightsky/NightSkyAnimated.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Ocean/Ocean.tscn" type="PackedScene" id=3]
-[ext_resource path="res://PlayersTwoThruEight/AllPlayers.tscn" type="PackedScene" id=4]
-[ext_resource path="res://UI/MainMenuUI.gd" type="Script" id=5]
+[ext_resource path="res://entities/Assets/Background/Night Sky/NightSkyAnimated.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/Assets/Ocean/Ocean.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/Player/otherplayers/AllOtheerPlayers.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ui/main menu/MainMenuUI.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -26,14 +26,15 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-next_world_scene = "res://Levels/Intro/IntroCutscene.tscn"
-to_credits_scene = "res://UI/Credits/Credits.tscn"
-to_options_scene = "res://UI/Credits/Options.tscn"
-to_minigames_scene = "res://MiniGames/MiniGameIsland/MiniGameIsland.tscn"
+next_world_scene = "res://levels/Level2.tscn"
+to_credits_scene = "res://ui/credits/Credits.tscn"
+to_options_scene = "res://ui/credits/Options.tscn"
+to_minigames_scene = "res://levels/Level2.tscn"
 
 [node name="NightSkyAnimated" parent="." instance=ExtResource( 2 )]
 position = Vector2( 320, 184 )
 scale = Vector2( 1.075, 1.13158 )
+frame = 1
 
 [node name="Ocean" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, 320 )
@@ -43,11 +44,9 @@ position = Vector2( -128, 320 )
 
 [node name="Ocean2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 376, 320 )
-frame = 2
 
 [node name="Ocean3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 632, 320 )
-frame = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
@@ -108,26 +107,26 @@ __meta__ = {
 [node name="AllPlayers" parent="." instance=ExtResource( 4 )]
 position = Vector2( 24, 8 )
 
-[node name="GolfballPlayer" parent="AllPlayers" index="0"]
-position = Vector2( 16, 24 )
+[node name="OtherPlayers2" parent="AllPlayers" index="0"]
+position = Vector2( 200, 288 )
 
-[node name="PingPongPaddle" parent="AllPlayers" index="1"]
-position = Vector2( 16, 160 )
+[node name="OtherPlayers3" parent="AllPlayers" index="1"]
+position = Vector2( 232, 288 )
 
-[node name="rollerblades" parent="AllPlayers" index="2"]
-position = Vector2( 16, 280 )
+[node name="OtherPlayers4" parent="AllPlayers" index="2"]
+position = Vector2( 264, 288 )
 
-[node name="TennisBall" parent="AllPlayers" index="3"]
-position = Vector2( 584, 280 )
+[node name="OtherPlayers5" parent="AllPlayers" index="3"]
+position = Vector2( 296, 288 )
 
-[node name="VolleyballNet" parent="AllPlayers" index="4"]
-position = Vector2( 296, 280 )
+[node name="OtherPlayers6" parent="AllPlayers" index="4"]
+position = Vector2( 328, 288 )
 
-[node name="BaseballBat" parent="AllPlayers" index="5"]
-position = Vector2( 584, 152 )
+[node name="OtherPlayers7" parent="AllPlayers" index="5"]
+position = Vector2( 360, 288 )
 
-[node name="FootballGuy" parent="AllPlayers" index="6"]
-position = Vector2( 584, 24 )
+[node name="OtherPlayers8" parent="AllPlayers" index="6"]
+position = Vector2( 392, 288 )
 [connection signal="pressed" from="Start Game" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Mini Game" to="." method="_on_Mini_Game_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
