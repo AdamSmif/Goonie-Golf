@@ -16,6 +16,7 @@ position = Vector2( 88, 240 )
 
 [node name="Level1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 513, 224 )
+next_world_scene = "res://test/DialogicTest/DialogicTest.tscn"
 
 [node name="icon" type="Sprite" parent="Level1"]
 position = Vector2( 16, 0 )

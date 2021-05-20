@@ -16,6 +16,7 @@ position = Vector2( 64, 240 )
 
 [node name="Level2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 464, 232 )
+next_world_scene = "res://levels/Level2.tscn"
 
 [node name="icon" type="Sprite" parent="Level2"]
 scale = Vector2( 0.8125, 0.8125 )

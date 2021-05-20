@@ -1,6 +1,6 @@
 extends Area2D
 
-#export(String, FILE, "*.tscn") var next_world_scene
+export(String, FILE, "*.tscn") var next_world_scene
 #export (Vector2) var spawn_pos
 
 #func _process(_delta):
@@ -12,4 +12,4 @@ extends Area2D
 
 func _on_Entrance_body_entered(_area: Area2D) -> void:
 	Global.from = get_parent().name 
-	get_tree().change_scene(("res://Levels/") + (self.name) + (".tscn"))
+	get_tree().change_scene(next_world_scene)
