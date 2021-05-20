@@ -47,16 +47,6 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 32 ) ],
-"loop": true,
-"name": "shocked",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "skate",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "throw",
@@ -67,15 +57,25 @@ animations = [ {
 "name": "down",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "boom",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ) ],
+"frames": [ ExtResource( 32 ) ],
 "loop": true,
-"name": "fall",
+"name": "shocked",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "skate",
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 13 ), ExtResource( 31 ), ExtResource( 18 ), ExtResource( 3 ) ],
 "loop": true,

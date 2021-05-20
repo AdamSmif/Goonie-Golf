@@ -8,6 +8,5 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-#	var dialog = Dialogic.start("talk1")
-#	add_child(dialog)
+	if Global.from != null:
+		get_node("Player").set_position(get_node(Global.from + "Pos").position)
