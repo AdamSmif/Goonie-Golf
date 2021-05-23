@@ -151,15 +151,18 @@ interact_1={
 }
 left_2={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":1,"axis":0,"axis_value":-1.0,"script":null)
+ ]
 }
 right_2={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":1,"axis":0,"axis_value":1.0,"script":null)
+ ]
 }
 up_2={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":1,"axis":1,"axis_value":-1.0,"script":null)
+ ]
 }
 down_2={
 "deadzone": 0.5,
