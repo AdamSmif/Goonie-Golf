@@ -28,7 +28,6 @@ collision_layer = 0
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -24 )
 rotation = 0.523599
 texture = ExtResource( 2 )
 

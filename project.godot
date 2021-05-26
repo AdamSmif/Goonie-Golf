@@ -44,7 +44,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Super Goonie Golf"
+config/name="Goonie Golf"
 run/main_scene="res://ui/splash screen/FluffyDogMediaSplashScreen.tscn"
 config/icon="res://icon.png"
 config/windows_native_icon="res://entities/Assets/icon/icon-export.ico"
