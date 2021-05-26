@@ -28,3 +28,6 @@ position = Vector2( 184, 168 )
 [node name="icon" type="Sprite" parent="Level2Pos"]
 scale = Vector2( 0.3125, 0.3125 )
 texture = ExtResource( 5 )
+
+[node name="DialogicTestPos" type="Position2D" parent="."]
+position = Vector2( 826.764, 56.8452 )

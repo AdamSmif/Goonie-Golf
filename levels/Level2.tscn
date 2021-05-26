@@ -16,7 +16,7 @@ position = Vector2( 88, 240 )
 
 [node name="Bleh" parent="." instance=ExtResource( 2 )]
 position = Vector2( 513, 224 )
-next_world_scene = "res://levels/intro/IntroHub/Level3.tscn"
+next_world_scene = "res://test/DialogicTest/DialogicTest.tscn"
 
 [node name="icon" type="Sprite" parent="Bleh"]
 position = Vector2( 16, 0 )

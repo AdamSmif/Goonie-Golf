@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://test/DialogicTest/DialogicTest.gd" type="Script" id=1]
 [ext_resource path="res://entities/Player/main player wade/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/Assets/Background/City/city.png" type="Texture" id=3]
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=4]
+[ext_resource path="res://engine/Entrance/Entrance.tscn" type="PackedScene" id=5]
 [ext_resource path="res://entities/NPCs/ADefaultNPC/defaultNPC.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ui/HUD/HUD.tscn" type="PackedScene" id=7]
 [ext_resource path="res://entities/Enemies/Muscle Bot/MuscleBot.tscn" type="PackedScene" id=8]
@@ -54,6 +55,10 @@ position = Vector2( 384, 256 )
 
 [node name="Level2Pos" type="Position2D" parent="."]
 position = Vector2( 840, 8 )
+
+[node name="Entrance" parent="." instance=ExtResource( 5 )]
+position = Vector2( 700.333, 229.73 )
+next_world_scene = "res://test/Level1.tscn"
 
 [editable path="Player"]
 
