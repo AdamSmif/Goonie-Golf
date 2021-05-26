@@ -12,7 +12,7 @@ script = ExtResource( 3 )
 [node name="GroundTile" parent="." instance=ExtResource( 1 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 64, 240 )
+position = Vector2( 104, 240 )
 
 [node name="Level2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 464, 232 )
