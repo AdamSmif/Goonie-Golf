@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/basket.png-ad07e8c7e07b7b0f6dd452e024873092.stex"
+path="res://.import/evileyes.png-b99a1d167d54539095b21414febf1bd1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/Assets/Disc Golf Basket/basket.png"
-dest_files=[ "res://.import/basket.png-ad07e8c7e07b7b0f6dd452e024873092.stex" ]
+source_file="res://entities/Assets/Evil Eyes/evileyes.png"
+dest_files=[ "res://.import/evileyes.png-b99a1d167d54539095b21414febf1bd1.stex" ]
 
 [params]
 
