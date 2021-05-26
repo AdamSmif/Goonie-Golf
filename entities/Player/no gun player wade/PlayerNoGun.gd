@@ -14,6 +14,7 @@ var bottles_needed = 0
 export(String, FILE, "*.tscn") var lose_level_world_scene
 # Game Over
 export(String, FILE, "*.tscn") var game_over_scene
+
 # Next Level For Bottle Colelcting Levels
 export(String, FILE, "*.tscn") var bottle_world_scene
 
@@ -38,6 +39,7 @@ export var springDown = 1200
 var CoyoteJump = true
 var jumpWasPressed = false
 onready var coyoteTimer := $CoyoteTimer
+
 
 # Stairs
 var stair_on = false

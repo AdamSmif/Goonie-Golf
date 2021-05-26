@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dumbell.png-6ef8765be73dd96d2be9b30e11733951.stex"
+path="res://.import/GrassTiles.png-c0462de91c95fcac9addb661d45cc8ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/Assets/Dumbell/Dumbell.png"
-dest_files=[ "res://.import/Dumbell.png-6ef8765be73dd96d2be9b30e11733951.stex" ]
+source_file="res://entities/tiles/WorldHubTile/GrassTiles.png"
+dest_files=[ "res://.import/GrassTiles.png-c0462de91c95fcac9addb661d45cc8ad.stex" ]
 
 [params]
 

@@ -34,6 +34,9 @@ position = Vector2( 856, 176 )
 scale = Vector2( 7, 7 )
 texture = ExtResource( 3 )
 
+[node name="AllOtheerPlayers" parent="Player" index="17"]
+position = Vector2( 24, -40 )
+
 [node name="defaultNPC" parent="." instance=ExtResource( 6 )]
 position = Vector2( -370.076, 271.656 )
 
@@ -50,6 +53,7 @@ text = ""
 position = Vector2( 384, 256 )
 
 [node name="Level2Pos" type="Position2D" parent="."]
+position = Vector2( 840, 8 )
 
 [editable path="Player"]
 

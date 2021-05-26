@@ -1,17 +1,17 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Player/golfcartplayer/golfcartplayer2.png" type="Texture" id=1]
-[ext_resource path="res://Player/golfcartplayer/golfcartplayer1.png" type="Texture" id=2]
-[ext_resource path="res://Player/golfcartplayer/golfcartplayer4.png" type="Texture" id=3]
-[ext_resource path="res://Player/golfcartplayer/golfcartplayer3.png" type="Texture" id=4]
-[ext_resource path="res://Player/golfcartplayer/GolfCartPlayer.gd" type="Script" id=5]
-[ext_resource path="res://Assets/light/LightSource.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/light/daycycle.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/light/Seasons/winter.tres" type="Gradient" id=8]
+[ext_resource path="res://entities/Player/top down golf cart player wade/golfcartplayer2.png" type="Texture" id=1]
+[ext_resource path="res://entities/Player/top down golf cart player wade/golfcartplayer1.png" type="Texture" id=2]
+[ext_resource path="res://entities/Player/top down golf cart player wade/golfcartplayer3.png" type="Texture" id=3]
+[ext_resource path="res://entities/Player/top down golf cart player wade/golfcartplayer4.png" type="Texture" id=4]
+[ext_resource path="res://entities/Player/top down golf cart player wade/GolfCartPlayer.gd" type="Script" id=5]
+[ext_resource path="res://engine/day night cycle/LightSource.tscn" type="PackedScene" id=6]
+[ext_resource path="res://engine/day night cycle/daycycle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://engine/day night cycle/Seasons/winter.tres" type="Gradient" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0

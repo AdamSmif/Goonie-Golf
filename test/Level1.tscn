@@ -14,11 +14,11 @@ script = ExtResource( 3 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 104, 240 )
 
-[node name="Level2" parent="." instance=ExtResource( 4 )]
+[node name="Bleh" parent="." instance=ExtResource( 4 )]
 position = Vector2( 464, 232 )
 next_world_scene = "res://levels/Level2.tscn"
 
-[node name="icon" type="Sprite" parent="Level2"]
+[node name="icon" type="Sprite" parent="Bleh"]
 scale = Vector2( 0.8125, 0.8125 )
 texture = ExtResource( 5 )
 
