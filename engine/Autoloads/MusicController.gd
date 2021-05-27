@@ -23,3 +23,12 @@ func play_rain_music():
 func stop_rain_music():
 	$AudioStreamPlayer.stream = rain_music
 	$AudioStreamPlayer.stop()
+	
+### Credits Music ###
+func play_credits_music():
+	$AudioStreamPlayer.stream = credits_music
+	$AudioStreamPlayer.play()
+	
+func stop_credits_music():
+	$AudioStreamPlayer.stream = credits_music
+	$AudioStreamPlayer.stop()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/rockclimbingwall/grip3.png" type="Texture" id=1]
+[ext_resource path="res://entities/Assets/Mountains/rockmountain.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12.5322, 6.86968 )

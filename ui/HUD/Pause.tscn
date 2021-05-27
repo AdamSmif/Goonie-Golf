@@ -28,7 +28,7 @@ font_data = ExtResource( 2 )
 [node name="Pause" type="CanvasLayer"]
 pause_mode = 2
 script = ExtResource( 1 )
-main_menu_scene = "res://UI/MainMenuUI.tscn"
+main_menu_scene = "res://UI/main menu/MainMenuUI.tscn"
 
 [node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
