@@ -11,3 +11,4 @@ func _physics_process(_delta):
 			if Input.is_action_just_pressed("interact_%s" % id):
 				$CollisionShape2D.disabled
 				$DialogSystem/AnimationPlayer.play("Dialog")
+

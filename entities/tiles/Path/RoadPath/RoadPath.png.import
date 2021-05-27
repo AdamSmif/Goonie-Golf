@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset_StreetPath.png-24d642d712beb44a112a6941bf7fd5d7.stex"
+path="res://.import/RoadPath.png-1b3cf8a8bc9031d3edafb35c874f812e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/tiles/Path/StreetPath/tileset_StreetPath.png"
-dest_files=[ "res://.import/tileset_StreetPath.png-24d642d712beb44a112a6941bf7fd5d7.stex" ]
+source_file="res://entities/tiles/Path/RoadPath/RoadPath.png"
+dest_files=[ "res://.import/RoadPath.png-1b3cf8a8bc9031d3edafb35c874f812e.stex" ]
 
 [params]
 
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
