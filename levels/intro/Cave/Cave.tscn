@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/Assets/Background/Low Poly General/lowpolyswisterland.png" type="Texture" id=3]
+
+[node name="Cave" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 65.8022, 320.786 )
+
+[node name="Sprite" parent="Player/ParallaxBackground" index="0"]
+texture = ExtResource( 3 )
+
+[node name="GroundTile" parent="." instance=ExtResource( 1 )]
+position = Vector2( 188.474, 270.841 )
+tile_data = PoolIntArray( 262138, 0, 0, 262139, 0, 1, 262140, 0, 1, 262141, 0, 1, 262142, 0, 1, 262143, 0, 1, 196608, 0, 1, 196609, 0, 1, 196610, 0, 1, 196611, 0, 1, 196612, 0, 1, 196613, 0, 1, 196614, 0, 1, 196615, 0, 1, 196616, 0, 1, 196617, 0, 2, 327674, 0, 65536, 327675, 0, 65537, 327676, 0, 65537, 327677, 0, 65537, 327678, 0, 65537, 327679, 0, 65537, 262144, 0, 65537, 262145, 0, 65537, 262146, 0, 65537, 262147, 0, 65537, 262148, 0, 65537, 262149, 0, 65537, 262150, 0, 65537, 262151, 0, 65537, 262152, 0, 65537, 262153, 0, 65538, 393210, 0, 131072, 393211, 0, 131073, 393212, 0, 131073, 393213, 0, 131073, 393214, 0, 131073, 393215, 0, 131073, 327680, 0, 131073, 327681, 0, 131073, 327682, 0, 131073, 327683, 0, 131073, 327684, 0, 131073, 327685, 0, 131073, 327686, 0, 131073, 327687, 0, 131073, 327688, 0, 131073, 327689, 0, 131074 )
+
+[editable path="Player"]

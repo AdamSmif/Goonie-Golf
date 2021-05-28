@@ -15,8 +15,6 @@ export(String, FILE, "*.tscn") var lose_level_world_scene
 # Game Over
 export(String, FILE, "*.tscn") var game_over_scene
 
-# Next Level For Bottle Colelcting Levels
-export(String, FILE, "*.tscn") var bottle_world_scene
 
 # Movement
 
