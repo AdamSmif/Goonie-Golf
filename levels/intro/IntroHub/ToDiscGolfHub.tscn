@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://entities/Player/player camera/PlayerCamera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/Player/top down golf cart player wade/GolfCartPlayer.tscn" type="PackedScene" id=2]
@@ -17,6 +17,30 @@
 [ext_resource path="res://entities/Assets/Cave/cave.png" type="Texture" id=15]
 [ext_resource path="res://entities/Assets/House/Village House/window1.png" type="Texture" id=16]
 
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 234.379, 44.1422 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 42.4902, 63.9132 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 47.1623, 64.1481 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 146.617, 34.9775 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.6862, 31.1758 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 20.7467, 33.2897 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 58.3284, 15.2035 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 17.5731, 8.98416 )
+
 [node name="ToDiscGolfHub" type="Node2D"]
 modulate = Color( 0.4, 0.466667, 0.458824, 1 )
 script = ExtResource( 7 )
@@ -27,6 +51,24 @@ tile_data = PoolIntArray( -3604506, 15, 0, -3604505, 15, 0, -3604504, 15, 0, -36
 [node name="Path" parent="." instance=ExtResource( 12 )]
 tile_data = PoolIntArray( -2621427, 0, 0, -2621426, 0, 2, -2555891, 0, 65536, -2555890, 0, 65538, -2490355, 0, 65536, -2490354, 0, 65538, -2424819, 0, 65536, -2424818, 0, 65538, -2359283, 0, 65536, -2359282, 0, 65538, -2293747, 0, 65536, -2293746, 0, 65538, -2228211, 0, 65536, -2228210, 0, 65538, -2162675, 0, 65536, -2162674, 0, 65538, -2097139, 0, 65536, -2097138, 0, 65538, -2031603, 0, 65536, -2031602, 0, 65538, -1966067, 0, 65536, -1966066, 0, 65538, -1900531, 0, 65536, -1900530, 0, 65538, -1834995, 0, 65536, -1834994, 0, 65538, -1769459, 0, 65536, -1769458, 0, 65538, -1703923, 0, 65536, -1703922, 0, 65538, -1638387, 0, 65536, -1638386, 0, 65538, -1572851, 0, 65536, -1572850, 0, 65538, -1507315, 0, 65536, -1507314, 0, 65538, -1441779, 0, 65536, -1441778, 0, 65538, -1376243, 0, 65536, -1376242, 0, 65538, -1310707, 0, 65536, -1310706, 0, 65538, -1245171, 0, 65536, -1245170, 0, 65538, -1179635, 0, 65536, -1179634, 0, 65538, -1114099, 0, 65536, -1114098, 0, 65538, -1048563, 0, 65536, -1048562, 0, 65538, -983027, 0, 65536, -983026, 0, 65538, -917491, 0, 65536, -917490, 0, 65538, -851955, 0, 65536, -851954, 0, 65538, -786419, 0, 65536, -786418, 0, 131077, -786417, 0, 1, -786416, 0, 1, -786415, 0, 1, -786414, 0, 1, -786413, 0, 1, -786412, 0, 1, -786411, 0, 1, -786410, 0, 1, -786409, 0, 1, -786408, 0, 1, -786407, 0, 1, -786406, 0, 1, -786405, 0, 1, -786404, 0, 1, -786403, 0, 1, -786402, 0, 1, -786401, 0, 1, -786400, 0, 1, -786399, 0, 1, -786398, 0, 1, -786397, 0, 1, -786396, 0, 2, -720883, 0, 65536, -720882, 0, 65541, -720881, 0, 131073, -720880, 0, 131073, -720879, 0, 131073, -720878, 0, 131073, -720877, 0, 131073, -720876, 0, 131073, -720875, 0, 131073, -720874, 0, 131073, -720873, 0, 131073, -720872, 0, 131073, -720871, 0, 131073, -720870, 0, 131073, -720869, 0, 131073, -720868, 0, 131073, -720867, 0, 131073, -720866, 0, 131073, -720865, 0, 131073, -720864, 0, 131073, -720863, 0, 131073, -720862, 0, 131073, -720861, 0, 131073, -720860, 0, 131074, -655347, 0, 65536, -655346, 0, 65538, -589811, 0, 65536, -589810, 0, 65538, -524275, 0, 65536, -524274, 0, 65538, -458739, 0, 65536, -458738, 0, 65538, -393203, 0, 65536, -393202, 0, 65538, -327667, 0, 65536, -327666, 0, 65538, -262131, 0, 65536, -262130, 0, 65538, -196595, 0, 65536, -196594, 0, 65538, -131059, 0, 65536, -131058, 0, 65538, -65523, 0, 65536, -65522, 0, 65538, 13, 0, 65536, 14, 0, 65538, 65549, 0, 65536, 65550, 0, 65538, 131085, 0, 65536, 131086, 0, 65538, 196621, 0, 65536, 196622, 0, 65538, 262157, 0, 65536, 262158, 0, 65538, 327693, 0, 65536, 327694, 0, 65538, 393229, 0, 65536, 393230, 0, 65538, 458765, 0, 65536, 458766, 0, 65538, 524301, 0, 65536, 524302, 0, 65538, 589837, 0, 65536, 589838, 0, 65538, 655361, 0, 0, 655362, 0, 1, 655363, 0, 1, 655364, 0, 1, 655365, 0, 1, 655366, 0, 1, 655367, 0, 1, 655368, 0, 1, 655369, 0, 1, 655370, 0, 1, 655371, 0, 1, 655372, 0, 1, 655373, 0, 131078, 655374, 0, 65538, 720897, 0, 131072, 720898, 0, 131073, 720899, 0, 131073, 720900, 0, 131073, 720901, 0, 131073, 720902, 0, 131073, 720903, 0, 131073, 720904, 0, 131073, 720905, 0, 131073, 720906, 0, 131073, 720907, 0, 131073, 720908, 0, 131073, 720909, 0, 65542, 720910, 0, 65538, 786445, 0, 65536, 786446, 0, 65538, 851981, 0, 65536, 851982, 0, 65538, 917517, 0, 65536, 917518, 0, 65538, 983053, 0, 65536, 983054, 0, 65538, 1048589, 0, 65536, 1048590, 0, 65538, 1114125, 0, 65536, 1114126, 0, 65538, 1179661, 0, 65536, 1179662, 0, 65538, 1245197, 0, 65536, 1245198, 0, 65538, 1310733, 0, 65536, 1310734, 0, 65538, 1376269, 0, 65536, 1376270, 0, 65538, 1441805, 0, 65536, 1441806, 0, 131077, 1441807, 0, 1, 1441808, 0, 1, 1441809, 0, 1, 1441810, 0, 1, 1441811, 0, 1, 1441812, 0, 1, 1441813, 0, 1, 1441814, 0, 1, 1441815, 0, 1, 1441816, 0, 1, 1441817, 0, 1, 1441818, 0, 1, 1441819, 0, 1, 1441820, 0, 2, 1507341, 0, 131072, 1507342, 0, 131073, 1507343, 0, 131073, 1507344, 0, 131073, 1507345, 0, 131073, 1507346, 0, 131073, 1507347, 0, 131073, 1507348, 0, 131073, 1507349, 0, 131073, 1507350, 0, 131073, 1507351, 0, 131073, 1507352, 0, 131073, 1507353, 0, 131073, 1507354, 0, 131073, 1507355, 0, 131073, 1507356, 0, 131074 )
 
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 320, 272 )
+
+[node name="PlayerCamera" parent="Player" instance=ExtResource( 1 )]
+offset = Vector2( 0, 0 )
+
+[node name="RichTextLabel" parent="Player/PlayerCamera" index="0"]
+visible = true
+modulate = Color( 1, 1, 1, 1 )
+margin_left = -216.0
+margin_top = -64.0
+margin_right = 220.0
+margin_bottom = -24.0
+text = "Go To The Disc Golf Tournament"
+
+[node name="Raining" parent="Player" instance=ExtResource( 8 )]
+position = Vector2( 0, 8 )
+
 [node name="Enviroment" type="YSort" parent="."]
 
 [node name="Foliage" type="YSort" parent="Enviroment"]
@@ -35,37 +77,85 @@ tile_data = PoolIntArray( -2621427, 0, 0, -2621426, 0, 2, -2555891, 0, 65536, -2
 position = Vector2( 768, 56 )
 texture = ExtResource( 15 )
 
-[node name="cityicon2" type="Sprite" parent="Enviroment/Foliage"]
+[node name="City" type="StaticBody2D" parent="Enviroment/Foliage"]
+
+[node name="cityicon2" type="Sprite" parent="Enviroment/Foliage/City"]
 modulate = Color( 0.431373, 0.407843, 0.407843, 1 )
 position = Vector2( 671.316, -402.649 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 13 )
 
-[node name="cityicon3" type="Sprite" parent="Enviroment/Foliage"]
+[node name="cityicon3" type="Sprite" parent="Enviroment/Foliage/City"]
 modulate = Color( 0.584314, 0.541176, 0.541176, 1 )
 position = Vector2( 458.684, -396.333 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 13 )
 
-[node name="cityicon" type="Sprite" parent="Enviroment/Foliage"]
+[node name="cityicon" type="Sprite" parent="Enviroment/Foliage/City"]
 modulate = Color( 0.733333, 0.733333, 0.733333, 1 )
 position = Vector2( 542.895, -335.28 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 13 )
 
-[node name="spookygolfcourse" type="Sprite" parent="Enviroment/Foliage"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Foliage/City"]
+position = Vector2( 566.366, -315.114 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enviroment/Foliage/City"]
+position = Vector2( 452.18, -268.496 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Enviroment/Foliage/City"]
+position = Vector2( 640.077, -273.735 )
+shape = SubResource( 7 )
+
+[node name="SpookyHouse" type="StaticBody2D" parent="Enviroment/Foliage"]
+
+[node name="spookygolfcourse" type="Sprite" parent="Enviroment/Foliage/SpookyHouse"]
 position = Vector2( 220.763, -845.647 )
 scale = Vector2( 6, 6 )
 texture = ExtResource( 14 )
 
-[node name="HouseYellow" type="Sprite" parent="Enviroment/Foliage"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Foliage/SpookyHouse"]
+position = Vector2( 118.642, -714.786 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enviroment/Foliage/SpookyHouse"]
+position = Vector2( 320.007, -717.101 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Enviroment/Foliage/SpookyHouse"]
+position = Vector2( 222.279, -761.105 )
+shape = SubResource( 9 )
+
+[node name="YellowHouse" type="StaticBody2D" parent="Enviroment/Foliage"]
+
+[node name="HouseYellow" type="Sprite" parent="Enviroment/Foliage/YellowHouse"]
 position = Vector2( 45.4345, 74.3416 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Foliage/YellowHouse"]
+position = Vector2( 11.5094, 104.994 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enviroment/Foliage/YellowHouse"]
+position = Vector2( 83.3845, 103.82 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Enviroment/Foliage/YellowHouse"]
+position = Vector2( 45.5679, 90.666 )
+shape = SubResource( 3 )
 
 [node name="window1" type="Sprite" parent="Enviroment/Foliage"]
-position = Vector2( 16, 96 )
-scale = Vector2( 4, 4 )
+position = Vector2( 16, 96.966 )
+scale = Vector2( 4, 3.87925 )
 texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Door1" type="Sprite" parent="Enviroment/Foliage/window1"]
 position = Vector2( 8, -6 )
@@ -75,6 +165,9 @@ texture = ExtResource( 10 )
 position = Vector2( 80, 96 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Mountains" type="YSort" parent="Enviroment"]
 
@@ -154,52 +247,53 @@ position = Vector2( 1179.69, -904.235 )
 
 [node name="LockerRoom" type="YSort" parent="."]
 
-[node name="Dumbell" type="Sprite" parent="LockerRoom"]
+[node name="StaticBody2D" type="StaticBody2D" parent="LockerRoom"]
+
+[node name="Dumbell" type="Sprite" parent="LockerRoom/StaticBody2D"]
 position = Vector2( 453.476, 249.638 )
 rotation = 1.5708
 scale = Vector2( 5, 5 )
 texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LockerRoom/StaticBody2D"]
+position = Vector2( 422.757, 309.347 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LockerRoom/StaticBody2D"]
+position = Vector2( 474.017, 309.838 )
+shape = SubResource( 5 )
 
 [node name="window1" type="Sprite" parent="."]
 position = Vector2( 482.192, 197.755 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="window2" type="Sprite" parent="."]
 position = Vector2( 414.308, 198.032 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Door1" type="Sprite" parent="."]
 position = Vector2( 448.371, 286.543 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 10 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 320, 272 )
-
-[node name="PlayerCamera" parent="Player" instance=ExtResource( 1 )]
-offset = Vector2( 0, 0 )
-
-[node name="RichTextLabel" parent="Player/PlayerCamera" index="0"]
-visible = true
-modulate = Color( 1, 1, 1, 1 )
-margin_left = -216.0
-margin_top = -64.0
-margin_right = 220.0
-margin_bottom = -24.0
-text = "Go To The Disc Golf Tournament"
-
-[node name="Raining" parent="Player" instance=ExtResource( 8 )]
-position = Vector2( 0, 8 )
-
 [node name="LockerRoomStart" parent="." instance=ExtResource( 6 )]
-position = Vector2( 448, 320.87 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 448, 321.015 )
+scale = Vector2( 0.1, 0.1 )
 next_world_scene = "res://levels/intro/LockerRoomStart/LockerRoomStart.tscn"
 
 [node name="DrewHouse" parent="." instance=ExtResource( 6 )]
-position = Vector2( 48.264, 128.33 )
+position = Vector2( 48.4989, 136.786 )
 scale = Vector2( 0.2, 0.2 )
 next_world_scene = "res://levels/intro/Drewzer Brewzer House/DrewHouse.tscn"
 
@@ -212,9 +306,10 @@ next_world_scene = "res://levels/intro/Cave/Cave.tscn"
 position = Vector2( 447.157, 355.361 )
 
 [node name="DrewHousePos" type="Position2D" parent="."]
-position = Vector2( 50.6228, 158.042 )
+position = Vector2( 48.7437, 176.833 )
 
 [node name="CavePos" type="Position2D" parent="."]
+position = Vector2( -0.234886, 0 )
 
 [editable path="Player"]
 
