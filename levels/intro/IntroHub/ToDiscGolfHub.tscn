@@ -17,28 +17,28 @@
 [ext_resource path="res://entities/Assets/Cave/cave.png" type="Texture" id=15]
 [ext_resource path="res://entities/Assets/House/Village House/window1.png" type="Texture" id=16]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 234.379, 44.1422 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 42.4902, 63.9132 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 47.1623, 64.1481 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 146.617, 34.9775 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 21.6862, 31.1758 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 20.7467, 33.2897 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 58.3284, 15.2035 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 17.5731, 8.98416 )
 
 [node name="ToDiscGolfHub" type="Node2D"]
@@ -99,15 +99,15 @@ texture = ExtResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Foliage/City"]
 position = Vector2( 566.366, -315.114 )
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Enviroment/Foliage/City"]
 position = Vector2( 452.18, -268.496 )
-shape = SubResource( 7 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Enviroment/Foliage/City"]
 position = Vector2( 640.077, -273.735 )
-shape = SubResource( 7 )
+shape = SubResource( 2 )
 
 [node name="SpookyHouse" type="StaticBody2D" parent="Enviroment/Foliage"]
 
@@ -118,15 +118,15 @@ texture = ExtResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Foliage/SpookyHouse"]
 position = Vector2( 118.642, -714.786 )
-shape = SubResource( 8 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Enviroment/Foliage/SpookyHouse"]
 position = Vector2( 320.007, -717.101 )
-shape = SubResource( 8 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Enviroment/Foliage/SpookyHouse"]
 position = Vector2( 222.279, -761.105 )
-shape = SubResource( 9 )
+shape = SubResource( 4 )
 
 [node name="YellowHouse" type="StaticBody2D" parent="Enviroment/Foliage"]
 
@@ -139,15 +139,15 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Foliage/YellowHouse"]
 position = Vector2( 11.5094, 104.994 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Enviroment/Foliage/YellowHouse"]
 position = Vector2( 83.3845, 103.82 )
-shape = SubResource( 2 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Enviroment/Foliage/YellowHouse"]
 position = Vector2( 45.5679, 90.666 )
-shape = SubResource( 3 )
+shape = SubResource( 7 )
 
 [node name="window1" type="Sprite" parent="Enviroment/Foliage"]
 position = Vector2( 16, 96.966 )
@@ -260,11 +260,11 @@ __meta__ = {
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="LockerRoom/StaticBody2D"]
 position = Vector2( 422.757, 309.347 )
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="LockerRoom/StaticBody2D"]
 position = Vector2( 474.017, 309.838 )
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 
 [node name="window1" type="Sprite" parent="."]
 position = Vector2( 482.192, 197.755 )
@@ -309,7 +309,7 @@ position = Vector2( 447.157, 355.361 )
 position = Vector2( 48.7437, 176.833 )
 
 [node name="CavePos" type="Position2D" parent="."]
-position = Vector2( -0.234886, 0 )
+position = Vector2( 768, 96 )
 
 [editable path="Player"]
 
