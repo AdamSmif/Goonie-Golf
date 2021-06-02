@@ -32,3 +32,12 @@ func play_credits_music():
 func stop_credits_music():
 	$AudioStreamPlayer.stream = credits_music
 	$AudioStreamPlayer.stop()
+	
+### Synth Music ###
+func play_synth_music():
+	$AudioStreamPlayer.stream = synth_music
+	$AudioStreamPlayer.play()
+	
+func stop_synth_music():
+	$AudioStreamPlayer.stream = synth_music
+	$AudioStreamPlayer.stop()
