@@ -311,6 +311,14 @@ position = Vector2( 48.7437, 176.833 )
 [node name="CavePos" type="Position2D" parent="."]
 position = Vector2( 768, 96 )
 
+[node name="TeeTimeIntro1Pos" type="Position2D" parent="."]
+position = Vector2( 224, -592 )
+
+[node name="Entrance" parent="." instance=ExtResource( 6 )]
+position = Vector2( 224, -656 )
+scale = Vector2( 0.5, 0.5 )
+next_world_scene = "res://levels/intro/DiscGolfTourneyIntro/TeeTimeIntro1.tscn"
+
 [editable path="Player"]
 
 [editable path="Player/PlayerCamera"]

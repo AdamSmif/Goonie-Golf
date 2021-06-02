@@ -18,7 +18,6 @@ tile_data = PoolIntArray( 327673, 0, 0, 327674, 0, 1, 327675, 0, 1, 327676, 0, 1
 position = Vector2( 525.052, 103.516 )
 
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
-animation = "Drew"
 frame = 1
 
 [node name="Text1" parent="defaultNPC/DialogSystem" index="1"]

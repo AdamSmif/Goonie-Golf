@@ -12,7 +12,7 @@ extents = Vector2( 7.40864, 2.04224 )
 
 [node name="DiscRight" type="KinematicBody2D"]
 collision_layer = 32
-collision_mask = 17
+collision_mask = 33
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
