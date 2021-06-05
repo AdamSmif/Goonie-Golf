@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ui/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://entities/Assets/DialogueBox/DialogueBox.png" type="Texture" id=2]
+[ext_resource path="res://engine/CutsceneDialogue/CutsceneDialogue.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[node name="CutsceneDialogue" type="CanvasLayer"]
+script = ExtResource( 3 )
+dialogue_file = "res://entities/Dialogue/npc.json"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 16.0
+margin_top = 240.0
+margin_right = 624.0
+margin_bottom = 360.0
+texture = ExtResource( 2 )
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Message" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 24.0
+margin_top = 48.0
+margin_right = 584.0
+margin_bottom = 104.0
+theme = SubResource( 2 )
+text = "Message"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 104.0
+margin_bottom = 40.0
+theme = SubResource( 4 )
+text = "Name"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

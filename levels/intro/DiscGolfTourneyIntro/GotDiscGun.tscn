@@ -1,5 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://engine/DialoguePlayer/DialoguePlayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entities/Player/main player wade/player_gun10.png" type="Texture" id=4]
 [ext_resource path="res://levels/intro/DiscGolfTourneyIntro/GotDiscGun.gd" type="Script" id=5]
 
@@ -21,8 +24,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Player" type="Sprite" parent="."]
-position = Vector2( 344, 232 )
+[node name="Gun" type="Sprite" parent="."]
+position = Vector2( 520, 328 )
 rotation = -0.289725
-scale = Vector2( 25, 25 )
+scale = Vector2( 12, 12 )
 texture = ExtResource( 4 )
+
+[node name="GroundTile" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( 1048569, 0, 0, 1048570, 0, 1, 1048571, 0, 2, 983065, 0, 0, 983066, 0, 1, 983067, 0, 2, 1114105, 0, 65536, 1114106, 0, 65537, 1114107, 0, 65538, 1048601, 0, 65536, 1048602, 0, 65537, 1048603, 0, 65538, 1179641, 0, 65536, 1179642, 0, 65537, 1179643, 0, 131077, 1179644, 0, 1, 1179645, 0, 1, 1179646, 0, 1, 1179647, 0, 1, 1114112, 0, 1, 1114113, 0, 1, 1114114, 0, 1, 1114115, 0, 1, 1114116, 0, 1, 1114117, 0, 1, 1114118, 0, 1, 1114119, 0, 1, 1114120, 0, 1, 1114121, 0, 1, 1114122, 0, 1, 1114123, 0, 1, 1114124, 0, 1, 1114125, 0, 1, 1114126, 0, 1, 1114127, 0, 1, 1114128, 0, 1, 1114129, 0, 1, 1114130, 0, 1, 1114131, 0, 1, 1114132, 0, 1, 1114133, 0, 1, 1114134, 0, 1, 1114135, 0, 1, 1114136, 0, 1, 1114137, 0, 131078, 1114138, 0, 65537, 1114139, 0, 65538, 1245177, 0, 131072, 1245178, 0, 131073, 1245179, 0, 131073, 1245180, 0, 131073, 1245181, 0, 131073, 1245182, 0, 131073, 1245183, 0, 131073, 1179648, 0, 131073, 1179649, 0, 131073, 1179650, 0, 131073, 1179651, 0, 131073, 1179652, 0, 131073, 1179653, 0, 131073, 1179654, 0, 131073, 1179655, 0, 131073, 1179656, 0, 131073, 1179657, 0, 131073, 1179658, 0, 131073, 1179659, 0, 131073, 1179660, 0, 131073, 1179661, 0, 131073, 1179662, 0, 131073, 1179663, 0, 131073, 1179664, 0, 131073, 1179665, 0, 131073, 1179666, 0, 131073, 1179667, 0, 131073, 1179668, 0, 131073, 1179669, 0, 131073, 1179670, 0, 131073, 1179671, 0, 131073, 1179672, 0, 131073, 1179673, 0, 131073, 1179674, 0, 131073, 1179675, 0, 131074 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -104, 512 )
+
+[node name="PlayerCamera" parent="Player" index="13"]
+current = false
+
+[node name="TeeTimeIntro1Pos" type="Position2D" parent="."]
+position = Vector2( -48, 520 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 320, 192 )
+current = true
+
+[node name="DialoguePlayer" parent="." instance=ExtResource( 3 )]
+dialogue_file = "res://entities/Dialogue/introclarence.json"
+
+[editable path="Player"]

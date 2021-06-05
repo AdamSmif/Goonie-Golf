@@ -20,7 +20,6 @@ position = Vector2( 512, 96 )
 
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
 position = Vector2( 2.948, 8.484 )
-frame = 0
 
 [node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 8 )]
 dialogue_file = "res://entities/Dialogue/npc.json"
