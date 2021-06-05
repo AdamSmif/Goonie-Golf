@@ -221,18 +221,18 @@ func _on_Hurtbox_area_entered(area):
 		$Sprite.play("boom")
 		motion.x = 0
 		$Timer.start()
-		get_tree().change_scene("res://UI/PlayerKO.tscn")
+		get_tree().change_scene(lose_level_world_scene)
 	
 
 
 func _on_GameOverTimer_timeout():
-	get_tree().change_scene("res://UI/PlayerKO.tscn")
+	get_tree().change_scene(lose_level_world_scene)
 
 
 func _on_PlayerStats_no_health():
 	$Sprite.play("boom")
 	motion.x = 0
-	get_tree().change_scene("res://UI/PlayerKO.tscn")
+	get_tree().change_scene(lose_level_world_scene)
 	
 
 ### Save Data ####

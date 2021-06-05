@@ -1,0 +1,14 @@
+[
+    {"name": "Coach", "text": "How on earth did you get here?"},
+    {"name": "Wade", "text": "...I...don't know..."},
+    {"name": "Coach", "text": "hmm..."},
+    {"name": "Coach", "text": "Well regardless, we got to head to the course right now. Your tee time is coming up soon."},
+    {"name": "Coach", "text": "You have your disc launcher right?"},
+    {"name": "Wade", "text": "Yeah I should have it..."},
+    {"name": "Wade", "text": "Oh no"},
+    {"name": "Coach", "text": "Don't tell me you lost your disc launcher!"},
+    {"name": "Wade", "text": "Okay uh...I didn't lose my disc launcher"},
+    {"name": "Coach", "text": "Man don't scare me like that!"},
+    {"name": "Coach", "text": "Anyway, I'll meet you at the course, you can borrow my golf cart. I need the exercise anyway"},
+    {"name": "Mysterious Voice", "text": "Go look for your disc golf launcher before coach finds out"}
+]

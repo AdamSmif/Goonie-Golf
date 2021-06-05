@@ -92,6 +92,9 @@ next_world_scene = "res://levels/intro/DiscGolfTourneyIntro/Hole2.tscn"
 [node name="GotDiscGunPos" type="Position2D" parent="."]
 position = Vector2( -58.3294, 46.4268 )
 
+[node name="TeeTimeIntro1Pos" type="Position2D" parent="."]
+position = Vector2( -58.3294, 46.4268 )
+
 [editable path="Player"]
 
 [editable path="Player/PlayerCamera"]

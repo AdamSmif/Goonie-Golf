@@ -20,15 +20,15 @@ default_font = SubResource( 3 )
 script = ExtResource( 3 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_top = 72.0
 margin_right = 640.0
-margin_bottom = 112.0
+margin_bottom = 184.0
 texture = ExtResource( 1 )
 patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 9
 patch_margin_bottom = 10
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -47,7 +47,7 @@ __meta__ = {
 [node name="Name" type="RichTextLabel" parent="NinePatchRect"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 120.0
+margin_right = 280.0
 margin_bottom = 32.0
 theme = SubResource( 4 )
 text = "Name"

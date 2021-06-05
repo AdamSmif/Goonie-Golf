@@ -2,7 +2,7 @@
 
 [ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=2]
-[ext_resource path="res://engine/DialoguePlayer/DialoguePlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://engine/CutsceneDialogue/CutsceneDialogue.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entities/Player/main player wade/player_gun10.png" type="Texture" id=4]
 [ext_resource path="res://levels/intro/DiscGolfTourneyIntro/GotDiscGun.gd" type="Script" id=5]
 
@@ -21,11 +21,12 @@ margin_right = 776.0
 margin_bottom = 520.0
 color = Color( 0.180392, 0.180392, 0.180392, 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Gun" type="Sprite" parent="."]
-position = Vector2( 520, 328 )
+position = Vector2( 344, 136 )
 rotation = -0.289725
 scale = Vector2( 12, 12 )
 texture = ExtResource( 4 )
@@ -46,7 +47,8 @@ position = Vector2( -48, 520 )
 position = Vector2( 320, 192 )
 current = true
 
-[node name="DialoguePlayer" parent="." instance=ExtResource( 3 )]
-dialogue_file = "res://entities/Dialogue/introclarence.json"
+[node name="CutsceneDialogue" parent="." instance=ExtResource( 3 )]
+dialogue_file = "res://entities/Dialogue/gotdiscgolfgunbroadcast.json"
+next_world_scene = "res://levels/intro/DiscGolfTourneyIntro/Hole1.tscn"
 
 [editable path="Player"]

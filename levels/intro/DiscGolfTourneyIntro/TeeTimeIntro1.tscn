@@ -51,12 +51,6 @@ rotation = -0.654498
 scale = Vector2( 4, 4 )
 texture = ExtResource( 6 )
 
-[node name="Exit" parent="player_gun10" instance=ExtResource( 4 )]
-position = Vector2( 1.39648, 0.631668 )
-rotation = 0.692896
-scale = Vector2( 0.2, 0.2 )
-next_world_scene = "res://levels/intro/DiscGolfTourneyIntro/Hole1.tscn"
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -4.74994, 237.497 )
 
@@ -81,6 +75,11 @@ position = Vector2( -40, 240 )
 position = Vector2( -136, 208 )
 scale = Vector2( 0.8, 0.9 )
 next_world_scene = "res://levels/intro/IntroHub/ToDiscGolfHub.tscn"
+
+[node name="Entrance2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1048, 136 )
+scale = Vector2( 0.5, 0.5 )
+next_world_scene = "res://levels/intro/DiscGolfTourneyIntro/GotDiscGun.tscn"
 
 [node name="RainEffect" parent="." instance=ExtResource( 12 )]
 

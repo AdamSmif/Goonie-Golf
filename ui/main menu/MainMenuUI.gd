@@ -18,16 +18,24 @@ func _ready():
 
 # Main Game
 func _on_Button_pressed():
+	$MenuSelect.play()
+	yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene(next_world_scene)
 
 
 func _on_Mini_Game_pressed():
+	$MenuSelect.play()
+	yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene(to_minigames_scene)
 
 
 func _on_Options_pressed():
+	$MenuSelect.play()
+	yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene(to_options_scene)
 
 
 func _on_Credits_pressed():
+	$MenuSelect.play()
+	yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene(to_credits_scene)
