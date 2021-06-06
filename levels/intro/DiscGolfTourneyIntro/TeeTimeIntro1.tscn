@@ -66,7 +66,7 @@ texture = ExtResource( 5 )
 
 [node name="FallZone" parent="." instance=ExtResource( 8 )]
 position = Vector2( 423.597, 731.152 )
-lose_level_world_scene = "res://Levels/Intro/discgolftourney/TeeTimeIntro1.tscn"
+lose_level_world_scene = "res://levels/intro/DiscGolfTourneyIntro/TeeTimeIntro1.tscn"
 
 [node name="ToDiscGolfHubPos" type="Position2D" parent="."]
 position = Vector2( -40, 240 )
