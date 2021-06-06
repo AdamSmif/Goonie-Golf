@@ -27,18 +27,18 @@ func _ready():
 
 func _physics_process(delta):
 	velocity = Vector2()
-	if Input.is_action_pressed('right_%s' % id):
+	if Input.is_action_pressed('hider_right_%s' % id):
 		$Sprite.flip_h = false
 		$Sprite.play("move")
 		velocity.x += 1
-	if Input.is_action_pressed('left_%s' % id):
+	if Input.is_action_pressed('hider_left_%s' % id):
 		$Sprite.flip_h = true
 		$Sprite.play("move")
 		velocity.x -= 1
-	if Input.is_action_pressed('up_%s' % id):
+	if Input.is_action_pressed('hider_up_%s' % id):
 		$Sprite.play("move")
 		velocity.y -= 1
-	if Input.is_action_pressed('down_%s' % id):
+	if Input.is_action_pressed('hider_down_%s' % id):
 		$Sprite.play("move")
 		velocity.y += 1
 	velocity = velocity.normalized() * MAX_SPEED

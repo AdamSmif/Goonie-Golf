@@ -43,7 +43,6 @@ extents = Vector2( 8.37697, 9.79048 )
 
 [node name="Hider" type="KinematicBody2D"]
 script = ExtResource( 8 )
-id = 2
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )

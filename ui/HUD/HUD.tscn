@@ -20,18 +20,20 @@ script = ExtResource( 1 )
 bottle_world_scene = "res://Levels/World.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 8.0
 margin_top = 8.0
-margin_right = 112.0
+margin_right = 128.0
 margin_bottom = 56.0
 color = Color( 0, 0, 0, 0.407843 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="BottleIcon" type="TextureRect" parent="."]
-margin_left = 48.0
+margin_left = 62.4
 margin_top = 8.0
-margin_right = 72.0
+margin_right = 86.4
 margin_bottom = 32.0
 texture = ExtResource( 2 )
 expand = true
@@ -40,9 +42,9 @@ __meta__ = {
 }
 
 [node name="Bottles" type="Label" parent="."]
-margin_left = 72.0
+margin_left = 86.4
 margin_top = 8.0
-margin_right = 121.391
+margin_right = 135.791
 margin_bottom = 38.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -53,9 +55,9 @@ __meta__ = {
 }
 
 [node name="Bottles2" type="Label" parent="."]
-margin_left = 88.0
+margin_left = 102.4
 margin_top = 8.0
-margin_right = 137.391
+margin_right = 151.791
 margin_bottom = 38.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -68,9 +70,9 @@ __meta__ = {
 [node name="HealthUI" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -288.0
+margin_left = -273.6
 margin_top = 16.0
-margin_right = -269.0
+margin_right = -254.6
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( -281.02, -194.117 )
 theme = SubResource( 3 )
@@ -82,9 +84,9 @@ __meta__ = {
 [node name="Disc" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -264.0
+margin_left = -249.6
 margin_top = 40.0
-margin_right = -244.0
+margin_right = -229.6
 margin_bottom = 56.0
 rect_pivot_offset = Vector2( -281.02, -194.117 )
 theme = SubResource( 3 )
@@ -94,10 +96,10 @@ __meta__ = {
 }
 
 [node name="disc" type="Sprite" parent="."]
-position = Vector2( 32, 48 )
+position = Vector2( 46.4, 48 )
 texture = ExtResource( 4 )
 
 [node name="icon" type="Sprite" parent="."]
-position = Vector2( 16, 24 )
+position = Vector2( 30.4, 24 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 5 )

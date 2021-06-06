@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/palmtree.png-fab8bfefe697b4efaf39f7c083ece3ac.stex"
+path="res://.import/CliffTileset.png-326b13b8db115a777e2f8389d51ccceb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/Assets/Palm Tree/palmtree.png"
-dest_files=[ "res://.import/palmtree.png-fab8bfefe697b4efaf39f7c083ece3ac.stex" ]
+source_file="res://entities/tiles/CliffTile/CliffTileset.png"
+dest_files=[ "res://.import/CliffTileset.png-326b13b8db115a777e2f8389d51ccceb.stex" ]
 
 [params]
 
