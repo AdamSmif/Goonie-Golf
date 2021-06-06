@@ -22,7 +22,7 @@ position = Vector2( 512, 96 )
 position = Vector2( 2.948, 8.484 )
 
 [node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 8 )]
-dialogue_file = "res://entities/Dialogue/npc.json"
+dialogue_file = "res://entities/Dialogue/introcutscene/JoeSandersIntroHouse.json"
 
 [node name="defaultNPC2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1112, -48 )
@@ -30,7 +30,6 @@ position = Vector2( 1112, -48 )
 [node name="AnimatedSprite" parent="defaultNPC2" index="0"]
 position = Vector2( 0.598755, 1.79622 )
 animation = "Clarence"
-frame = 0
 
 [node name="DialoguePlayer" parent="defaultNPC2" instance=ExtResource( 8 )]
 dialogue_file = "res://entities/Dialogue/introclarence.json"
