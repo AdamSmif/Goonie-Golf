@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://levels/Levels.gd" type="Script" id=1]
+[ext_resource path="res://entities/Assets/Background/Low Poly General/lowpolyswisterland.png" type="Texture" id=2]
+[ext_resource path="res://entities/Assets/Cards/Graham Pondexter.png" type="Texture" id=3]
+[ext_resource path="res://entities/Assets/Background/Morning Chill/morningchill.png" type="Texture" id=4]
+[ext_resource path="res://ui/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://engine/CutsceneDialogue/CutsceneDialogue.tscn" type="PackedScene" id=6]
+[ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.tscn" type="PackedScene" id=7]
+[ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="GotCardCave" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="morningchill" type="Sprite" parent="."]
+visible = false
+position = Vector2( 319.949, 67.1495 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 4 )
+
+[node name="lowpolyswisterland" type="Sprite" parent="."]
+modulate = Color( 0.890196, 0.65098, 0.396078, 1 )
+position = Vector2( 203.773, 188.279 )
+texture = ExtResource( 2 )
+
+[node name="Graham Pondexter" type="Sprite" parent="."]
+position = Vector2( 136, 192 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 66.7185
+margin_top = 160.0
+margin_right = 210.718
+margin_bottom = 208.0
+theme = SubResource( 2 )
+text = "Graham Pondexter"
+scroll_active = false
+
+[node name="CutsceneDialogue" parent="." instance=ExtResource( 6 )]
+dialogue_file = "res://entities/Dialogue/introcave/grahampondexterbio.json"
+next_world_scene = "res://levels/intro/Cave/Cave.tscn"
+
+[node name="GroundTile" parent="." instance=ExtResource( 8 )]
+tile_data = PoolIntArray( 1048572, 0, 0, 1048573, 0, 1, 1048574, 0, 2, 983060, 0, 0, 983061, 0, 1, 983062, 0, 2, 1114108, 0, 65536, 1114109, 0, 65537, 1114110, 0, 65538, 1048596, 0, 65536, 1048597, 0, 65537, 1048598, 0, 65538, 1179644, 0, 65536, 1179645, 0, 65537, 1179646, 0, 65538, 1114132, 0, 65536, 1114133, 0, 65537, 1114134, 0, 65538, 1245180, 0, 65536, 1245181, 0, 65537, 1245182, 0, 65538, 1179668, 0, 65536, 1179669, 0, 65537, 1179670, 0, 65538, 1310716, 0, 65536, 1310717, 0, 65537, 1310718, 0, 65538, 1245204, 0, 65536, 1245205, 0, 65537, 1245206, 0, 65538, 1376252, 0, 65536, 1376253, 0, 65537, 1376254, 0, 131077, 1376255, 0, 1, 1310720, 0, 1, 1310721, 0, 1, 1310722, 0, 1, 1310723, 0, 1, 1310724, 0, 1, 1310725, 0, 1, 1310726, 0, 1, 1310727, 0, 1, 1310728, 0, 1, 1310729, 0, 1, 1310730, 0, 1, 1310731, 0, 1, 1310732, 0, 1, 1310733, 0, 1, 1310734, 0, 1, 1310735, 0, 1, 1310736, 0, 1, 1310737, 0, 1, 1310738, 0, 1, 1310739, 0, 1, 1310740, 0, 131078, 1310741, 0, 65537, 1310742, 0, 65538, 1441788, 0, 65536, 1441789, 0, 65537, 1441790, 0, 65537, 1441791, 0, 65537, 1376256, 0, 65537, 1376257, 0, 65537, 1376258, 0, 65537, 1376259, 0, 65537, 1376260, 0, 65537, 1376261, 0, 65537, 1376262, 0, 65537, 1376263, 0, 65537, 1376264, 0, 65537, 1376265, 0, 65537, 1376266, 0, 65537, 1376267, 0, 65537, 1376268, 0, 65537, 1376269, 0, 65537, 1376270, 0, 65537, 1376271, 0, 65537, 1376272, 0, 65537, 1376273, 0, 65537, 1376274, 0, 65537, 1376275, 0, 65537, 1376276, 0, 65537, 1376277, 0, 65537, 1376278, 0, 65538, 1507324, 0, 131072, 1507325, 0, 131073, 1507326, 0, 131073, 1507327, 0, 131073, 1441792, 0, 131073, 1441793, 0, 131073, 1441794, 0, 131073, 1441795, 0, 131073, 1441796, 0, 131073, 1441797, 0, 131073, 1441798, 0, 131073, 1441799, 0, 131073, 1441800, 0, 131073, 1441801, 0, 131073, 1441802, 0, 131073, 1441803, 0, 131073, 1441804, 0, 131073, 1441805, 0, 131073, 1441806, 0, 131073, 1441807, 0, 131073, 1441808, 0, 131073, 1441809, 0, 131073, 1441810, 0, 131073, 1441811, 0, 131073, 1441812, 0, 131073, 1441813, 0, 131073, 1441814, 0, 131074 )
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+position = Vector2( 22.2073, 599.599 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 320, 176 )
+current = true
+
+[node name="CavePos" type="Position2D" parent="."]
+position = Vector2( 120, 600 )

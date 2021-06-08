@@ -72,7 +72,13 @@ position = Vector2( 320, 160 )
 texture = ExtResource( 5 )
 
 [node name="Raining" parent="Player/PlayerCamera" index="2" instance=ExtResource( 9 )]
-position = Vector2( 276.552, -110.621 )
+position = Vector2( 12.3424, -157.989 )
+
+[node name="Raining2" parent="Player/PlayerCamera" index="3" instance=ExtResource( 9 )]
+position = Vector2( 56.5528, -127.463 )
+
+[node name="Raining3" parent="Player/PlayerCamera" index="4" instance=ExtResource( 9 )]
+position = Vector2( 22.8687, -176.937 )
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
 
@@ -94,6 +100,7 @@ position = Vector2( -58.3294, 46.4268 )
 
 [node name="TeeTimeIntro1Pos" type="Position2D" parent="."]
 position = Vector2( -58.3294, 46.4268 )
+[connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
 [editable path="Player"]
 

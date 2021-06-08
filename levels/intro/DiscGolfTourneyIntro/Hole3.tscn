@@ -35,7 +35,13 @@ position = Vector2( 336.379, 185.008 )
 texture = ExtResource( 7 )
 
 [node name="Raining" parent="Player/PlayerCamera" index="2" instance=ExtResource( 5 )]
-position = Vector2( 240.444, -174.95 )
+position = Vector2( -156.571, -122.334 )
+
+[node name="Raining2" parent="Player/PlayerCamera" index="3" instance=ExtResource( 5 )]
+position = Vector2( 29.9784, -151.033 )
+
+[node name="Raining3" parent="Player/PlayerCamera" index="4" instance=ExtResource( 5 )]
+position = Vector2( 63.4616, -93.6337 )
 
 [node name="FallZone" parent="." instance=ExtResource( 4 )]
 position = Vector2( 416, 1168 )
@@ -61,6 +67,7 @@ __meta__ = {
 position = Vector2( -32.9999, 56.9999 )
 
 [node name="RainEffect" parent="." instance=ExtResource( 10 )]
+[connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
 [editable path="Player"]
 

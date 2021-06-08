@@ -27,7 +27,7 @@ tracks/0/keys = {
 }
 
 [node name="PlayerCamera" type="Camera2D"]
-offset = Vector2( 250, -125 )
+offset = Vector2( 0, -125 )
 current = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -41,10 +41,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 155.98
-margin_top = -143.337
-margin_right = 355.98
-margin_bottom = -103.337
+margin_left = -100.0
+margin_top = -264.0
+margin_right = 100.0
+margin_bottom = -196.0
 theme = SubResource( 2 )
 text = "Disc Golf Game"
 scroll_active = false

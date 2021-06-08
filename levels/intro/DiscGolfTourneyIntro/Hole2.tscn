@@ -23,8 +23,14 @@ tile_data = PoolIntArray( -4259937, 0, 0, -4259936, 0, 2, -4194401, 0, 65536, -4
 position = Vector2( 328, 176 )
 texture = ExtResource( 6 )
 
+[node name="PlayerCamera" parent="Player" index="12"]
+offset = Vector2( 125, -125 )
+
 [node name="Raining" parent="Player/PlayerCamera" index="2" instance=ExtResource( 7 )]
-position = Vector2( 256, -136 )
+position = Vector2( -48, -176 )
+
+[node name="Raining2" parent="Player/PlayerCamera" index="3" instance=ExtResource( 7 )]
+position = Vector2( 104, -64 )
 
 [node name="FallZone" parent="." instance=ExtResource( 4 )]
 position = Vector2( 481.135, 1001.14 )
@@ -41,6 +47,7 @@ next_world_scene = "res://levels/intro/DiscGolfTourneyIntro/Hole3.tscn"
 position = Vector2( 32, 80 )
 
 [node name="RainEffect" parent="." instance=ExtResource( 9 )]
+[connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
 [editable path="Player"]
 

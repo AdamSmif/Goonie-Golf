@@ -34,6 +34,7 @@ func _ready():
 
 func _physics_process(delta):
 		if bottles == 8:
+			Global.from = get_parent().name 
 			get_tree().change_scene(bottle_world_scene)
 			
 

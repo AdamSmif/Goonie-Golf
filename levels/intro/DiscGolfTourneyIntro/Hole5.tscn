@@ -31,24 +31,25 @@ position = Vector2( 344, 128 )
 texture = ExtResource( 4 )
 
 [node name="Raining" parent="Player/PlayerCamera" index="2" instance=ExtResource( 3 )]
-position = Vector2( 216, -144 )
+position = Vector2( 0, -120 )
 
 [node name="Raining2" parent="Player/PlayerCamera" index="3" instance=ExtResource( 3 )]
-position = Vector2( 360, -176 )
+position = Vector2( -208, -192 )
 
 [node name="Raining3" parent="Player/PlayerCamera" index="4" instance=ExtResource( 3 )]
-position = Vector2( 288, -80 )
+position = Vector2( 160, -64 )
 
 [node name="Raining4" parent="Player/PlayerCamera" index="5" instance=ExtResource( 3 )]
-position = Vector2( 408, -48 )
+position = Vector2( -200, -24 )
 
 [node name="Raining5" parent="Player/PlayerCamera" index="6" instance=ExtResource( 3 )]
-position = Vector2( 160, -184 )
+position = Vector2( -200, -24 )
 
 [node name="Raining6" parent="Player/PlayerCamera" index="7" instance=ExtResource( 3 )]
-position = Vector2( 320, -256 )
+position = Vector2( 152, -192 )
 
 [node name="defaultNPC" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1464, 72 )
+[connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
 [editable path="Player"]
