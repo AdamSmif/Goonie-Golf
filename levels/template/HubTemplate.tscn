@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://entities/Player/top down golf cart player wade/GolfCartPlayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/tiles/CliffTile/Cliffs.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/Levels.gd" type="Script" id=3]
+[ext_resource path="res://entities/tiles/Path/RoadPath/Path.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/tiles/WorldHubTile/WorldMap.tscn" type="PackedScene" id=5]
+
+[node name="HubTemplate" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="WorldMap" parent="." instance=ExtResource( 5 )]
+
+[node name="Path" parent="." instance=ExtResource( 4 )]
+
+[node name="Cliffs" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 129.93, 42.7547 )
+
+[node name="Enviroment" type="YSort" parent="."]
+
+[node name="Foliage" type="YSort" parent="Enviroment"]
+
+[node name="Mountains" type="YSort" parent="Enviroment"]
+
+[node name="NameOfLevelYouCameFromPos" type="Position2D" parent="."]
