@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://entities/Player/3d player wade/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/Assets/3D Assets/platform.dae" type="PackedScene" id=2]
+[ext_resource path="res://entities/Assets/3D Assets/treeboy.dae" type="PackedScene" id=3]
+[ext_resource path="res://entities/Assets/3D Assets/tree.dae" type="PackedScene" id=4]
+[ext_resource path="res://entities/Assets/Background/Sunset Sky/sunsetsky.png" type="Texture" id=5]
+[ext_resource path="res://entities/Assets/Palm Tree/palmtree1.png" type="Texture" id=6]
+[ext_resource path="res://entities/Assets/3D Assets/firstlandscape.dae" type="PackedScene" id=7]
+[ext_resource path="res://levels/intro/Void/3DPlatformTest.gd" type="Script" id=8]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 4.08838
+height = 0.002
+
+[sub_resource type="PanoramaSky" id=2]
+radiance_size = 1
+panorama = ExtResource( 5 )
+
+[sub_resource type="Environment" id=3]
+background_mode = 2
+background_sky = SubResource( 2 )
+ambient_light_color = Color( 0.807843, 0.113725, 0.113725, 1 )
+
+[sub_resource type="CapsuleShape" id=4]
+height = 0.002
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 8 )
+next_world_scene = "res://levels/intro/Void/IntoTheVoid.tscn"
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.552996, 5.95494, -8.31604 )
+
+[node name="platform" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26974, 14.8512, -6.52139 )
+
+[node name="platform2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00043, 18.4012, 2.12357 )
+
+[node name="platform3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.561, 12.0038, -25.03 )
+
+[node name="tree" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81285, 12.8809, -21.7279 )
+
+[node name="treeboy" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.2415, 13.0188, -25.7729 )
+
+[node name="CollisionShape" type="CollisionShape" parent="treeboy"]
+transform = Transform( 2, 0, 0, 0, 5, 0, 0, 0, 2, 0, -7.37952, -0.742617 )
+shape = SubResource( 1 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 0, 5.4036, -15.7248 )
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 4 )
+
+[node name="firstlandscape" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.00178898, 0, -0.499997, 0, 0.5, 0, 0.499997, 0, -0.00178898, 12.4054, -0.0780754, -70.0261 )

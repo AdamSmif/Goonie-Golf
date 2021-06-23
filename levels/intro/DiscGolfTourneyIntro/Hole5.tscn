@@ -20,7 +20,7 @@ tile_data = PoolIntArray( -2097101, 0, 0, -2097100, 0, 1, -2097099, 0, 1, -20970
 
 [node name="FallZone" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1552, 1672 )
-lose_level_world_scene = "res://levels/intro/Cave/Cave.tscn"
+lose_level_world_scene = "res://levels/intro/Void/3DPlatformTest.tscn"
 
 [node name="hole4Pos" type="Position2D" parent="."]
 
