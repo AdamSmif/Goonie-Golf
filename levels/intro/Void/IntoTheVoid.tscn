@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://entities/Player/main player wade/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://ui/HUD/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://entities/Assets/Palm Tree/PalmTree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://engine/Fall Zone/FallZone.tscn" type="PackedScene" id=10]
+[ext_resource path="res://entities/NPCs/ADefaultNPC/defaultNPC.tscn" type="PackedScene" id=11]
+[ext_resource path="res://engine/DialoguePlayer/DialoguePlayer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://entities/Assets/Dumbell/Dumbell.tscn" type="PackedScene" id=13]
 
 [node name="IntoTheVoid" type="Node2D"]
 script = ExtResource( 5 )
@@ -28,24 +31,29 @@ position = Vector2( 6800, -264 )
 scale = Vector2( 10, 10 )
 frame = 1
 
-[node name="Trees" type="YSort" parent="."]
+[node name="Props" type="YSort" parent="."]
 
-[node name="PalmTree" parent="Trees" instance=ExtResource( 9 )]
+[node name="PalmTree" parent="Props" instance=ExtResource( 9 )]
 modulate = Color( 0.0666667, 0.00392157, 0.0823529, 1 )
 position = Vector2( 744, -80 )
 scale = Vector2( 12, 12 )
+frame = 0
 
-[node name="PalmTree2" parent="Trees" instance=ExtResource( 9 )]
+[node name="PalmTree2" parent="Props" instance=ExtResource( 9 )]
 modulate = Color( 0.0666667, 0.00392157, 0.0823529, 1 )
 position = Vector2( 1480, -160 )
 scale = Vector2( 12, 12 )
-frame = 1
+frame = 0
 
-[node name="PalmTree3" parent="Trees" instance=ExtResource( 9 )]
+[node name="PalmTree3" parent="Props" instance=ExtResource( 9 )]
 modulate = Color( 0.0666667, 0.00392157, 0.0823529, 1 )
 position = Vector2( -95.9999, -112 )
 scale = Vector2( 12, 12 )
-frame = 1
+frame = 0
+
+[node name="Dumbell" parent="Props" instance=ExtResource( 13 )]
+modulate = Color( 0.0235294, 0.168627, 0.027451, 1 )
+position = Vector2( 1896, -200 )
 
 [node name="GroundTile" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.0470588, 0.00392157, 0.0862745, 1 )
@@ -83,3 +91,14 @@ position = Vector2( 8, -536 )
 [node name="FallZone" parent="." instance=ExtResource( 10 )]
 position = Vector2( 480, 888 )
 lose_level_world_scene = "res://levels/intro/Void/IntoTheVoid.tscn"
+
+[node name="defaultNPC" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1976, -208 )
+
+[node name="AnimatedSprite" parent="defaultNPC" index="0"]
+frame = 1
+
+[node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 12 )]
+dialogue_file = "res://entities/Dialogue/introvoid/SusanSoloTalk1.json"
+
+[editable path="defaultNPC"]

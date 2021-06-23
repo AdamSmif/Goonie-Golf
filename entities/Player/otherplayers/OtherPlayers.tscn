@@ -1,11 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://entities/Player/otherplayers/OtherPlayers.gd" type="Script" id=1]
 [ext_resource path="res://entities/Player/otherplayers/Other Player Assets/otherplayers.2.png" type="Texture" id=2]
+[ext_resource path="res://entities/Player/otherplayers/Other Player Assets/otherplayers.3.png" type="Texture" id=3]
+[ext_resource path="res://entities/Player/otherplayers/Other Player Assets/otherplayers.4.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -35,6 +37,9 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.13
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.427185, 0.284792 )
