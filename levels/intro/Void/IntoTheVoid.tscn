@@ -89,7 +89,7 @@ position = Vector2( 8, -536 )
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 
 [node name="FallZone" parent="." instance=ExtResource( 10 )]
-position = Vector2( 480, 888 )
+position = Vector2( 2507.12, 919.773 )
 lose_level_world_scene = "res://levels/intro/Void/IntoTheVoid.tscn"
 
 [node name="defaultNPC" parent="." instance=ExtResource( 11 )]
