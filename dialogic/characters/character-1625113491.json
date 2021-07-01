@@ -1,0 +1,20 @@
+{
+	"color": "#fff62a2a",
+	"description": "Cool Guy\n",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1625113491.json",
+	"mirror_portraits": false,
+	"name": "Test",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 1
+}

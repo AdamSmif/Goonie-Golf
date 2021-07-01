@@ -10,5 +10,7 @@
     {"name": "Wade", "text": "Okay uh...I didn't lose my disc launcher"},
     {"name": "Coach", "text": "Man don't scare me like that!"},
     {"name": "Coach", "text": "Anyway, I'll meet you at the course, you can borrow my golf cart. I need the exercise anyway"},
+    {"name": "Coach", "text": "Head north from the gym and you should see a big giant mansion by the beach. We're hosting the disc golf tourney there."},
+    {"name": "Wade", "text": "Sounds good"},
     {"name": "Mysterious Voice", "text": "Go look for your disc golf launcher before coach finds out"}
 ]

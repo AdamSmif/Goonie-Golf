@@ -16,16 +16,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "Vern Avocado",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "Drewzer Brewzer",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "Clarence",
@@ -36,14 +26,24 @@ animations = [ {
 "name": "Joe Sanders",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Blue Guy",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "Susan Solo",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 2 ) ],
 "loop": true,
-"name": "Blue Guy",
+"name": "Drewzer Brewzer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Vern Avocado",
 "speed": 5.0
 } ]
 

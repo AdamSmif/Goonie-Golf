@@ -41,14 +41,8 @@ position = Vector2( 24, -40 )
 [node name="defaultNPC" parent="." instance=ExtResource( 6 )]
 position = Vector2( -370.076, 271.656 )
 
-[node name="Text1" parent="defaultNPC/DialogSystem" index="1"]
-text = "How ya doing?"
-
-[node name="Text2" parent="defaultNPC/DialogSystem" index="2"]
-text = "What a cool sytem!"
-
-[node name="Text3" parent="defaultNPC/DialogSystem" index="3"]
-text = ""
+[node name="AnimatedSprite" parent="defaultNPC" index="0"]
+frame = 1
 
 [node name="MuscleBot" parent="." instance=ExtResource( 8 )]
 position = Vector2( 384, 256 )

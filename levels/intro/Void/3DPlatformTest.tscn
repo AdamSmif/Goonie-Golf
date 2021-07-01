@@ -36,7 +36,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.552996, 5.95494, -8.31604 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26974, 14.8512, -6.52139 )
 
 [node name="platform2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00043, 18.4012, 2.12357 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02429, 18.4378, 2.08698 )
 
 [node name="platform3" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.561, 12.0038, -25.03 )
