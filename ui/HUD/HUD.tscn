@@ -20,21 +20,19 @@ script = ExtResource( 1 )
 bottle_world_scene = "res://Levels/World.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 128.0
-margin_bottom = 56.0
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 71.0
+margin_bottom = 87.0
 color = Color( 0, 0, 0, 0.407843 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="BottleIcon" type="TextureRect" parent="."]
-margin_left = 62.4
-margin_top = 8.0
-margin_right = 86.4
-margin_bottom = 32.0
+margin_top = 32.0
+margin_right = 24.0
+margin_bottom = 56.0
 texture = ExtResource( 2 )
 expand = true
 __meta__ = {
@@ -42,10 +40,10 @@ __meta__ = {
 }
 
 [node name="Bottles" type="Label" parent="."]
-margin_left = 86.4
-margin_top = 8.0
-margin_right = 135.791
-margin_bottom = 38.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 81.391
+margin_bottom = 62.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "#"
@@ -55,10 +53,10 @@ __meta__ = {
 }
 
 [node name="Bottles2" type="Label" parent="."]
-margin_left = 102.4
-margin_top = 8.0
-margin_right = 151.791
-margin_bottom = 38.0
+margin_left = 48.0
+margin_top = 32.0
+margin_right = 97.391
+margin_bottom = 62.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "/8"
@@ -70,10 +68,10 @@ __meta__ = {
 [node name="HealthUI" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -273.6
-margin_top = 16.0
-margin_right = -254.6
-margin_bottom = 32.0
+margin_left = -289.6
+margin_top = 8.0
+margin_right = -270.6
+margin_bottom = 24.0
 rect_pivot_offset = Vector2( -281.02, -194.117 )
 theme = SubResource( 3 )
 text = "4"
@@ -84,10 +82,10 @@ __meta__ = {
 [node name="Disc" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -249.6
-margin_top = 40.0
-margin_right = -229.6
-margin_bottom = 56.0
+margin_left = -288.0
+margin_top = 72.0
+margin_right = -268.0
+margin_bottom = 88.0
 rect_pivot_offset = Vector2( -281.02, -194.117 )
 theme = SubResource( 3 )
 text = "#"
@@ -96,10 +94,10 @@ __meta__ = {
 }
 
 [node name="disc" type="Sprite" parent="."]
-position = Vector2( 46.4, 48 )
+position = Vector2( 12.3939, 80.5548 )
 texture = ExtResource( 4 )
 
 [node name="icon" type="Sprite" parent="."]
-position = Vector2( 30.4, 24 )
+position = Vector2( 14.4, 16 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 5 )

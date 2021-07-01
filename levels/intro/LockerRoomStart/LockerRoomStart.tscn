@@ -61,7 +61,6 @@ scale = Vector2( 2, 2 )
 
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
 animation = "Joe Sanders"
-frame = 1
 
 [node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 12 )]
 dialogue_file = "res://entities/Dialogue/introcoachlockerroomtalk.json"

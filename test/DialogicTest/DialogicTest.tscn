@@ -42,7 +42,7 @@ position = Vector2( 24, -40 )
 position = Vector2( -370.076, 271.656 )
 
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
-frame = 1
+frame = 0
 
 [node name="MuscleBot" parent="." instance=ExtResource( 8 )]
 position = Vector2( 384, 256 )
