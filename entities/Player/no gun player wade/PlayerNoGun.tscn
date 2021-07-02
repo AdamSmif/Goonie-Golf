@@ -6,9 +6,9 @@
 [ext_resource path="res://entities/Player/no gun player wade/player1_run2.png" type="Texture" id=4]
 [ext_resource path="res://entities/Player/no gun player wade/player1_jump2.png" type="Texture" id=5]
 [ext_resource path="res://entities/Player/no gun player wade/player1_run4.png" type="Texture" id=6]
+[ext_resource path="res://audio/sound effects/Jump/JumpSound.tscn" type="PackedScene" id=7]
 [ext_resource path="res://entities/Player/no gun player wade/player1_run3.png" type="Texture" id=8]
 [ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.gd" type="Script" id=9]
-[ext_resource path="res://audio/sound effects/Jump.wav" type="AudioStream" id=10]
 [ext_resource path="res://audio/sound effects/coin/Coin.wav" type="AudioStream" id=11]
 [ext_resource path="res://entities/Player/no gun player wade/player1_run1.png" type="Texture" id=12]
 [ext_resource path="res://entities/Player/no gun player wade/player1_fallspoked.png" type="Texture" id=13]
@@ -57,11 +57,6 @@ animations = [ {
 "name": "move",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "boom",
-"speed": 5.0
-}, {
 "frames": [ null ],
 "loop": true,
 "name": "throw",
@@ -75,6 +70,11 @@ animations = [ {
 "frames": [ ExtResource( 13 ) ],
 "loop": true,
 "name": "shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "boom",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
@@ -107,7 +107,7 @@ script = ExtResource( 9 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "boom"
+animation = "idle"
 __meta__ = {
 "_edit_lock_": true
 }
@@ -139,12 +139,7 @@ position = Vector2( -17, 11 )
 visible = false
 position = Vector2( 17, 11 )
 
-[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 250, 0 )
-stream = ExtResource( 10 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="JumpSound" parent="." instance=ExtResource( 7 )]
 
 [node name="BottleSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 11 )

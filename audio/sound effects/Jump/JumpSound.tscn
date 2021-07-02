@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://audio/sound effects/Jump.wav" type="AudioStream" id=1]
+
+[node name="JumpSound" type="AudioStreamPlayer2D"]
+position = Vector2( 250, 0 )
+stream = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
