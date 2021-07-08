@@ -67,6 +67,7 @@ playing = true
 [node name="Rain9" type="AnimatedSprite" parent="."]
 position = Vector2( 336, 176 )
 frames = SubResource( 1 )
+frame = 2
 speed_scale = 1.5
 playing = true
 
