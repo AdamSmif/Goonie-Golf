@@ -27,14 +27,15 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-next_world_scene = "res://levels/intro/intro-cutscene/IntroCutscene.tscn"
+next_world_scene = "res://ui/games menu/Games.tscn"
 to_credits_scene = "res://ui/credits/Credits.tscn"
 to_options_scene = "res://ui/credits/Options.tscn"
-to_minigames_scene = "res://minigames/MiniGameIsland/MiniGameIsland.tscn"
+to_minigames_scene = "res://ui/Charity/Charity.tscn"
 
 [node name="NightSkyAnimated" parent="." instance=ExtResource( 2 )]
 position = Vector2( 320, 184 )
 scale = Vector2( 1.075, 1.13158 )
+frame = 1
 
 [node name="Ocean" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, 320 )
@@ -72,20 +73,23 @@ margin_top = 96.0
 margin_right = 392.0
 margin_bottom = 128.0
 theme = SubResource( 4 )
-text = "Main Game"
+text = "Games"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Mini Game" type="Button" parent="."]
+[node name="Charity" type="Button" parent="."]
 margin_left = 248.0
 margin_top = 152.0
 margin_right = 392.0
 margin_bottom = 184.0
 theme = SubResource( 4 )
-text = "Mini Games"
+text = "Charity"
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Options" type="Button" parent="."]
 margin_left = 56.0
@@ -134,7 +138,7 @@ position = Vector2( 392, 288 )
 
 [node name="MenuSelect" parent="." instance=ExtResource( 6 )]
 [connection signal="pressed" from="Start Game" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Mini Game" to="." method="_on_Mini_Game_pressed"]
+[connection signal="pressed" from="Charity" to="." method="_on_Mini_Game_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
 
