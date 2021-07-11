@@ -25,11 +25,13 @@ extents = Vector2( 12.6137, 10.7035 )
 extents = Vector2( 12.6137, 10.7035 )
 
 [node name="PlayerSkateBoard" type="KinematicBody2D"]
+collision_mask = 529
 script = ExtResource( 3 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 speed_scale = 0.25
 playing = true
 

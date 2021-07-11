@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://entities/Assets/Background/Night Sky/NightSkyAnimated.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/Assets/Ocean/Ocean.tscn" type="PackedScene" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://ui/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://entities/Assets/Disc Golf Basket/basket.png" type="Texture" id=5]
 [ext_resource path="res://ui/splash screen/SplashScreen2.gd" type="Script" id=6]
+[ext_resource path="res://entities/Assets/Soccer/soccerpixelart.png" type="Texture" id=7]
+[ext_resource path="res://entities/Assets/golf club/golf club.png" type="Texture" id=8]
+[ext_resource path="res://entities/Assets/fling golf stick/fling golf stick.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -40,29 +43,50 @@ next_world_scene = "res://ui/main menu/MainMenuUI.tscn"
 
 [node name="NightSkyAnimated" parent="." instance=ExtResource( 1 )]
 position = Vector2( 320, 176 )
-frame = 1
 
-[node name="basket" type="Sprite" parent="."]
-position = Vector2( 320, 200 )
+[node name="Sports" type="YSort" parent="."]
+
+[node name="basket" type="Sprite" parent="Sports"]
+position = Vector2( 312, 200 )
 scale = Vector2( 3.5, 3.5 )
 texture = ExtResource( 5 )
 
-[node name="Ocean" parent="." instance=ExtResource( 2 )]
+[node name="fling golf stick" type="Sprite" parent="Sports"]
+position = Vector2( 568, 184 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 9 )
+
+[node name="golf club" type="Sprite" parent="Sports"]
+position = Vector2( 64, 160 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 8 )
+
+[node name="soccerpixelart" type="Sprite" parent="Sports"]
+position = Vector2( 352, 280 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="Oceanwave" type="YSort" parent="."]
+
+[node name="Ocean" parent="Oceanwave" instance=ExtResource( 2 )]
 position = Vector2( 128, 304 )
+frame = 1
+
+[node name="Ocean2" parent="Oceanwave" instance=ExtResource( 2 )]
+position = Vector2( 376, 304 )
 frame = 2
 
-[node name="Ocean2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 376, 304 )
-
-[node name="Ocean3" parent="." instance=ExtResource( 2 )]
+[node name="Ocean3" parent="Oceanwave" instance=ExtResource( 2 )]
 position = Vector2( 632, 304 )
+frame = 2
 
-[node name="Ocean4" parent="." instance=ExtResource( 2 )]
+[node name="Ocean4" parent="Oceanwave" instance=ExtResource( 2 )]
 position = Vector2( -128, 304 )
-frame = 0
+frame = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -15.066
 autoplay = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -81,8 +105,9 @@ margin_left = -56.0
 margin_top = -48.0
 margin_right = 728.0
 margin_bottom = 416.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0, 0, 0, 0 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

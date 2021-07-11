@@ -36,7 +36,7 @@ position = Vector2( 877.999, 280.518 )
 [node name="Entrance" parent="." instance=ExtResource( 7 )]
 position = Vector2( -308.811, 307.252 )
 scale = Vector2( 1, 100 )
-next_world_scene = "res://levels/intro/IntroHub/ToDiscGolfHub.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/IntroHub/ToDiscGolfHub.tscn"
 
 [node name="CavePos" type="Position2D" parent="."]
 position = Vector2( 1507.24, 280.602 )
@@ -53,6 +53,6 @@ texture = ExtResource( 8 )
 [node name="Entrance2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1672.32, 278.463 )
 scale = Vector2( 0.2, 0.2 )
-next_world_scene = "res://levels/intro/Cave/GotCardCave.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/Cave/GotCardCave.tscn"
 
 [editable path="Player"]

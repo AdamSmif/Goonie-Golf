@@ -7,7 +7,8 @@
 [ext_resource path="res://UI/HUD/HUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://engine/Fall Zone/FallZone.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/NPCs/ADefaultNPC/defaultNPC.tscn" type="PackedScene" id=7]
-[ext_resource path="res://levels/intro/DiscGolfTourneyIntro/Hole5.gd" type="Script" id=8]
+[ext_resource path="res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole5.gd" type="Script" id=8]
+
 
 [node name="Hole5" type="Node2D"]
 modulate = Color( 0.4, 0.466667, 0.458824, 1 )

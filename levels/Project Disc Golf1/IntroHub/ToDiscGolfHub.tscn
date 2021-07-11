@@ -294,17 +294,17 @@ texture = ExtResource( 10 )
 [node name="LockerRoomStart" parent="." instance=ExtResource( 6 )]
 position = Vector2( 448, 321.015 )
 scale = Vector2( 0.1, 0.1 )
-next_world_scene = "res://levels/intro/LockerRoomStart/LockerRoomStart.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/LockerRoomStart/LockerRoomStart.tscn"
 
 [node name="DrewHouse" parent="." instance=ExtResource( 6 )]
 position = Vector2( 48.4989, 136.786 )
 scale = Vector2( 0.2, 0.2 )
-next_world_scene = "res://levels/intro/Drewzer Brewzer House/DrewHouse.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/Drewzer Brewzer House/DrewHouse.tscn"
 
 [node name="Cave" parent="." instance=ExtResource( 6 )]
 position = Vector2( 767.402, 69.9378 )
 scale = Vector2( 0.1, 0.1 )
-next_world_scene = "res://levels/intro/Cave/Cave.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/Cave/Cave.tscn"
 
 [node name="LockerRoomStartPos" type="Position2D" parent="."]
 position = Vector2( 447.157, 355.361 )
@@ -324,16 +324,17 @@ position = Vector2( 552, -176 )
 [node name="Entrance" parent="." instance=ExtResource( 6 )]
 position = Vector2( 224, -656 )
 scale = Vector2( 0.5, 0.5 )
-next_world_scene = "res://levels/intro/DiscGolfTourneyIntro/TeeTimeIntro1.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/TeeTimeIntro1.tscn"
 
 [node name="Entrance2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 552, -216 )
 scale = Vector2( 0.6, 0.2 )
-next_world_scene = "res://levels/intro/SkateBoardLevelIntro/IntroWorldKsateLevel.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/SkateBoardLevelIntro/IntroWorldKsateLevel.tscn"
 
 [node name="Entrance3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 80, -120 )
 scale = Vector2( 0.5, 0.5 )
+next_world_scene = "res://levels/Project Disc Golf1/Drewzer Brewzer House/DrewHouse.tscn"
 
 [node name="YSort" type="YSort" parent="."]
 

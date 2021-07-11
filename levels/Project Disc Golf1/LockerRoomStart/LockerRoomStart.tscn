@@ -58,6 +58,7 @@ position = Vector2( 1200, -32 )
 [node name="defaultNPC" parent="." instance=ExtResource( 5 )]
 position = Vector2( 176, 144 )
 scale = Vector2( 2, 2 )
+collision_mask = 513
 
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
 animation = "Joe Sanders"
@@ -72,11 +73,11 @@ position = Vector2( 472, 832 )
 lose_level_world_scene = "res://levels/intro/LockerRoomStart/LockerRoomStart.tscn"
 
 [node name="Dumbell" parent="." instance=ExtResource( 9 )]
-position = Vector2( 232, 144 )
+position = Vector2( 440, 136 )
 
 [node name="ToDiscGolfHub" parent="." instance=ExtResource( 10 )]
 position = Vector2( -488, 104 )
-next_world_scene = "res://levels/intro/IntroHub/ToDiscGolfHub.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/IntroHub/ToDiscGolfHub.tscn"
 
 [node name="ToDiscGolfHubPos" type="Position2D" parent="."]
 position = Vector2( -262.878, 131.152 )

@@ -21,6 +21,7 @@ animations = [ {
 extents = Vector2( 15.5284, 14.4808 )
 
 [node name="GolfCartPlayer" type="KinematicBody2D"]
+collision_mask = 529
 script = ExtResource( 5 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]

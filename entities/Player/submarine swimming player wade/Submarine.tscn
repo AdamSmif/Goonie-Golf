@@ -35,6 +35,7 @@ radius = 17.6542
 radius = 19.2918
 
 [node name="Submarine" type="KinematicBody2D"]
+collision_mask = 530
 script = ExtResource( 4 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]

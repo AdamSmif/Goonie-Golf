@@ -7,7 +7,8 @@
 [ext_resource path="res://entities/Assets/Background/Sunset Sky/sunsetsky.png" type="Texture" id=5]
 [ext_resource path="res://entities/Assets/Palm Tree/palmtree1.png" type="Texture" id=6]
 [ext_resource path="res://entities/Assets/3D Assets/firstlandscape.dae" type="PackedScene" id=7]
-[ext_resource path="res://levels/intro/Void/3DPlatformTest.gd" type="Script" id=8]
+[ext_resource path="res://levels/Project Disc Golf1/Void/3DPlatformTest.gd" type="Script" id=8]
+
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 4.08838

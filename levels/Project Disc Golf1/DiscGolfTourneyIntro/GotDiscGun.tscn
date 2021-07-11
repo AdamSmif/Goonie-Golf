@@ -4,8 +4,9 @@
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://engine/CutsceneDialogue/CutsceneDialogue.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entities/Player/main player wade/player_gun10.png" type="Texture" id=4]
-[ext_resource path="res://levels/intro/DiscGolfTourneyIntro/GotDiscGun.gd" type="Script" id=5]
+[ext_resource path="res://levels/Project Disc Golf1/DiscGolfTourneyIntro/GotDiscGun.gd" type="Script" id=5]
 [ext_resource path="res://audio/sound effects/raineffect/RainEffect.tscn" type="PackedScene" id=6]
+
 
 [node name="GotDiscGun" type="Control"]
 anchor_right = 1.0
