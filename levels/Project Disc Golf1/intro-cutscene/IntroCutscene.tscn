@@ -10,7 +10,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-next_world_scene = "res://levels/Project Disc Golf1/LockerRoomStart/LockerRoomStart.tscn"
+next_scene = "res://levels/Project Disc Golf1/LockerRoomStart/LockerRoomStart.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -22,4 +22,4 @@ __meta__ = {
 
 [node name="CutsceneDialogue" parent="." instance=ExtResource( 1 )]
 dialogue_file = "res://entities/Dialogue/introcutscene.json"
-next_world_scene = "res://levels/intro/LockerRoomStart/LockerRoomStart.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/LockerRoomStart/LockerRoomStart.tscn"
