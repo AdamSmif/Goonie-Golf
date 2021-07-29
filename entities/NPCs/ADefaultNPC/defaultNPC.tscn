@@ -72,16 +72,6 @@ animations = [ {
 "name": "Red Circle Guy",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "Skateboard Joe",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "Clarence",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Vern Avocado",
@@ -90,6 +80,16 @@ animations = [ {
 "frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "OJ Moss",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Clarence",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "Skateboard Joe",
 "speed": 5.0
 } ]
 

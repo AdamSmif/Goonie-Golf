@@ -27,6 +27,9 @@ tile_data = PoolIntArray( -1179444, 0, 0, -1179443, 0, 1, -1179442, 0, 1, -11794
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
+[node name="Sprite" parent="Player" index="0"]
+frame = 0
+
 [node name="RichTextLabel" parent="Player/PlayerCamera" index="0"]
 modulate = Color( 1, 1, 1, 1 )
 text = "Collect Bottles!"
@@ -39,11 +42,11 @@ position = Vector2( 34.5311, -127.751 )
 
 [node name="RainEffect" parent="." instance=ExtResource( 2 )]
 
-[node name="ToDiscGolfHubPos" type="Position2D" parent="."]
+[node name="SkateTutorialPos" type="Position2D" parent="."]
 position = Vector2( 10, 0 )
 
 [node name="HUD" parent="." instance=ExtResource( 9 )]
-bottle_world_scene = "res://Levels/intro/IntroHub/ToDiscGolfHub.tscn"
+bottle_world_scene = "res://levels/Project Disc Golf1/IntroHub/ToDiscGolfHub.tscn"
 
 [node name="Bottles" type="YSort" parent="."]
 
@@ -339,7 +342,7 @@ texture = ExtResource( 11 )
 [node name="FallZone" parent="." instance=ExtResource( 10 )]
 position = Vector2( 8302.73, 327.726 )
 rotation = 1.5708
-lose_level_world_scene = "res://levels/intro/SkateBoardLevelIntro/IntroWorldKsateLevel.tscn"
+lose_level_world_scene = "res://levels/Project Disc Golf1/IntroHub/ToDiscGolfHub.tscn"
 [connection signal="bottle_collected" from="Bottles/Bottle" to="HUD" method="_on_Bottle_bottle_collected"]
 [connection signal="bottle_collected" from="Bottles/Bottle8" to="HUD" method="_on_Bottle_bottle_collected"]
 [connection signal="bottle_collected" from="Bottles/Bottle2" to="HUD" method="_on_Bottle_bottle_collected"]
