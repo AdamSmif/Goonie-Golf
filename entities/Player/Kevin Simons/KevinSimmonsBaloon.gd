@@ -43,6 +43,10 @@ func _physics_process(delta):
 	else:
 		motion.x = 0
 		friction = true
+		
+	if Input.is_action_pressed('down_%s' % id):
+		motion.y = GRAVITY * 5
+		print(motion.y)
 
 	var _was_on_floor = is_on_floor()
 	# For interacting with rigid bodies
