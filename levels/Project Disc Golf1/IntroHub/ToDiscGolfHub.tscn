@@ -330,7 +330,7 @@ next_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/TeeTime
 [node name="Entrance2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 552, -216 )
 scale = Vector2( 0.6, 0.2 )
-next_world_scene = "res://levels/Project Disc Golf1/SkateBoardLevelIntro/IntroWorldKsateLevel.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/SkateBoardLevelIntro/SkateTutorial.tscn"
 
 [node name="Entrance3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 80, -120 )

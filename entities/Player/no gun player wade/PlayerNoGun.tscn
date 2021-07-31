@@ -1,6 +1,5 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=35 format=2]
 
-[ext_resource path="res://entities/Player/no gun player wade/player1_fall1.png" type="Texture" id=1]
 [ext_resource path="res://entities/Player/no gun player wade/player1_jump1.png" type="Texture" id=2]
 [ext_resource path="res://entities/Assets/explosion/explosion6.png" type="Texture" id=3]
 [ext_resource path="res://entities/Player/no gun player wade/player1_run2.png" type="Texture" id=4]
@@ -42,14 +41,19 @@ animations = [ {
 "name": "idle",
 "speed": 0.5
 }, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "skate",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "boom",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 31 ) ],
 "loop": true,
 "name": "down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ) ],
@@ -57,29 +61,24 @@ animations = [ {
 "name": "shocked",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
 "frames": [ null ],
 "loop": true,
 "name": "throw",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "boom",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "skate",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "move",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -99,7 +98,7 @@ length = 0.35
 [sub_resource type="Animation" id=6]
 length = 0.5
 
-[node name="PlayerNoGun" type="KinematicBody2D" groups=[
+[node name="Player" type="KinematicBody2D" groups=[
 "Saved",
 ]]
 collision_mask = 530
