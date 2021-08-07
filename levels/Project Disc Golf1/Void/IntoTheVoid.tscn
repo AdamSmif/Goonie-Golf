@@ -36,19 +36,16 @@ scale = Vector2( 10, 10 )
 modulate = Color( 0.0666667, 0.00392157, 0.0823529, 1 )
 position = Vector2( 744, -80 )
 scale = Vector2( 12, 12 )
-frame = 0
 
 [node name="PalmTree2" parent="Props" instance=ExtResource( 9 )]
 modulate = Color( 0.0666667, 0.00392157, 0.0823529, 1 )
 position = Vector2( 1480, -160 )
 scale = Vector2( 12, 12 )
-frame = 0
 
 [node name="PalmTree3" parent="Props" instance=ExtResource( 9 )]
 modulate = Color( 0.0666667, 0.00392157, 0.0823529, 1 )
 position = Vector2( -95.9999, -112 )
 scale = Vector2( 12, 12 )
-frame = 0
 
 [node name="Dumbell" parent="Props" instance=ExtResource( 13 )]
 modulate = Color( 0.0235294, 0.168627, 0.027451, 1 )
