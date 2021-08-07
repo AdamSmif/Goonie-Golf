@@ -3,7 +3,7 @@ extends Control
 export(String, FILE, "*.tscn") var next_world_scene
 
 func _ready():
-
+	MusicController.play_menu_music()
 	yield(get_tree().create_timer(2), "timeout")
 	$AnimationPlayer.play("FadeBlackBar")
 	yield(get_tree().create_timer(3), "timeout")
