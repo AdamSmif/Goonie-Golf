@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/baseball.png-eafe57b74807d992c35fe34fb77ed970.stex"
+path="res://.import/hearticon.png-cf26454faf0d6d473b48d523122203ab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/Assets/Baseball/baseball.png"
-dest_files=[ "res://.import/baseball.png-eafe57b74807d992c35fe34fb77ed970.stex" ]
+source_file="res://entities/Assets/heart/hearticon.png"
+dest_files=[ "res://.import/hearticon.png-cf26454faf0d6d473b48d523122203ab.stex" ]
 
 [params]
 
