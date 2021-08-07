@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Enemies+Allies/boss/evileyes/evileyes.png" type="Texture" id=2]
+[ext_resource path="res://entities/Assets/Evil Eyes/evileyes.png" type="Texture" id=2]
 [ext_resource path="res://UI/UI Animations/fade.anim" type="Animation" id=3]
-[ext_resource path="res://UI/GameOver.gd" type="Script" id=4]
-[ext_resource path="res://Player/player1_fall1.png" type="Texture" id=5]
-[ext_resource path="res://Music/SoundAffects/GameOverSound.ogg" type="AudioStream" id=6]
-[ext_resource path="res://Assets/Shaders/GlowInTheDark.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ui/game_over/GameOver.gd" type="Script" id=4]
+[ext_resource path="res://entities/Player/no gun player wade/player_idleframe.png" type="Texture" id=5]
+[ext_resource path="res://audio/sound effects/GameOverSound.ogg" type="AudioStream" id=6]
+[ext_resource path="res://entities/Assets/AfterEffects/GlowInTheDark.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -22,6 +22,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+main_menu = "res://ui/main menu/MainMenuUI.tscn"
 
 [node name="GlowInTheDark" parent="." instance=ExtResource( 7 )]
 
@@ -72,5 +73,6 @@ position = Vector2( 320, 296 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 5 )
 
-[node name="GameOverSound" type="AudioStreamPlayer2D" parent="."]
+[node name="GameOverSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = -13.131

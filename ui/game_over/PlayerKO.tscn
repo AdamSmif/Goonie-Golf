@@ -2,7 +2,7 @@
 
 [ext_resource path="res://entities/Player/no gun player wade/player1_fall1.png" type="Texture" id=1]
 [ext_resource path="res://audio/sound effects/hit/KOSound.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ui/game_over/GameOver.gd" type="Script" id=3]
+[ext_resource path="res://ui/game_over/PlayerKO.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "playerkofade"
@@ -26,6 +26,7 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+game_over_scene = "res://ui/game_over/GameOver.tscn"
 
 [node name="Red" type="ColorRect" parent="."]
 margin_right = 640.0
@@ -50,3 +51,5 @@ texture = ExtResource( 1 )
 anims/playerkofade = SubResource( 1 )
 
 [node name="KOSound" parent="." instance=ExtResource( 2 )]
+position = Vector2( 320, 192 )
+volume_db = -6.796

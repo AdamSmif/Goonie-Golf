@@ -7,7 +7,6 @@
 [ext_resource path="res://levels/Project Disc Golf1/DiscGolfTourneyIntro/GotDiscGun.gd" type="Script" id=5]
 [ext_resource path="res://audio/sound effects/raineffect/RainEffect.tscn" type="PackedScene" id=6]
 
-
 [node name="GotDiscGun" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -51,7 +50,7 @@ current = true
 
 [node name="CutsceneDialogue" parent="." instance=ExtResource( 3 )]
 dialogue_file = "res://entities/Dialogue/gotdiscgolfgunbroadcast.json"
-next_world_scene = "res://levels/intro/DiscGolfTourneyIntro/Hole1.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole1.tscn"
 
 [node name="RainEffect" parent="." instance=ExtResource( 6 )]
 

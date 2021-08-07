@@ -9,7 +9,6 @@
 [ext_resource path="res://entities/NPCs/ADefaultNPC/defaultNPC.tscn" type="PackedScene" id=7]
 [ext_resource path="res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole5.gd" type="Script" id=8]
 
-
 [node name="Hole5" type="Node2D"]
 modulate = Color( 0.4, 0.466667, 0.458824, 1 )
 script = ExtResource( 8 )
@@ -20,8 +19,8 @@ tile_data = PoolIntArray( -2097101, 0, 0, -2097100, 0, 1, -2097099, 0, 1, -20970
 [node name="HUD" parent="." instance=ExtResource( 5 )]
 
 [node name="FallZone" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1552, 1672 )
-lose_level_world_scene = "res://levels/intro/Void/3DPlatformTest.tscn"
+position = Vector2( 1560, 1672 )
+lose_level_world_scene = "res://levels/Project Disc Golf1/Void/IntoTheVoid.tscn"
 
 [node name="hole4Pos" type="Position2D" parent="."]
 

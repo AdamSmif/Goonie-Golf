@@ -33,15 +33,15 @@ position = Vector2( -48, -176 )
 position = Vector2( 104, -64 )
 
 [node name="FallZone" parent="." instance=ExtResource( 4 )]
-position = Vector2( 481.135, 1001.14 )
-lose_level_world_scene = "res://levels/intro/DiscGolfTourneyIntro/Hole2.tscn"
+position = Vector2( 480, 1000 )
+lose_level_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole2.tscn"
 
 [node name="HUD" parent="." instance=ExtResource( 5 )]
 bottle_world_scene = "res://Levels/intro/DiscGolfTourneyIntro/Hole3.tscn"
 
 [node name="DiscGolfBasket" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1152, 32 )
-next_world_scene = "res://levels/intro/DiscGolfTourneyIntro/Hole3.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole3.tscn"
 
 [node name="Hole1Pos" type="Position2D" parent="."]
 position = Vector2( 32, 80 )
