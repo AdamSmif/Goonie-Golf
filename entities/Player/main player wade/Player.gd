@@ -75,19 +75,19 @@ func _physics_process(_delta):
 		$AllOtheerPlayers/OtherPlayers7.visible = true
 		$AllOtheerPlayers/OtherPlayers8.visible = true
 # Spawn Other Players
-	if Input.is_action_just_pressed("grow_2"):
+	if Input.is_action_just_pressed("spawn_2"):
 		$AllPlayers/OtherPlayers2.visible = true
-	elif Input.is_action_just_pressed("grow_3"):
+	elif Input.is_action_just_pressed("spawn_3"):
 		$AllPlayers/OtherPlayers3.visible = true
-	elif Input.is_action_just_pressed("grow_4"):
+	elif Input.is_action_just_pressed("spawn_4"):
 		$AllPlayers/OtherPlayers4.visible = true
-	elif Input.is_action_just_pressed("grow_5"):
+	elif Input.is_action_just_pressed("spawn_5"):
 		$AllPlayers/OtherPlayers5.visible = true
-	elif Input.is_action_just_pressed("grow_6"):
+	elif Input.is_action_just_pressed("spawn_6"):
 		$AllPlayers/OtherPlayers6.visible = true
-	elif Input.is_action_just_pressed("grow_7"):
+	elif Input.is_action_just_pressed("spawn_7"):
 		$AllPlayers/OtherPlayers7.visible = true
-	elif Input.is_action_just_pressed("grow_8"):
+	elif Input.is_action_just_pressed("spawn_8"):
 		$AllPlayers/OtherPlayers8.visible = true
 
 # Throw

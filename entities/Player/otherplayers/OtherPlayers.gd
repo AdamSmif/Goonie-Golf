@@ -18,9 +18,12 @@ onready var CoolDown = $CoolDown
 export var shootDelay: float = 0.1
 
 func _physics_process(delta):
+	# Spawn Player
+	if Input.is_action_just_pressed("spawn_%s" % id):
+		print("spawn")
 	if Input.is_action_just_pressed("grow_%s" % id):
 		print("grew")
-		$AnimationPlayer.play("Grow")
+		$AnimationPlayer.play("Fire")
 	var axis = get_input_axis()
 	if axis == Vector2.ZERO:
 		apply_friction(ACCELERATION * delta)

@@ -62,10 +62,18 @@ collision_mask = 513
 
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
 animation = "Joe Sanders"
-frame = 1
 
 [node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 12 )]
 dialogue_file = "res://entities/Dialogue/introcoachlockerroomtalk.json"
+
+[node name="defaultNPC2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1528, -143.731 )
+
+[node name="AnimatedSprite" parent="defaultNPC2" index="0"]
+frame = 0
+
+[node name="DialoguePlayer" parent="defaultNPC2" instance=ExtResource( 12 )]
+dialogue_file = "res://entities/Dialogue/mike/yeah_mike.json"
 
 [node name="RainEffect" parent="." instance=ExtResource( 6 )]
 
@@ -94,3 +102,5 @@ position = Vector2( -262.878, 131.152 )
 [editable path="Player"]
 
 [editable path="defaultNPC"]
+
+[editable path="defaultNPC2"]

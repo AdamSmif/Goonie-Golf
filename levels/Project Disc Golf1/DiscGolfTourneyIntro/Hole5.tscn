@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/Player/main player wade/Player.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://entities/Assets/Background/rain abstract/rainabstract.png" type="Texture" id=4]
 [ext_resource path="res://UI/HUD/HUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://engine/Fall Zone/FallZone.tscn" type="PackedScene" id=6]
-[ext_resource path="res://entities/NPCs/ADefaultNPC/defaultNPC.tscn" type="PackedScene" id=7]
 [ext_resource path="res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole5.gd" type="Script" id=8]
 
 [node name="Hole5" type="Node2D"]
@@ -47,9 +46,6 @@ position = Vector2( -200, -24 )
 
 [node name="Raining6" parent="Player/PlayerCamera" index="7" instance=ExtResource( 3 )]
 position = Vector2( 152, -192 )
-
-[node name="defaultNPC" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1464, 72 )
 [connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
 [editable path="Player"]
