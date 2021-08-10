@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://entities/Assets/abandoned train/abandonedtrain2.png" type="Texture" id=1]
 [ext_resource path="res://entities/Assets/abandoned train/abandonedtrain1.png" type="Texture" id=2]
@@ -11,9 +11,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 25.9149, 4.56815 )
-
 [node name="Abandoned Train" type="StaticBody2D"]
 scale = Vector2( 4, 4 )
 
@@ -22,6 +19,7 @@ frames = SubResource( 1 )
 speed_scale = 0.1
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( 2.30282, 17.6899 )
-shape = SubResource( 2 )
+build_mode = 1
+polygon = PoolVector2Array( -25.8037, -4.53938, -25.438, 5.82373, -30.0709, 11.1882, -20.0735, 12.4074, -19.342, 14.48, -16.1721, 13.9923, -15.5625, 12.2854, 27.231, 12.1635, 26.9872, 1.55656, 7.84593, 1.92232, 6.99249, 8.26211, 2.23765, 7.04292, 2.84725, 0.0935364, 5.04179, -1.36949, 5.04179, -4.17363, -11.9049, -4.29555, -12.7584, -1.49141, -10.4419, 0.215454, -9.95425, 4.97029, -21.4146, 4.60454, -21.9023, -3.80787 )

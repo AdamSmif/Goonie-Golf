@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://entities/Assets/Evergreen Tree/evergreentree1.png" type="Texture" id=1]
 [ext_resource path="res://entities/Assets/Evergreen Tree/evergreentree2.png" type="Texture" id=2]
@@ -11,18 +11,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 3.21167
-height = 2.58242
-
-[node name="EvergreenTree" type="StaticBody2D"]
-scale = Vector2( 4, 4 )
-
-[node name="Sprite" type="AnimatedSprite" parent="."]
+[node name="EverGreenNoCollision" type="AnimatedSprite"]
+scale = Vector2( 8, 8 )
 frames = SubResource( 1 )
 speed_scale = 0.2
 playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.0352364, -0.897674 )
-shape = SubResource( 2 )

@@ -59,25 +59,15 @@ func _physics_process(_delta):
 	motion.y += GRAVITY
 	var friction = false
 
-# Throw
-#	if Input.is_action_just_pressed("throwright_%s" % id) and discDelayTimer.is_stopped():
-#		emit_signal("disc_thrown")
-#		print("disc thrown")
-#		$Sprite.play("throw")
-#		discDelayTimer.start(throwDelay)
-#		#spawn disc
-#		var throwInstance = throw.instance()
-#		throwInstance.position = $Position2D.global_position
-#		get_tree().get_root().add_child(throwInstance)
-#
-#	if Input.is_action_just_pressed("throwleft_%s" % id) and discDelayTimer.is_stopped():
-#		emit_signal("disc_thrown")
-#		$Sprite.play("throw")
-#		discDelayTimer.start(throwDelay)
-#		#spawn disc
-#		var throwLeftInstance = throwleft.instance()
-#		throwLeftInstance.position = $Position2D.global_position
-#		get_tree().get_root().add_child(throwLeftInstance)
+# Spawn All Players
+	if Input.is_action_just_pressed("ui_accept"):
+		$AllPlayers/OtherPlayers2.visible = true
+		$AllPlayers/OtherPlayers3.visible = true
+		$AllPlayers/OtherPlayers4.visible = true
+		$AllPlayers/OtherPlayers5.visible = true
+		$AllPlayers/OtherPlayers6.visible = true
+		$AllPlayers/OtherPlayers7.visible = true
+		$AllPlayers/OtherPlayers8.visible = true
 
 # Movment
 	if Input.is_action_pressed('right_%s' % id):

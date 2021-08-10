@@ -1,5 +1,6 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
+[ext_resource path="res://entities/Player/otherplayers/AllOtheerPlayers.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/Player/no gun player wade/player1_jump1.png" type="Texture" id=2]
 [ext_resource path="res://entities/Assets/explosion/explosion6.png" type="Texture" id=3]
 [ext_resource path="res://entities/Player/no gun player wade/player1_run2.png" type="Texture" id=4]
@@ -46,6 +47,16 @@ animations = [ {
 "name": "down",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ null ],
+"loop": true,
+"name": "throw",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "skate",
@@ -61,11 +72,6 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ null ],
-"loop": true,
-"name": "throw",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "boom",
@@ -74,11 +80,6 @@ animations = [ {
 "frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "move",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "jump",
 "speed": 5.0
 } ]
 
@@ -183,6 +184,30 @@ position = Vector2( 0, 8 )
 
 [node name="daycycle" parent="." instance=ExtResource( 29 )]
 col = ExtResource( 27 )
+
+[node name="AllPlayers" parent="." instance=ExtResource( 1 )]
+position = Vector2( 48, -24 )
+
+[node name="OtherPlayers2" parent="AllPlayers" index="0"]
+visible = false
+
+[node name="OtherPlayers3" parent="AllPlayers" index="1"]
+visible = false
+
+[node name="OtherPlayers4" parent="AllPlayers" index="2"]
+visible = false
+
+[node name="OtherPlayers5" parent="AllPlayers" index="3"]
+visible = false
+
+[node name="OtherPlayers6" parent="AllPlayers" index="4"]
+visible = false
+
+[node name="OtherPlayers7" parent="AllPlayers" index="5"]
+visible = false
+
+[node name="OtherPlayers8" parent="AllPlayers" index="6"]
+visible = false
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="DiscTimer" to="." method="_on_DiscTimer_timeout"]
@@ -190,3 +215,5 @@ col = ExtResource( 27 )
 [connection signal="no_health" from="PlayerStats" to="." method="_on_PlayerStats_no_health"]
 
 [editable path="Hurtbox"]
+
+[editable path="AllPlayers"]
