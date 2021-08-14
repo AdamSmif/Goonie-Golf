@@ -19,40 +19,46 @@ tracks/0/keys = {
 [node name="AllPlayers" type="YSort"]
 
 [node name="OtherPlayers2" parent="." instance=ExtResource( 1 )]
+visible = false
 
 [node name="OtherPlayers3" parent="." instance=ExtResource( 1 )]
+visible = false
 modulate = Color( 0.694118, 0.0352941, 0.0470588, 1 )
 position = Vector2( 32, 0 )
 id = 3
 
 [node name="Sprite" parent="OtherPlayers3" index="0"]
 modulate = Color( 1, 0.176471, 0.176471, 1 )
-frame = 0
 
 [node name="AnimationPlayer" parent="OtherPlayers3" index="2"]
 anims/Fire = SubResource( 1 )
 
 [node name="OtherPlayers4" parent="." instance=ExtResource( 1 )]
+visible = false
 modulate = Color( 0.921569, 0.270588, 0.545098, 1 )
 position = Vector2( 64, 0 )
 id = 4
 
 [node name="OtherPlayers5" parent="." instance=ExtResource( 1 )]
+visible = false
 modulate = Color( 0.937255, 0.952941, 0.00392157, 1 )
 position = Vector2( 96, 0 )
 id = 5
 
 [node name="OtherPlayers6" parent="." instance=ExtResource( 1 )]
+visible = false
 modulate = Color( 0.901961, 0.317647, 0, 1 )
 position = Vector2( 128, 0 )
 id = 6
 
 [node name="OtherPlayers7" parent="." instance=ExtResource( 1 )]
+visible = false
 modulate = Color( 0.0117647, 0.823529, 0.827451, 1 )
 position = Vector2( 160, 0 )
 id = 7
 
 [node name="OtherPlayers8" parent="." instance=ExtResource( 1 )]
+visible = false
 modulate = Color( 0.482353, 0.0627451, 0.627451, 1 )
 position = Vector2( 192, 0 )
 id = 8

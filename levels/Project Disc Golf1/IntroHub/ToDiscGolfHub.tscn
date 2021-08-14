@@ -319,6 +319,9 @@ position = Vector2( 48.7437, 176.833 )
 [node name="Train1Pos" type="Position2D" parent="."]
 position = Vector2( 80, -352 )
 
+[node name="VillagePos" type="Position2D" parent="."]
+position = Vector2( 80, -56 )
+
 [node name="CavePos" type="Position2D" parent="."]
 position = Vector2( 768, 96 )
 
@@ -341,7 +344,7 @@ next_world_scene = "res://levels/Project Disc Golf1/SkateBoardLevelIntro/SkateTu
 [node name="Entrance3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 80, -120 )
 scale = Vector2( 0.5, 0.5 )
-next_world_scene = "res://levels/Project Disc Golf1/Drewzer Brewzer House/DrewHouse.tscn"
+next_world_scene = "res://levels/Project Disc Golf1/Village/Village.tscn"
 
 [node name="Entrance4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 72, -432 )
