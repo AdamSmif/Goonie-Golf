@@ -15,16 +15,18 @@ modulate = Color( 0.113725, 0.32549, 0.380392, 1 )
 
 [node name="NightSkyAnimated" parent="Player/ParallaxLayer" instance=ExtResource( 3 )]
 position = Vector2( -264, 200 )
+frame = 1
 
 [node name="NightSkyAnimated2" parent="Player/ParallaxLayer" instance=ExtResource( 3 )]
 position = Vector2( 376, 200 )
-frame = 1
 
 [node name="NightSkyAnimated3" parent="Player/ParallaxLayer" instance=ExtResource( 3 )]
 position = Vector2( 376, -176 )
+frame = 1
 
 [node name="NightSkyAnimated4" parent="Player/ParallaxLayer" instance=ExtResource( 3 )]
 position = Vector2( -264, -176 )
+frame = 1
 
 [node name="YSort" parent="Player/ParallaxLayer" instance=ExtResource( 5 )]
 position = Vector2( 352, 192 )
