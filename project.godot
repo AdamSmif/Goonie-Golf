@@ -45,6 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Goonie Golf"
+config/description="A FOSS golf focused video game"
 run/main_scene="res://ui/splash screen/FluffyDogMediaSplashScreen.tscn"
 config/icon="res://entities/Assets/EGPT Logo/EGPT.png"
 config/macos_native_icon="res://entities/Assets/EGPT Logo/EGPT White Logo Mac.icns"
