@@ -48,19 +48,19 @@ animations = [ {
 "name": "Skateboard Joe",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "Mr. Bill",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Joe Sanders",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "Drewzer Brewzer",
+"name": "Susan Solo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Blue Guy",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 29 ), ExtResource( 28 ) ],
@@ -68,9 +68,9 @@ animations = [ {
 "name": "Blue Void Man",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 2 ) ],
 "loop": true,
-"name": "Susan Solo",
+"name": "Drewzer Brewzer",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ), ExtResource( 24 ) ],
@@ -83,9 +83,24 @@ animations = [ {
 "name": "Green Void Man",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 23 ) ],
 "loop": true,
-"name": "Blue Guy",
+"name": "Mr. Bill",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "Douglas Ramond",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "OJ Moss",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 34 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "Dorris",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
@@ -93,9 +108,9 @@ animations = [ {
 "name": "Vern Avocado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 20 ) ],
+"frames": [ ExtResource( 33 ), ExtResource( 32 ) ],
 "loop": true,
-"name": "OJ Moss",
+"name": "Dot Williams",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
@@ -111,21 +126,6 @@ animations = [ {
 "frames": [ ExtResource( 37 ), ExtResource( 38 ) ],
 "loop": true,
 "name": "Mike Schubert",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 31 ), ExtResource( 34 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "Dorris",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 33 ), ExtResource( 32 ) ],
-"loop": true,
-"name": "Dot Williams",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 35 ), ExtResource( 36 ) ],
-"loop": true,
-"name": "Douglas Ramond",
 "speed": 5.0
 } ]
 
