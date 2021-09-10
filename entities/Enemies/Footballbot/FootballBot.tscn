@@ -26,14 +26,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "explosion",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "squashed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "explosion",
 "speed": 5.0
 } ]
 
@@ -46,7 +46,7 @@ extents = Vector2( 14.0143, 23.8441 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 17.5186, 16.0222 )
 
-[node name="FootballBot" type="KinematicBody2D"]
+[node name="GrunkoBot" type="KinematicBody2D"]
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 16
 collision_mask = 99

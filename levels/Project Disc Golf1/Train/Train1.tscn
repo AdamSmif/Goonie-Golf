@@ -22,14 +22,13 @@ script = ExtResource( 9 )
 
 [node name="EverGreenNoCollision" parent="ForeGround" instance=ExtResource( 10 )]
 position = Vector2( 1504, 48 )
-frame = 1
 
 [node name="EverGreenNoCollision2" parent="ForeGround" instance=ExtResource( 10 )]
 position = Vector2( 1504, 48 )
-frame = 1
 
 [node name="EverGreenNoCollision3" parent="ForeGround" instance=ExtResource( 10 )]
 position = Vector2( 56, 72 )
+frame = 1
 
 [node name="Background" type="YSort" parent="."]
 
@@ -40,26 +39,29 @@ frame = 1
 
 [node name="EverGreenNoCollision" parent="Background" instance=ExtResource( 10 )]
 position = Vector2( 648, 40 )
+frame = 1
 
 [node name="EverGreenNoCollision2" parent="Background" instance=ExtResource( 10 )]
 position = Vector2( 552, 56 )
+frame = 1
 
 [node name="EverGreenNoCollision3" parent="Background" instance=ExtResource( 10 )]
 position = Vector2( -360, 56 )
+frame = 1
 
 [node name="EverGreenNoCollision4" parent="Background" instance=ExtResource( 10 )]
 position = Vector2( 232, 64 )
-frame = 1
 
 [node name="EverGreenNoCollision5" parent="Background" instance=ExtResource( 10 )]
 position = Vector2( -80, 56 )
-frame = 1
 
 [node name="EverGreenNoCollision6" parent="Background" instance=ExtResource( 10 )]
 position = Vector2( 896, 56 )
+frame = 1
 
 [node name="EverGreenNoCollision7" parent="Background" instance=ExtResource( 10 )]
 position = Vector2( 1168, 56 )
+frame = 1
 
 [node name="meteor" type="Sprite" parent="Background"]
 position = Vector2( 3424, -160 )

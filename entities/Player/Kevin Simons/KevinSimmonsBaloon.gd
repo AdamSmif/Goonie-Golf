@@ -47,6 +47,10 @@ func _physics_process(delta):
 	if Input.is_action_pressed('down_%s' % id):
 		motion.y = GRAVITY * 5
 		print(motion.y)
+		
+# TODO: If player touches the ground game over
+	if motion.y == 0:
+		get_tree().change_scene(lose_level_world_scene)
 
 	var _was_on_floor = is_on_floor()
 	# For interacting with rigid bodies
@@ -91,9 +95,9 @@ func _on_Hurtbox_area_entered(area):
 	knockback = Vector2.RIGHT * 150
 	knockback = Vector2.LEFT * 150
 	if stats.health == 0:
-		$Sprite.play("boom")
 		motion.x = 0
-		$Timer.start()
+		#TODO: Add cool down
+#		$Timer.start()
 		get_tree().change_scene(lose_level_world_scene)
 	
 

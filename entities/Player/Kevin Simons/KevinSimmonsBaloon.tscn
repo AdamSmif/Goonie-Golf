@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://audio/sound effects/hit/GotHitSound.tscn" type="PackedScene" id=1]
-[ext_resource path="res://engine/Collisions/Hitbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://engine/Collisions/Hurtbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/Player/Kevin Simons/kevinsimmonsballoon2.png" type="Texture" id=3]
 [ext_resource path="res://entities/Player/Kevin Simons/kevinsimmonsballoon1.png" type="Texture" id=4]
 [ext_resource path="res://entities/Player/Kevin Simons/KevinSimmonsBaloon.gd" type="Script" id=5]
@@ -20,8 +20,8 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6.21032, 10 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 5.51442, 7.08213 )
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 4.42859, 7.5789 )
 
 [sub_resource type="CircleShape2D" id=4]
 
@@ -35,19 +35,20 @@ script = ExtResource( 5 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
+frame = 1
 speed_scale = 0.2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0.463932, 19.833 )
 shape = SubResource( 2 )
 
-[node name="Hitbox" parent="." instance=ExtResource( 2 )]
-collision_layer = 128
+[node name="Hurtbox" parent="." instance=ExtResource( 2 )]
 
-[node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2( 0.658249, 19.7815 )
-shape = SubResource( 3 )
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( 0.299782, 21.7341 )
+shape = SubResource( 7 )
 
 [node name="BaloonCollision" type="Area2D" parent="."]
 
@@ -72,5 +73,6 @@ offset = Vector2( 0, 125 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Hit = ExtResource( 8 )
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
-[editable path="Hitbox"]
+[editable path="Hurtbox"]
