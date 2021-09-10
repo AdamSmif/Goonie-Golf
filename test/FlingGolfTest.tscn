@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://entities/Player/FlingGolfer/FlingGolfer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/Assets/evergreentreeGB/evergreentreeGB.png" type="Texture" id=2]
+[ext_resource path="res://entities/Player/player camera/PlayerCamera.tscn" type="PackedScene" id=3]
+
+[node name="FlingGolfTest" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -352.0
+margin_top = -208.0
+margin_right = 928.0
+margin_bottom = 608.0
+color = Color( 0.0588235, 0.219608, 0.0588235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="evergreentreeGB" type="Sprite" parent="YSort"]
+position = Vector2( 24, 128 )
+texture = ExtResource( 2 )
+
+[node name="evergreentreeGB2" type="Sprite" parent="YSort"]
+position = Vector2( 160, 64 )
+texture = ExtResource( 2 )
+
+[node name="evergreentreeGB3" type="Sprite" parent="YSort"]
+position = Vector2( 392, 104 )
+texture = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 40, 64 )
+
+[node name="PlayerCamera" parent="Player" instance=ExtResource( 3 )]
+
+[node name="Shader" type="ColorRect" parent="."]
+margin_left = -400.0
+margin_top = -304.0
+margin_right = 1080.0
+margin_bottom = 696.0
+color = Color( 0.607843, 0.737255, 0.0588235, 0.223529 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}

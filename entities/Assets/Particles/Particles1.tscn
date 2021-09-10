@@ -8,6 +8,7 @@ spread = 30.0
 gravity = Vector3( 0, 98, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
+color = Color( 0.247059, 0.0117647, 0.368627, 1 )
 
 [node name="Particles1" type="Particles2D"]
 position = Vector2( -389.376, -17.6517 )
