@@ -115,13 +115,6 @@ tracks/0/keys = {
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
-id = null
-MAX_SPEED = null
-ACCELERATION = null
-FRICTION = null
-lose_level_world_scene = null
-game_over_scene = null
-bottle_world_scene = null
 
 [node name="Player" type="Sprite" parent="."]
 texture = ExtResource( 2 )
