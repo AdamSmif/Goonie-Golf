@@ -22,12 +22,12 @@ func _ready():
 func _physics_process(delta):
 	
 	# Player Control
-	if Input.is_action_pressed('right_%s' % id):
-		speed = 200
-		print("controlled muscle")
-	elif Input.is_action_pressed('left_%s' % id):
-		speed = 200
-		print("controlled muscle")
+	if Input.is_action_pressed("enemyGrow"):
+		$AnimationPlayer.play("GrowEnemy")
+	elif Input.is_action_pressed("enemyJump"):
+		$AnimationPlayer.play("JumpEnemy")
+	elif Input.is_action_pressed("enemySprint"):
+		$AnimationPlayer.play("SprintEnemy")
 	else:
 	#Knockback
 #	Causes enemy to jitter

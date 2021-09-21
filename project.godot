@@ -58,6 +58,7 @@ Pause="*res://ui/HUD/Pause.tscn"
 Global="*res://engine/Autoloads/Global.gd"
 MusicController="*res://engine/Autoloads/MusicController.tscn"
 DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
+GameOver="*res://ui/HUD/GameOver.tscn"
 
 [display]
 
@@ -368,9 +369,19 @@ talk={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":84,"unicode":0,"echo":false,"script":null)
  ]
 }
-hider={
+enemyGrow={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":123,"unicode":0,"echo":false,"script":null)
+ ]
+}
+enemyJump={
 "deadzone": 0.5,
 "events": [  ]
+}
+enemySprint={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":125,"unicode":0,"echo":false,"script":null)
+ ]
 }
 
 [layer_names]

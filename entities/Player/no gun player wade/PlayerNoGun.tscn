@@ -42,29 +42,9 @@ animations = [ {
 "name": "idle",
 "speed": 0.5
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "move",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "boom",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "shocked",
-"speed": 5.0
-}, {
-"frames": [ null ],
-"loop": true,
-"name": "throw",
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
@@ -72,14 +52,34 @@ animations = [ {
 "name": "skate",
 "speed": 1.0
 }, {
+"frames": [ null ],
+"loop": true,
+"name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "boom",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 31 ) ],
 "loop": true,
 "name": "down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
-"name": "jump",
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "move",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "shocked",
 "speed": 5.0
 } ]
 
@@ -122,7 +122,6 @@ __meta__ = {
 }
 
 [node name="Hurtbox" parent="." instance=ExtResource( 15 )]
-collision_layer = 128
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2( -0.00325012, 7.91791 )

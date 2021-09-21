@@ -226,7 +226,7 @@ func _on_Hurtbox_area_entered(area):
 		$Sprite.play("boom")
 		motion.x = 0
 		$Timer.start()
-		get_tree().change_scene(lose_level_world_scene)
+		GameOver.set_visible(true)
 	
 
 

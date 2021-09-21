@@ -1,125 +1,32 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://entities/Player/FlingGolfer/FlingGolfer.gd" type="Script" id=1]
-[ext_resource path="res://entities/Player/FlingGolfer/FlingGolfer-Sheet.png" type="Texture" id=2]
+[ext_resource path="res://entities/Player/FlingGolfer/FlingGolfer1.png" type="Texture" id=2]
+[ext_resource path="res://entities/Player/FlingGolfer/FlingGolfer.png" type="Texture" id=3]
 [ext_resource path="res://entities/Assets/fling golf stick/flingclubGB.png" type="Texture" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6.80797, 10 )
-
-[sub_resource type="Animation" id=2]
-resource_name = "IdleDown"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Player:vframes")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 1 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Player:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "IdleSide"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Player:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 2 ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "IdleUp"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Player:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 4 ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "walkDown"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Player:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 0, 1 ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "walkSide"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Player:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 2, 3 ]
-}
-
-[sub_resource type="Animation" id=7]
-resource_name = "walkUp"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Player:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 4, 5 ]
-}
-
-[sub_resource type="AnimationNodeStateMachine" id=8]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
-[node name="Player" type="Sprite" parent="."]
-texture = ExtResource( 2 )
-hframes = 12
-frame = 5
+[node name="Player" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "walk"
 
 [node name="Club" type="Sprite" parent="."]
 visible = false
@@ -129,25 +36,7 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.564053, 7.26999 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "IdleDown"
-anims/IdleDown = SubResource( 2 )
-anims/IdleSide = SubResource( 3 )
-anims/IdleUp = SubResource( 4 )
-anims/walkDown = SubResource( 5 )
-anims/walkSide = SubResource( 6 )
-anims/walkUp = SubResource( 7 )
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 8 )
-anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 9 )
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-scale = Vector2( 0.5, 0.5 )
-enabled = true

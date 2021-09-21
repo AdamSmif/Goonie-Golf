@@ -64,7 +64,9 @@ func _ready():
 func _physics_process(_delta):
 	motion.y += GRAVITY
 	var friction = false
-	
+
+### Local Player Spawn ###
+#TODO: Clean Up ###
 # Spawn All Players
 	if Input.is_action_just_pressed("ui_accept"):
 		$AllOtheerPlayers/OtherPlayers2.visible = true
@@ -89,6 +91,8 @@ func _physics_process(_delta):
 		$AllPlayers/OtherPlayers7.visible = true
 	elif Input.is_action_just_pressed("spawn_8"):
 		$AllPlayers/OtherPlayers8.visible = true
+
+####### ######
 
 # Throw
 	if Input.is_action_just_pressed("throwright_%s" % id) and discDelayTimer.is_stopped():
@@ -251,7 +255,7 @@ func _on_Hurtbox_area_entered(area):
 		$Sprite.play("boom")
 		motion.x = 0
 		$Timer.start()
-		get_tree().change_scene("res://ui/game_over/PlayerKO.tscn")
+		GameOver.set_visible(true)
 	
 
 
