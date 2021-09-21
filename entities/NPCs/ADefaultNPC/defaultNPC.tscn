@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://entities/NPCs/Walter Higgins/coolguy1.png" type="Texture" id=1]
 [ext_resource path="res://entities/NPCs/Drewzer Brewzer/Baseball floating guy2.png" type="Texture" id=2]
@@ -40,32 +40,19 @@
 [ext_resource path="res://entities/NPCs/Mike Schubert/MSchubert2.png" type="Texture" id=38]
 [ext_resource path="res://entities/NPCs/Green Boi/GreenBoi1.png" type="Texture" id=39]
 [ext_resource path="res://entities/NPCs/Green Boi/GreenBoi2.png" type="Texture" id=40]
+[ext_resource path="res://entities/NPCs/Johnny Wizard/Johnny Wizard2.png" type="Texture" id=41]
+[ext_resource path="res://entities/NPCs/Johnny Wizard/Johnny Wizard1.png" type="Texture" id=42]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "Blue Guy",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 29 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "Blue Void Man",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "Drewzer Brewzer",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 35 ), ExtResource( 36 ) ],
-"loop": true,
-"name": "Douglas Ramond",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "Mr. Bill",
+"name": "Blue Guy",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 31 ), ExtResource( 34 ), ExtResource( 30 ) ],
@@ -73,29 +60,9 @@ animations = [ {
 "name": "Dorris",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 24 ) ],
 "loop": true,
-"name": "Clarence",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Joe Sanders",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 37 ), ExtResource( 38 ) ],
-"loop": true,
-"name": "Mike Schubert",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 33 ), ExtResource( 32 ) ],
-"loop": true,
-"name": "Dot Williams",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "Susan Solo",
+"name": "Red Circle Guy",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
@@ -103,14 +70,14 @@ animations = [ {
 "name": "Vern Avocado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 33 ), ExtResource( 32 ) ],
 "loop": true,
-"name": "Red Circle Guy",
+"name": "Dot Williams",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 20 ) ],
+"frames": [ ExtResource( 35 ), ExtResource( 36 ) ],
 "loop": true,
-"name": "OJ Moss",
+"name": "Douglas Ramond",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
@@ -127,6 +94,46 @@ animations = [ {
 "loop": true,
 "name": "Skateboard Joe",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Joe Sanders",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Clarence",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "Mike Schubert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "OJ Moss",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Drewzer Brewzer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Susan Solo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "Mr. Bill",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "JohnnyWizard",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
@@ -139,7 +146,8 @@ script = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "Mike Schubert"
+animation = "JohnnyWizard"
+frame = 1
 speed_scale = 0.1
 playing = true
 

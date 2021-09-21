@@ -109,7 +109,6 @@ position = Vector2( 1976, -208 )
 
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
 animation = "Green Void Man"
-frame = 1
 
 [node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 12 )]
 dialogue_file = "res://entities/Dialogue/introvoid/SusanSoloTalk1.json"
