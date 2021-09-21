@@ -139,22 +139,6 @@ func _physics_process(_delta):
 		Input.action_release("left_%s" % id)
 		Input.action_release("right_%s" % id)
 
-# Sprinting
-	if Input.is_action_pressed('sprintright_%s' % id):
-		print("sprint right")
-		motion.x = lerp(motion.x + SPRINT_ACCELERATION, MAX_SPRINT_SPEED, .75)
-		$Sprite.flip_h = false
-		$Sprite.play("skateright")
-		if sign($Position2D.position.x) == -1:
-			$Position2D.position.x *= -1
-	elif Input.is_action_pressed('sprintleft_%s' % id):
-		print("sprint left")
-		motion.x = lerp(motion.x + -SPRINT_ACCELERATION, -MAX_SPRINT_SPEED, .75)
-		$Sprite.flip_h = true
-		$Sprite.play("skateleft")
-		if sign($Position2D.position.x) == 1:
-			$Position2D.position.x *= -1
-
 	if is_on_floor():
 		CoyoteJump = true
 		if jumpWasPressed == true:
@@ -220,9 +204,7 @@ func ouch(var enemyposx):
 	$Timer.start()
 	
 ### Signals ###
-	
-func _on_Timer_timeout():
-	get_tree().change_scene(lose_level_world_scene)
+
 
 
 func _on_DiscTimer_timeout():
@@ -254,20 +236,10 @@ func _on_Hurtbox_area_entered(area):
 	if stats.health == 0:
 		$Sprite.play("boom")
 		motion.x = 0
-		$Timer.start()
 		GameOver.set_visible(true)
 	
 
 
-func _on_GameOverTimer_timeout():
-	get_tree().change_scene("res://ui/game_over/PlayerKO.tscn")
-
-
-func _on_PlayerStats_no_health():
-	$Sprite.play("boom")
-	motion.x = 0
-	get_tree().change_scene("res://ui/game_over/PlayerKO.tscn")
-	
 
 ### Save Data ####
 

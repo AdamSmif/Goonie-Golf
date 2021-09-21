@@ -42,21 +42,6 @@ animations = [ {
 "name": "idle",
 "speed": 0.5
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 33 ) ],
-"loop": true,
-"name": "down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 26 ) ],
-"loop": true,
-"name": "boom",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "fall",
@@ -67,27 +52,42 @@ animations = [ {
 "name": "shocked",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 31 ), ExtResource( 18 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "move",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ) ],
+"loop": true,
+"name": "down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "skate",
 "speed": 1.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 31 ), ExtResource( 18 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "move",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "boom",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 18.0369 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 7.89791, 8.27244 )
+extents = Vector2( 7.99175, 13.3285 )
 
 [sub_resource type="Animation" id=4]
 resource_name = "idle"
@@ -102,7 +102,7 @@ length = 0.5
 [node name="Player" type="KinematicBody2D" groups=[
 "Saved",
 ]]
-collision_mask = 530
+collision_mask = 531
 script = ExtResource( 2 )
 game_over_scene = "res://UI/game_over/GameOver.tscn"
 
@@ -155,10 +155,6 @@ __meta__ = {
 
 [node name="GotHitSound" parent="." instance=ExtResource( 19 )]
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.7
-one_shot = true
-
 [node name="DiscTimer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
@@ -166,8 +162,6 @@ one_shot = true
 [node name="CoyoteTimer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
-
-[node name="GameOverTimer" type="Timer" parent="."]
 
 [node name="PlayerCamera" parent="." instance=ExtResource( 16 )]
 
@@ -188,9 +182,7 @@ col = ExtResource( 27 )
 [node name="AllPlayers" parent="." instance=ExtResource( 5 )]
 position = Vector2( 27.1007, -43.4872 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="DiscTimer" to="." method="_on_DiscTimer_timeout"]
-[connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]
 [connection signal="no_health" from="PlayerStats" to="." method="_on_PlayerStats_no_health"]
 
 [editable path="Hurtbox"]

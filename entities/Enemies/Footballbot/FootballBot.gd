@@ -2,6 +2,9 @@ extends KinematicBody2D
 
 onready var stats = $Stats
 
+# Player Number That Enemy Will React To
+export var id = 1
+
 export var speed = 50
 var velocity = Vector2()
 var knockback = Vector2.ZERO
@@ -9,6 +12,9 @@ var knockback = Vector2.ZERO
 export var direction = -1
 # true does not fall on cliff, false falls off cliff
 export var detects_cliffs = true
+# Jump
+export var JUMP_HEIGHT = -5 
+export var GRAVITY = 30
 
 func _ready():
 	print(stats.max_health)
@@ -22,6 +28,19 @@ func _ready():
 	
 func _physics_process(delta):
 	
+	
+	# Player Control
+	if Input.is_action_pressed("enemyGrow"):
+		$AnimationPlayer.play("GrowEnemy")
+	elif Input.is_action_pressed("enemyJump"):
+		$AnimationPlayer.play("JumpEnemy")
+	elif Input.is_action_pressed("enemySprint"):
+		$AnimationPlayer.play("SprintEnemy")
+
+# TODO: Make sure enemy doesn't glitch out when on top of enemy #
+#	if Input.is_action_pressed('up_%s' % id):
+#		velocity.y = JUMP_HEIGHT
+	
 	# moves if bumps into wall
 	if is_on_wall() or not $floor_checker.is_colliding() and detects_cliffs and is_on_floor():
 		direction = direction * -1
@@ -33,7 +52,6 @@ func _physics_process(delta):
 	
 	velocity.x = speed * direction
 	velocity = move_and_slide(velocity, Vector2.UP)
-	
 	
 	
 
@@ -56,9 +74,10 @@ func _on_Stats_no_health():
 #	$Hurtbox.queue_free()
 	$Hurtbox/CollisionShape2D.disabled = true
 	$Hitbox/CollisionShape2D.disabled = true
+	speed = 0
+	velocity.y = 0
 	$Sprite.play("explosion")
 	$ExplosionSound.play()
-	speed = 0
 	set_collision_layer_bit(5,false)
 	set_collision_mask_bit(0,false)
 	$Hurtbox.set_collision_layer_bit(8,false)
@@ -75,3 +94,6 @@ func _on_Hurtbox_area_entered(area):
 	$HitBadGuy.play()
 	knockback = Vector2.RIGHT * 150
 	knockback = Vector2.LEFT * 150
+
+
+

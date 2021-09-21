@@ -396,6 +396,7 @@ enemySprint={
 2d_physics/layer_8="PlayerHurtBox"
 2d_physics/layer_9="EnemyHurtBox"
 2d_physics/layer_10="NPC"
+2d_physics/layer_11="PlayerDetection"
 
 [rendering]
 
