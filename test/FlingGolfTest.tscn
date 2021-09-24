@@ -16,10 +16,10 @@ color_splash_color = Color( 0.0627451, 0.486275, 0.0784314, 1 )
 bloom_show = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -352.0
-margin_top = -208.0
-margin_right = 928.0
-margin_bottom = 608.0
+margin_left = -440.0
+margin_top = -328.0
+margin_right = 840.0
+margin_bottom = 488.0
 color = Color( 0.0588235, 0.219608, 0.0588235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

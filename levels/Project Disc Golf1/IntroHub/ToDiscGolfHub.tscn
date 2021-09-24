@@ -53,7 +53,9 @@ script = ExtResource( 7 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PostProcessing_tool" parent="CanvasLayer" instance=ExtResource( 18 )]
-color_splash_strength = 0.1
+white_balance_temperature = 1.0
+color_splash_show = true
+color_splash_strength = 1.0
 bloom_intensity = 0.3
 chromatc_aberration_strength = 1.0
 fog_overlay_show = true
