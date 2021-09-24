@@ -13,8 +13,8 @@ export(String, FILE, "*.tscn") var to_options_scene
 export(String, FILE, "*.tscn") var to_minigames_scene
 
 
-#func _ready():
-#	MusicController.play_menu_music()
+func _ready():
+	MusicController.play_menu_music()
 
 # Main Game
 func _on_Button_pressed():
