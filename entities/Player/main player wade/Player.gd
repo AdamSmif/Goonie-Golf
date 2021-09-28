@@ -69,13 +69,13 @@ func _physics_process(_delta):
 #TODO: Clean Up ###
 # Spawn All Players
 	if Input.is_action_just_pressed("ui_accept"):
-		$AllOtheerPlayers/OtherPlayers2.visible = true
-		$AllOtheerPlayers/OtherPlayers3.visible = true
-		$AllOtheerPlayers/OtherPlayers4.visible = true
-		$AllOtheerPlayers/OtherPlayers5.visible = true
-		$AllOtheerPlayers/OtherPlayers6.visible = true
-		$AllOtheerPlayers/OtherPlayers7.visible = true
-		$AllOtheerPlayers/OtherPlayers8.visible = true
+		$AllPlayers.visible = true
+#		$AllPlayers/OtherPlayers3.visible = true
+#		$AllPlayers/OtherPlayers4.visible = true
+#		$AllPlayers/OtherPlayers5.visible = true
+#		$AllPlayers/OtherPlayers6.visible = true
+#		$AllPlayers/OtherPlayers7.visible = true
+#		$AllPlayers/OtherPlayers8.visible = true
 # Spawn Other Players
 	if Input.is_action_just_pressed("spawn_2"):
 		$AllPlayers/OtherPlayers2.visible = true

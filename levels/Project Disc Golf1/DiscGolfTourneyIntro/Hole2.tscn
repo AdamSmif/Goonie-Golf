@@ -23,7 +23,7 @@ tile_data = PoolIntArray( -4259937, 0, 0, -4259936, 0, 2, -4194401, 0, 65536, -4
 position = Vector2( 328, 176 )
 texture = ExtResource( 6 )
 
-[node name="PlayerCamera" parent="Player" index="12"]
+[node name="PlayerCamera" parent="Player" index="10"]
 offset = Vector2( 125, -125 )
 
 [node name="Raining" parent="Player/PlayerCamera" index="2" instance=ExtResource( 7 )]

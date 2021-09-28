@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://entities/Player/FlingGolfer/FlingGolfer.tscn" type="PackedScene" id=1]
-[ext_resource path="res://entities/Assets/evergreentreeGB/evergreentreeGB.png" type="Texture" id=2]
+[ext_resource path="res://entities/Assets/evergreentreeGB/EverGreenTreeGB.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/Player/player camera/PlayerCamera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://engine/Post Processing tool/PostProcessing_tool.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/NPCs/ADefaultNPC/defaultNPC.tscn" type="PackedScene" id=5]
+[ext_resource path="res://engine/DialoguePlayer/DialoguePlayer.tscn" type="PackedScene" id=6]
 
 [node name="FlingGolfTest" type="Node2D"]
 
@@ -12,8 +14,10 @@
 [node name="PostProcessing_tool" parent="CanvasLayer" instance=ExtResource( 4 )]
 white_balance_temperature = 1.0
 white_balance_tint = 1.0
-color_splash_color = Color( 0.0627451, 0.486275, 0.0784314, 1 )
-bloom_show = true
+color_splash_color = Color( 1, 0.129412, 0.129412, 1 )
+color_splash_strength = 4.0
+chromatc_aberration_show = true
+fog_overlay_show = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -440.0
@@ -24,20 +28,6 @@ color = Color( 0.0588235, 0.219608, 0.0588235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="YSort" type="YSort" parent="."]
-
-[node name="evergreentreeGB" type="Sprite" parent="YSort"]
-position = Vector2( 24, 128 )
-texture = ExtResource( 2 )
-
-[node name="evergreentreeGB2" type="Sprite" parent="YSort"]
-position = Vector2( 160, 64 )
-texture = ExtResource( 2 )
-
-[node name="evergreentreeGB3" type="Sprite" parent="YSort"]
-position = Vector2( 392, 104 )
-texture = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 40, 64 )
@@ -50,8 +40,28 @@ margin_left = -400.0
 margin_top = -304.0
 margin_right = 1080.0
 margin_bottom = 696.0
-color = Color( 0.607843, 0.737255, 0.0588235, 0.223529 )
+color = Color( 0.545098, 0.662745, 0.0470588, 0.223529 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="defaultNPC" parent="." instance=ExtResource( 5 )]
+position = Vector2( 344, 112 )
+
+[node name="AnimatedSprite" parent="defaultNPC" index="0"]
+animation = "Vern Avocado"
+
+[node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 6 )]
+dialogue_file = "res://entities/Dialogue/mike/yeah_mike.json"
+
+[node name="EverGreenTreeGB" parent="." instance=ExtResource( 2 )]
+position = Vector2( 168, 16 )
+
+[node name="EverGreenTreeGB3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 168, 280 )
+
+[node name="EverGreenTreeGB2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -104, 240 )
+
+[editable path="defaultNPC"]
