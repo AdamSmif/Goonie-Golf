@@ -320,7 +320,7 @@ position = Vector2( 1816, 240 )
 position = Vector2( -0.540405, -2.7018 )
 scale = Vector2( 0.75, 0.75 )
 animation = "Douglas Ramond"
-frame = 1
+frame = 0
 
 [node name="defaultNPC3" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 1416, 240 )
@@ -329,7 +329,7 @@ position = Vector2( 1416, 240 )
 position = Vector2( 17.0808, 4.75784 )
 scale = Vector2( 0.75, 0.75 )
 animation = "Vern Avocado"
-frame = 1
+frame = 0
 
 [node name="defaultNPC4" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 2569.63, 238.304 )
@@ -338,7 +338,7 @@ position = Vector2( 2569.63, 238.304 )
 position = Vector2( 2.09058, -2.50871 )
 scale = Vector2( 1.25, 1.25 )
 animation = "Dot Williams"
-frame = 1
+frame = 0
 
 [node name="defaultNPC5" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 2778.32, 239.505 )

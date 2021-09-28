@@ -17,7 +17,9 @@ white_balance_tint = 1.0
 color_splash_color = Color( 1, 0.129412, 0.129412, 1 )
 color_splash_strength = 4.0
 chromatc_aberration_show = true
+glitch_show = true
 fog_overlay_show = true
+vignette_show = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -440.0
@@ -35,7 +37,6 @@ position = Vector2( 40, 64 )
 [node name="PlayerCamera" parent="Player" instance=ExtResource( 3 )]
 
 [node name="Shader" type="ColorRect" parent="."]
-visible = false
 margin_left = -400.0
 margin_top = -304.0
 margin_right = 1080.0
@@ -51,6 +52,7 @@ position = Vector2( 344, 112 )
 
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
 animation = "Vern Avocado"
+frame = 0
 
 [node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 6 )]
 dialogue_file = "res://entities/Dialogue/mike/yeah_mike.json"
