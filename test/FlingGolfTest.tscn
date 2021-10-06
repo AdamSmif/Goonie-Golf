@@ -32,7 +32,6 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 40, 64 )
 
 [node name="PlayerCamera" parent="Player" instance=ExtResource( 3 )]
 
@@ -52,7 +51,9 @@ position = Vector2( 344, 112 )
 
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
 animation = "Vern Avocado"
-frame = 0
+
+[node name="LightSource" parent="defaultNPC" index="2"]
+position = Vector2( 4.64916e-06, -2.98023e-06 )
 
 [node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 6 )]
 dialogue_file = "res://entities/Dialogue/mike/yeah_mike.json"

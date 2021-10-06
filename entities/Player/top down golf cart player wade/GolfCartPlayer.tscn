@@ -21,7 +21,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 15.5284, 14.4808 )
 
-[node name="GolfCartPlayer" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D"]
 collision_mask = 529
 script = ExtResource( 5 )
 
@@ -34,6 +34,7 @@ position = Vector2( 0.541107, 1.35275 )
 shape = SubResource( 2 )
 
 [node name="daycycle" parent="." instance=ExtResource( 7 )]
+visible = false
 position = Vector2( 315.874, -1.80499 )
 col = ExtResource( 8 )
 
