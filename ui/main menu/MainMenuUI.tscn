@@ -27,7 +27,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-next_world_scene = "res://ui/games menu/Games.tscn"
+next_world_scene = "res://levels/hub/HubWorld.tscn"
 to_credits_scene = "res://ui/credits/Credits.tscn"
 to_options_scene = "res://ui/credits/Options.tscn"
 to_minigames_scene = "res://ui/Charity/Charity.tscn"
@@ -39,15 +39,19 @@ frame = 1
 
 [node name="Ocean" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, 320 )
+frame = 2
 
 [node name="Ocean4" parent="." instance=ExtResource( 3 )]
 position = Vector2( -128, 320 )
+frame = 2
 
 [node name="Ocean2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 376, 320 )
+frame = 2
 
 [node name="Ocean3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 632, 320 )
+frame = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5

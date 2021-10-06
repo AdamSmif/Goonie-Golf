@@ -266,6 +266,7 @@ position = Vector2( 1179.69, -904.235 )
 
 [node name="AbanonedTrainNoCollision" parent="Enviroment" instance=ExtResource( 17 )]
 position = Vector2( 72, -520 )
+frame = 1
 
 [node name="RainEffect" parent="." instance=ExtResource( 4 )]
 

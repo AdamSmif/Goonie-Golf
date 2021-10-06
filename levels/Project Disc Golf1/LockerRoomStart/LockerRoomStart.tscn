@@ -90,6 +90,9 @@ next_world_scene = "res://levels/Project Disc Golf1/IntroHub/ToDiscGolfHub.tscn"
 
 [node name="ToDiscGolfHubPos" type="Position2D" parent="."]
 position = Vector2( -262.878, 131.152 )
+
+[node name="HubWorldPos" type="Position2D" parent="."]
+position = Vector2( -302.166, 129.924 )
 [connection signal="bottle_collected" from="YSort/Bottle" to="HUD" method="_on_Bottle_bottle_collected"]
 [connection signal="bottle_collected" from="YSort/Bottle2" to="HUD" method="_on_Bottle_bottle_collected"]
 [connection signal="bottle_collected" from="YSort/Bottle3" to="HUD" method="_on_Bottle_bottle_collected"]

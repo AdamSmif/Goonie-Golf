@@ -51,6 +51,7 @@ position = Vector2( 344, 112 )
 
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
 animation = "Vern Avocado"
+frame = 0
 
 [node name="LightSource" parent="defaultNPC" index="2"]
 position = Vector2( 4.64916e-06, -2.98023e-06 )
