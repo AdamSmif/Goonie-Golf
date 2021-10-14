@@ -1,7 +1,7 @@
 extends Node2D
 
 
-const PLAYER = preload("res://test/lobby/player/player.tscn")
+const PLAYER = preload("res://player/player.tscn")
 
 onready var player_spawn = $PlayerSpawn
 onready var players = $Players

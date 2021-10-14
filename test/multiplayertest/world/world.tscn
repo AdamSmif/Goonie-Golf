@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://test/lobby/assets/sprites/icon.png" type="Texture" id=1]
-[ext_resource path="res://test/lobby/world/gamestate.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/icon.png" type="Texture" id=1]
+[ext_resource path="res://world/gamestate.gd" type="Script" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
