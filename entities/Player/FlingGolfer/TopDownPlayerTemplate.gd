@@ -18,3 +18,9 @@ func _physics_process(delta):
 		move_and_slide(input_vector * speed)
 		$AnimationTree.set("parameters/Idle/blend_position", input_vector)
 		$AnimationTree.set("parameters/Walk/blend_position", input_vector)
+
+#Netcode
+	rpc_unreliable("set_pos",global_position)
+	
+remote func set_pos(pos):
+	global_position = pos
