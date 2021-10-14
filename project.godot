@@ -46,11 +46,7 @@ _global_script_class_icons={
 
 config/name="Goonie Golf"
 config/description="A FOSS golf focused video game"
-<<<<<<< Updated upstream
-run/main_scene="res://ui/splash screen/FluffyDogMediaSplashScreen.tscn"
-=======
 run/main_scene="res://test/multiplayertest/lobby/lobby.tscn"
->>>>>>> Stashed changes
 config/icon="res://entities/Assets/EGPT Logo/EGPT.png"
 config/macos_native_icon="res://entities/Assets/EGPT Logo/EGPT White Logo Mac.icns"
 config/windows_native_icon="res://entities/Assets/EGPT Logo/EGPT-White-LogoICO.ico"
@@ -63,11 +59,8 @@ Global="*res://engine/Autoloads/Global.gd"
 MusicController="*res://engine/Autoloads/MusicController.tscn"
 DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
 GameOver="*res://ui/HUD/GameOver.tscn"
-<<<<<<< Updated upstream
-=======
 Server="*res://test/multiplayertest/server/server.gd"
 Save="*res://test/multiplayertest/save/save.gd"
->>>>>>> Stashed changes
 
 [display]
 

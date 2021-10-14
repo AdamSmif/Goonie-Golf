@@ -97,12 +97,6 @@ text = "Join Game"
 
 [node name="WaitingRoom" parent="." instance=ExtResource( 2 )]
 
-[node name="VBoxContainer" parent="WaitingRoom/CenterContainer" index="0"]
-margin_left = 220.0
-margin_top = 158.0
-margin_right = 420.0
-margin_bottom = 222.0
-
 [node name="ItemList" parent="WaitingRoom/CenterContainer/VBoxContainer" index="1"]
 items = [ "Player 1", null, false, "Player 2", null, false, "Player 3", null, false, "Player 4", null, false ]
 [connection signal="text_changed" from="CenterContainer/VBoxContainer/GridContainer/NameTextBox" to="." method="_on_NameTextBox_text_changed"]
