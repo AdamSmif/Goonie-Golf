@@ -10,3 +10,15 @@ func find_and_use_dialogue():
 	
 	if dialogue_player:
 		dialogue_player.play()
+
+
+func _on_defaultNPC_area_entered(area):
+	Global.from = get_parent().name
+	print("?") 
+	$AnimationPlayer.play("interaction")
+
+
+func _on_defaultNPC_area_exited(area):
+	Global.from = get_parent().name
+	print("? off") 
+	$AnimationPlayer.play("interactionoff")

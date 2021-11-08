@@ -3,7 +3,8 @@
 [ext_resource path="res://UI/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/UI Animations/BlackToTransparent.anim" type="Animation" id=2]
 [ext_resource path="res://UI/Credits/Credits.gd" type="Script" id=3]
-[ext_resource path="res://entities/Assets/Background/Low Poly General/lowpolygolf.jpeg" type="Texture" id=4]
+[ext_resource path="res://entities/Assets/Background/Low Poly General/DiscGolfLowPoly/lowpolygolf.jpeg" type="Texture" id=4]
+
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )

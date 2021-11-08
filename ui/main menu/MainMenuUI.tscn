@@ -39,19 +39,15 @@ frame = 1
 
 [node name="Ocean" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, 320 )
-frame = 2
 
 [node name="Ocean4" parent="." instance=ExtResource( 3 )]
 position = Vector2( -128, 320 )
-frame = 2
 
 [node name="Ocean2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 376, 320 )
-frame = 2
 
 [node name="Ocean3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 632, 320 )
-frame = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
