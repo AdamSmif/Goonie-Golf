@@ -25,7 +25,7 @@ font_data = ExtResource( 2 )
 [sub_resource type="Theme" id=4]
 default_font = SubResource( 3 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "interaction"
 tracks/0/type = "value"
 tracks/0/path = NodePath("question:modulate")
@@ -40,7 +40,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 resource_name = "interactionoff"
 tracks/0/type = "value"
 tracks/0/path = NodePath("question:modulate")
@@ -55,8 +55,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "transition"
+[sub_resource type="Animation" id=7]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
@@ -124,8 +123,8 @@ position = Vector2( -3.30527, 0.973724 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/fade = ExtResource( 6 )
-anims/interaction = SubResource( 6 )
-anims/interactionoff = SubResource( 7 )
-anims/transition = SubResource( 5 )
+anims/interaction = SubResource( 5 )
+anims/interactionoff = SubResource( 6 )
+anims/transition = SubResource( 7 )
 [connection signal="body_entered" from="." to="." method="_on_ArcadeMachine_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_ArcadeMachine_body_exited"]

@@ -23,6 +23,5 @@ func _physics_process(delta):
 		$AnimationTree.set("parameters/Idle/blend_position", input_vector)
 		$AnimationTree.set("parameters/Walk/blend_position", input_vector)
 
-
 #func set_player_name ():
 #	player_label.text = Server.players[int(name)]["Player_name"]

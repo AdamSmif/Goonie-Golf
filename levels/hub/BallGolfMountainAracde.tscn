@@ -1,0 +1,126 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://ui/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://entities/Assets/arcademachine/arcadebig.png" type="Texture" id=2]
+[ext_resource path="res://entities/Assets/Background/Sunset Sky/sunsetsky.png" type="Texture" id=3]
+[ext_resource path="res://audio/sound effects/Menu Select/MenuSelect.tscn" type="PackedScene" id=4]
+[ext_resource path="res://levels/hub/DiscGolfAracde.gd" type="Script" id=5]
+[ext_resource path="res://entities/Assets/Ocean/Ocean.tscn" type="PackedScene" id=6]
+[ext_resource path="res://entities/Assets/Evergreen Tree/EverGreenNoCollision.tscn" type="PackedScene" id=7]
+[ext_resource path="res://entities/tiles/WorldHubTile/WorldMap.tscn" type="PackedScene" id=8]
+[ext_resource path="res://entities/Assets/Mountains/snowmountain.png" type="Texture" id=9]
+[ext_resource path="res://entities/Assets/Golf Flag/golflag.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[node name="DiscGolfAracde" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+play_game = "res://test/BaloonTest.tscn"
+exit_game = "res://levels/hub/HubWorld.tscn"
+
+[node name="sunsetsky" type="Sprite" parent="."]
+position = Vector2( 304, 88 )
+texture = ExtResource( 3 )
+
+[node name="snowmountain" type="Sprite" parent="."]
+position = Vector2( 104, 120 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 9 )
+
+[node name="snowmountain2" type="Sprite" parent="."]
+position = Vector2( 560, 128 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 9 )
+
+[node name="EverGreenNoCollision" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 256 )
+scale = Vector2( 5, 5 )
+
+[node name="EverGreenNoCollision2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 520, 272 )
+scale = Vector2( 5, 5 )
+
+[node name="EverGreenNoCollision3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 672, 280 )
+scale = Vector2( 5, 5 )
+frame = 1
+
+[node name="EverGreenNoCollision4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 176, 288 )
+scale = Vector2( 5, 5 )
+
+[node name="Ocean" parent="." instance=ExtResource( 6 )]
+position = Vector2( 160, 256 )
+scale = Vector2( 2, 2 )
+frame = 2
+
+[node name="Ocean2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 664, 264 )
+scale = Vector2( 2, 2 )
+frame = 2
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 320, 192 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 120.0
+margin_right = 440.0
+margin_bottom = 240.0
+theme = SubResource( 2 )
+text = "Play"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 288.0
+margin_top = 344.0
+margin_right = 352.0
+margin_bottom = 376.0
+theme = SubResource( 4 )
+text = "Exit"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuSelect" parent="." instance=ExtResource( 4 )]
+
+[node name="WorldMap" parent="." instance=ExtResource( 8 )]
+tile_data = PoolIntArray(  )
+
+[node name="golflag" type="Sprite" parent="."]
+position = Vector2( 232, 216 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 10 )
+
+[node name="golflag2" type="Sprite" parent="."]
+position = Vector2( 400, 216 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 10 )
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

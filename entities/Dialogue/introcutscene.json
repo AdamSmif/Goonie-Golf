@@ -1,14 +1,15 @@
 [
     {"name": "Wade", "text": "Man trying to go to sleep right now is next to impossible."},
     {"name": "Wade", "text": "Hopefully I get enough rest for my disc golf tournament tommorow"},
-    {"name": "Narrator", "text": "You try your best to get some sleep"},
-    {"name": "Narrator", "text": "*A few moments later*"},
-    {"name": "???", "text": "*Wade..."},
-    {"name": "???", "text": "*Be careful tommorow"},
-    {"name": "???", "text": "*Danger alerts you!"},
+    {"name": "", "text": "You try your best to get some sleep"},
+    {"name": "", "text": "*A few moments later*"},
+    {"name": "???", "text": "Wade..."},
+    {"name": "???", "text": "Be careful tommorow"},
+    {"name": "???", "text": "Danger alerts you!"},
     {"name": "???", "text": "Be wary of glowing red eyes Wade"},
-    {"name": "Narrator", "text": "two hours go by"},
+    {"name": "", "text": "two hours go by"},
     {"name": "Coach", "text": "Hey Wade wake up!"},
+    {"name": "", "text": "You find yourself at your local gym."},
     {"name": "Coach", "text": "How did you even get in here, I keep the doors locked at night!"},
     {"name": "Wade", "text": "???"}
 ]
