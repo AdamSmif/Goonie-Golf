@@ -58,6 +58,9 @@ margin_left = -32.0
 margin_top = 384.0
 margin_right = 680.0
 margin_bottom = 424.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 margin_left = -40.0

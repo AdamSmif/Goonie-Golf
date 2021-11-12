@@ -1,0 +1,112 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://engine/CutsceneDialogue/CutsceneDialogue.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/Player/Kevin Simons/KevinSimons1.png" type="Texture" id=2]
+[ext_resource path="res://entities/Assets/Background/Low Poly General/lowpoly.jpg" type="Texture" id=3]
+[ext_resource path="res://entities/NPCs/Karl Simmons/KarlSimmons1.png" type="Texture" id=4]
+[ext_resource path="res://entities/NPCs/Karl Simmons/KarlSimmons2.png" type="Texture" id=5]
+[ext_resource path="res://entities/Player/Kevin Simons/KevinSimons2.png" type="Texture" id=6]
+[ext_resource path="res://entities/Assets/arcademachine/screen.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="MountainCutscene1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="lowpoly" type="Sprite" parent="."]
+position = Vector2( 352, 168 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -112.0
+margin_top = -40.0
+margin_right = -640.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 632.0
+margin_top = -24.0
+margin_right = 104.0
+margin_bottom = 56.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 663.0
+margin_top = 384.0
+margin_right = 135.0
+margin_bottom = 679.0
+rect_rotation = 90.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 656.0
+margin_top = -104.0
+margin_right = 128.0
+margin_bottom = 191.0
+rect_rotation = 90.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CutsceneDialogue" parent="." instance=ExtResource( 1 )]
+dialogue_file = "res://entities/Dialogue/project mountain/introcutscene1.json"
+next_world_scene = "res://levels/Project Mountain/introcutscene/MountainCutscene2.tscn"
+
+[node name="KevinSimons1" type="AnimatedSprite" parent="."]
+position = Vector2( 64, 200 )
+scale = Vector2( 4, 4 )
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.1
+playing = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 560, 208 )
+scale = Vector2( 4, 4 )
+frames = SubResource( 2 )
+speed_scale = 0.07
+playing = true
+
+[node name="screen" type="Sprite" parent="."]
+position = Vector2( 320, 192 )
+texture = ExtResource( 7 )

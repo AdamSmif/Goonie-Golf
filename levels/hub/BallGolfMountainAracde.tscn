@@ -31,7 +31,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-play_game = "res://test/BaloonTest.tscn"
+play_game = "res://levels/Project Mountain/introcutscene/MountainCutscene1.tscn"
 exit_game = "res://levels/hub/HubWorld.tscn"
 
 [node name="sunsetsky" type="Sprite" parent="."]

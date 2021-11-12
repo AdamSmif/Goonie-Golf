@@ -341,7 +341,7 @@ position = Vector2( -56, -216 )
 next_world_scene = "res://levels/hub/DiscGolfAracde.tscn"
 
 [node name="AnimatedSprite" parent="BeachAssets/ArcadeMachine" index="0"]
-frame = 1
+frame = 0
 
 [node name="Label" parent="BeachAssets/ArcadeMachine" index="4"]
 text = "Project Disc"
@@ -351,7 +351,7 @@ position = Vector2( -40, -1000 )
 next_world_scene = "res://levels/hub/BallGolfMountainAracde.tscn"
 
 [node name="AnimatedSprite" parent="BeachAssets/ArcadeMachine2" index="0"]
-frame = 1
+frame = 0
 
 [node name="Label" parent="BeachAssets/ArcadeMachine2" index="4"]
 text = "Project Mountain"
@@ -368,6 +368,9 @@ anims/transition = SubResource( 4 )
 [node name="ArcadeMachine3" parent="BeachAssets" instance=ExtResource( 16 )]
 position = Vector2( -528, -704 )
 next_world_scene = "res://test/FlingGolfTest.tscn"
+
+[node name="AnimatedSprite" parent="BeachAssets/ArcadeMachine3" index="0"]
+frame = 0
 
 [node name="Label" parent="BeachAssets/ArcadeMachine3" index="4"]
 text = "Project Mountain"

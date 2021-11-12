@@ -5,216 +5,50 @@ export var id = 1
 # Stats
 var stats = PlayerStats
 
-#signals to HUD that a disc is thrown
-signal disc_thrown
-
 # Coin Amount
 var bottles_needed = 0
-# Level Respawn
-export(String, FILE, "*.tscn") var lose_level_world_scene
-# Game Over
-export(String, FILE, "*.tscn") var game_over_scene
 
+const UP_DIRECTION := Vector2.UP
 
-# Movement
+export var speed := 600
 
-export var MAX_SPEED = 250
-export  var ACCELERATION = 75
-export var MAX_SPRINT_SPEED = 450
-export  var SPRINT_ACCELERATION = 350
-var motion = Vector2()
-var knockback = Vector2.ZERO
+export var jump_strength := 1500
+export var maximum_jumps := 2
+export var double_jump_strength := 1200
+export var gravity := 4500
 
-# Jump
-export var JUMP_HEIGHT = -500 
-export var GRAVITY = 30
+var _jumps_made := 0
+var _velocity := Vector2.ZERO
 
-#trampoline
-export var spring = -1200
-export var springDown = 1200
-
-# Coyote Time
-var CoyoteJump = true
-var jumpWasPressed = false
-onready var coyoteTimer := $CoyoteTimer
-
-
-# Stairs
-var stair_on = false
-
-
-# Cool Down
-onready var discDelayTimer := $DiscTimer
-export var throwDelay: float = 0.8
-var vel := Vector2(0, 0)
-
-# allows rigid bodies to stay rigid
-export (int, 0, 200) var push = 5    
-
-func _ready():
-	stats.connect("no_health", self, "queue_free")
-
-
-func _physics_process(_delta):
-	motion.y += GRAVITY
-	var friction = false
-
-# Movment
-	if Input.is_action_pressed('right_%s' % id):
-		motion.x = lerp(motion.x + ACCELERATION, MAX_SPEED, .75)
-		$Sprite.flip_h = false
-		$Sprite.play("move")
-	elif Input.is_action_pressed('left_%s' % id):
-		motion.x = lerp(motion.x - ACCELERATION, -MAX_SPEED, .75)
-		$Sprite.flip_h = true
-		$Sprite.play("move")
-	else:
-		motion.x = 0
-		$Sprite.play("idle")
-		friction = true
+func _physics_process(delta: float) -> void:
+		var _horizontal_direction = (
+			Input.get_action_strength('right_%s' % id)
+			- Input.get_action_strength('left_%s' % id)
+		)
+		_velocity.x = _horizontal_direction * speed
+		_velocity.y += gravity * delta
 		
-	if Input.is_action_pressed('down_%s' % id):
-		$Sprite.flip_h = false
-		$Sprite.play("down")
-
-# Sprinting
-	if Input.is_action_pressed('sprintright_%s' % id):
-		print("sprint right")
-		motion.x = lerp(motion.x + SPRINT_ACCELERATION, MAX_SPRINT_SPEED, .75)
-		$Sprite.flip_h = false
-		$Sprite.play("skateright")
-	elif Input.is_action_pressed('sprintleft_%s' % id):
-		print("sprint left")
-		motion.x = lerp(motion.x + -SPRINT_ACCELERATION, -MAX_SPRINT_SPEED, .75)
-		$Sprite.flip_h = true
-		$Sprite.play("skateleft")
-
-	if is_on_floor():
-		CoyoteJump = true
-		if jumpWasPressed == true:
-			motion.y = JUMP_HEIGHT
-		pass
-		if Input.is_action_pressed('up_%s' % id):
-			jumpWasPressed = true
-			rememberJumpTime()
-			if CoyoteJump == true:
-				$JumpSound.play()
-				motion.y = JUMP_HEIGHT
-				if friction == true:
-					motion.x = lerp(motion.x, 0, 0.2)
-	else:
-		coyoteTime()
-		if motion.y < 0: 
-			$Sprite.play("jump")
-		else:
-			$Sprite.play("fall")
-		if friction == true:
-			motion.x = lerp(motion.x, 0, 0.2)
-
-	var _was_on_floor = is_on_floor()
-	# For interacting with rigid bodies
-	motion = move_and_slide(motion, Vector2.UP, false, 4, PI/4, false)
+		#Body State #
+		var is_falling := _velocity.y > 0.0 and not is_on_floor()
+		var is_jumping := Input.is_action_just_pressed('up_%s' % id) and is_on_floor()
+		var is_double_jumping := Input.is_action_just_pressed('up_%s' % id) and is_falling
+		var is_jump_cancelled := Input.is_action_just_pressed('up_%s' % id) and _velocity.y < 0.0
+		var is_idling := is_on_floor() and is_zero_approx(_velocity.x)
+		var is_running := is_on_floor() and not is_zero_approx(_velocity.x)
 	
-	# if the player goes really fast the player's animation will get spoked
-	if motion.y > 1350 or motion.y < -1350:
-		$Sprite.play("shocked")
-
-func coyoteTime():
-	coyoteTimer
-	CoyoteJump = false
-	pass
-
-func rememberJumpTime():
-	yield(get_tree().create_timer(0.2), "timeout")
-	jumpWasPressed = false
-	pass
-
-func _on_FallZone_body_entered(body):
-	get_tree().change_scene(lose_level_world_scene)
-	
-	
-func bounce():
-	motion.y = JUMP_HEIGHT * 0.8
-	
-# Enemy Collision
-
-func ouch(var enemyposx):
-	set_modulate(Color(1,0.3,0.3,0.4))
-	motion.y = JUMP_HEIGHT * 0.2
-#
-	if position.x < enemyposx:
-		motion.x = -800
-	elif position.x > enemyposx:
-		motion.x = 800
-
-	Input.action_release("left_%s" % id)
-	Input.action_release("right_%s" % id)
-	
-
-	$Timer.start()
-	
-### Signals ###
-	
-func _on_Timer_timeout():
-	get_tree().change_scene(lose_level_world_scene)
-
-
-func _on_DiscTimer_timeout():
-	pass # Replace with function body.
-
-
-# Trampoline Signals
-
-func _on_Trampoline_body_entered(_body):
-	motion.y = spring
-
-
-func _on_DownTrampoline_body_entered(body):
-	motion.y = springDown
-
-# Stairs Signals
-
-func _on_Stairs_body_entered(body):
-	pass # Replace with function body.
-
-
-func _on_Hurtbox_area_entered(area):
-	stats.health -= 1
-	$AnimationPlayer.play("Hit")
-	$GotHitSound.play()
-	motion.y = JUMP_HEIGHT * 0.2
-	knockback = Vector2.RIGHT * 150
-	knockback = Vector2.LEFT * 150
-	if stats.health == 0:
-		$Sprite.play("boom")
-		motion.x = 0
-		$Timer.start()
-		get_tree().change_scene(lose_level_world_scene)
-	
-
-
-func _on_GameOverTimer_timeout():
-	get_tree().change_scene(lose_level_world_scene)
-
-
-func _on_PlayerStats_no_health():
-	$Sprite.play("boom")
-	motion.x = 0
-	get_tree().change_scene(lose_level_world_scene)
-	
-
-### Save Data ####
-
-func _get_save_stats():
-	return {
-		'filename': get_filename(),
-		'parent' : get_parent().get_path(),
-		'x_pos' : global_transform.origin.x,
-		'y_pos' : global_transform.origin.y,
-		'stats' : {
-			'stats' : stats
-		}
-	}
-
-
-
+		#		##
+		
+		# Jumping #
+		if is_jumping:
+				_jumps_made += 1
+				_velocity.y = -jump_strength
+		elif is_double_jumping:
+			_jumps_made += 1
+			if _jumps_made <= maximum_jumps:
+				_velocity.y = -double_jump_strength
+		elif is_jump_cancelled:
+			_velocity.y = 0.0
+		elif is_idling or is_running:
+			_jumps_made = 0
+		
+		_velocity = move_and_slide(_velocity, UP_DIRECTION)

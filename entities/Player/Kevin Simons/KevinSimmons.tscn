@@ -12,7 +12,7 @@
 [ext_resource path="res://entities/Player/Kevin Simons/KevinSimons4.png" type="Texture" id=10]
 [ext_resource path="res://entities/Player/Kevin Simons/KevinSimons6.png" type="Texture" id=11]
 [ext_resource path="res://entities/Player/Kevin Simons/KevinSimons5.png" type="Texture" id=12]
-[ext_resource path="res://entities/Player/Kevin Simons/KevinSimmons.gd" type="Script" id=13]
+[ext_resource path="res://entities/Player/Kevin Simons/KevinSimmonsPrototype.gd" type="Script" id=13]
 [ext_resource path="res://engine/Collisions/Hurtbox.tscn" type="PackedScene" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -22,9 +22,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 11 ) ],
 "loop": true,
-"name": "move",
+"name": "fall",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
@@ -37,9 +37,9 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "fall",
+"name": "move",
 "speed": 5.0
 } ]
 
@@ -52,9 +52,6 @@ extents = Vector2( 5.83839, 7.86322 )
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 530
 script = ExtResource( 13 )
-MAX_SPEED = 150
-ACCELERATION = 180
-GRAVITY = 15
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
@@ -66,7 +63,6 @@ position = Vector2( 3.61413, 4.30892 )
 shape = SubResource( 2 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 14 )]
-collision_layer = 128
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 visible = false

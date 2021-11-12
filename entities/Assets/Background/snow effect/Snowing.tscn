@@ -19,41 +19,40 @@ animations = [ {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -160, 0 )
 frames = SubResource( 1 )
-frame = 4
+frame = 1
 speed_scale = 0.5
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 160, 0 )
 frames = SubResource( 1 )
-frame = 3
 speed_scale = 0.5
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
 position = Vector2( -160, -192 )
 frames = SubResource( 1 )
-frame = 2
+frame = 4
 speed_scale = 0.5
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
 position = Vector2( 160, -200 )
 frames = SubResource( 1 )
-frame = 2
+frame = 4
 speed_scale = 0.5
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="."]
 position = Vector2( -160, 176 )
 frames = SubResource( 1 )
-frame = 2
+frame = 4
 speed_scale = 0.5
 playing = true
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="."]
 position = Vector2( 160, 176 )
 frames = SubResource( 1 )
-frame = 1
+frame = 3
 speed_scale = 0.5
 playing = true
