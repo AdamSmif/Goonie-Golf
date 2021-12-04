@@ -4,6 +4,8 @@ var rain_music = load("res://audio/music/RainShowersRVX2406.ogg")
 var menu_music = load("res://audio/music/title-screen.ogg")
 var credits_music = load("res://audio/music/8_bit_cold_lake_lofi.ogg")
 var synth_music = load("res://audio/music/Dreamstate.ogg")
+var hub_music = load("res://audio/music/hub world.wav")
+
 
 ### Menu Music ###
 func play_menu_music():
@@ -40,4 +42,13 @@ func play_synth_music():
 	
 func stop_synth_music():
 	$AudioStreamPlayer.stream = synth_music
+	$AudioStreamPlayer.stop()
+	
+### Hub Music ###
+func play_hub_music():
+	$AudioStreamPlayer.stream = hub_music
+	$AudioStreamPlayer.play()
+	
+func stop_hub_music():
+	$AudioStreamPlayer.stream = hub_music
 	$AudioStreamPlayer.stop()

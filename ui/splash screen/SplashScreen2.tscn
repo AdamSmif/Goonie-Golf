@@ -43,6 +43,7 @@ next_world_scene = "res://ui/main menu/MainMenuUI.tscn"
 
 [node name="NightSkyAnimated" parent="." instance=ExtResource( 1 )]
 position = Vector2( 320, 176 )
+frame = 1
 
 [node name="Sports" type="YSort" parent="."]
 
@@ -70,19 +71,16 @@ texture = ExtResource( 7 )
 
 [node name="Ocean" parent="Oceanwave" instance=ExtResource( 2 )]
 position = Vector2( 128, 304 )
-frame = 1
+frame = 2
 
 [node name="Ocean2" parent="Oceanwave" instance=ExtResource( 2 )]
 position = Vector2( 376, 304 )
-frame = 2
 
 [node name="Ocean3" parent="Oceanwave" instance=ExtResource( 2 )]
 position = Vector2( 632, 304 )
-frame = 2
 
 [node name="Ocean4" parent="Oceanwave" instance=ExtResource( 2 )]
 position = Vector2( -128, 304 )
-frame = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

@@ -35,7 +35,6 @@ to_minigames_scene = "res://ui/Charity/Charity.tscn"
 [node name="NightSkyAnimated" parent="." instance=ExtResource( 2 )]
 position = Vector2( 320, 184 )
 scale = Vector2( 1.075, 1.13158 )
-frame = 1
 
 [node name="Ocean" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, 320 )

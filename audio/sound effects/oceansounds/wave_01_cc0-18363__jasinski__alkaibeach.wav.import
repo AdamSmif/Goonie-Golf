@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wave_01_cc0-18363__jasinski__alkaibeach.wav-e408a7925432fec24ac4a3b83023ce2d.sample"
+
+[deps]
+
+source_file="res://audio/sound effects/oceansounds/wave_01_cc0-18363__jasinski__alkaibeach.wav"
+dest_files=[ "res://.import/wave_01_cc0-18363__jasinski__alkaibeach.wav-e408a7925432fec24ac4a3b83023ce2d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
