@@ -15,6 +15,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TeeTimeIntro1Pos" type="Position2D" parent="."]
+position = Vector2( -48, 520 )
+
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -88.0
 margin_top = -80.0
@@ -40,9 +43,6 @@ position = Vector2( -104, 512 )
 
 [node name="PlayerCamera" parent="Player" index="13"]
 current = false
-
-[node name="TeeTimeIntro1Pos" type="Position2D" parent="."]
-position = Vector2( -48, 520 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 320, 192 )

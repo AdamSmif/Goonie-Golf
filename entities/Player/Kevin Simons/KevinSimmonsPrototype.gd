@@ -84,6 +84,21 @@ func _physics_process(_delta):
 	elif Input.is_action_just_pressed("spawn_8"):
 		$AllPlayers/OtherPlayers8.visible = true
 
+## New Movement Code #
+#	var input_vector = Vector2.ZERO
+#	input_vector.x = Input.get_action_strength('right_%s' % id) - Input.get_action_strength('left_%s' % id)
+#	if input_vector == Vector2.ZERO:
+#		move_and_slide(input_vector * MAX_SPEED)
+#		$Sprite.play("idle")
+#		friction = true
+#	if input_vector.x > 0:
+#		move_and_slide(input_vector * MAX_SPEED)
+#		$Sprite.flip_h = false
+#		$Sprite.play("move")
+#	elif input_vector.x < 0:
+#		$Sprite.flip_h = true
+#		$Sprite.play("move")
+
 # Movment
 	if Input.get_action_strength('right_%s' % id):
 		motion.x = lerp(motion.x + ACCELERATION, MAX_SPEED, .75)

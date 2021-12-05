@@ -14,5 +14,6 @@ animations = [ {
 [node name="EverGreenNoCollision" type="AnimatedSprite"]
 scale = Vector2( 8, 8 )
 frames = SubResource( 1 )
+frame = 1
 speed_scale = 0.2
 playing = true

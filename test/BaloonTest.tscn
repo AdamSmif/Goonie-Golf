@@ -15,9 +15,6 @@ modulate = Color( 0.113725, 0.32549, 0.380392, 1 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 lose_level_world_scene = "res://test/BaloonTest.tscn"
 
-[node name="Sprite" parent="Player" index="0"]
-frame = 0
-
 [node name="ParallaxLayer" type="ParallaxBackground" parent="Player"]
 
 [node name="NightSkyAnimated" parent="Player/ParallaxLayer" instance=ExtResource( 3 )]

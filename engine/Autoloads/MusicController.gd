@@ -5,7 +5,7 @@ var menu_music = load("res://audio/music/title-screen.ogg")
 var credits_music = load("res://audio/music/8_bit_cold_lake_lofi.ogg")
 var synth_music = load("res://audio/music/Dreamstate.ogg")
 var hub_music = load("res://audio/music/hub world.wav")
-
+var mountain_music = load("res://audio/music/mountain.wav")
 
 ### Menu Music ###
 func play_menu_music():
@@ -51,4 +51,13 @@ func play_hub_music():
 	
 func stop_hub_music():
 	$AudioStreamPlayer.stream = hub_music
+	$AudioStreamPlayer.stop()
+	
+### Mountain Music ###
+func play_mountain_music():
+	$AudioStreamPlayer.stream = mountain_music
+	$AudioStreamPlayer.play()
+	
+func stop_mountain_music():
+	$AudioStreamPlayer.stream = mountain_music
 	$AudioStreamPlayer.stop()

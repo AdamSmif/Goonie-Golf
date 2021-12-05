@@ -87,7 +87,6 @@ scale = Vector2( 1.5, 1.5 )
 [node name="AnimatedSprite" parent="defaultNPC" index="0"]
 position = Vector2( 1.32404, -3.21486 )
 animation = "Skateboard Joe"
-frame = 1
 
 [node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 2 )]
 dialogue_file = "res://entities/Dialogue/introskate/JoeEagleTalk1.json"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://levels/hub/HubWorld.gd" type="Script" id=1]
 [ext_resource path="res://entities/tiles/WorldHubTile/WorldMap.tscn" type="PackedScene" id=2]
@@ -22,130 +22,7 @@
 [ext_resource path="res://entities/Assets/driftwood/DriftwoodRight.tscn" type="PackedScene" id=20]
 [ext_resource path="res://entities/Assets/driftwood/DriftwoodLeft.tscn" type="PackedScene" id=21]
 [ext_resource path="res://entities/Assets/driftwood/DriftWoodLong.tscn" type="PackedScene" id=22]
-
-[sub_resource type="Animation" id=1]
-resource_name = "transition"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "interaction"
-tracks/0/type = "value"
-tracks/0/path = NodePath("question:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "interactionoff"
-tracks/0/type = "value"
-tracks/0/path = NodePath("question:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "transition"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "transition"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "interaction"
-tracks/0/type = "value"
-tracks/0/path = NodePath("question:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=7]
-resource_name = "interactionoff"
-tracks/0/type = "value"
-tracks/0/path = NodePath("question:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-
-[sub_resource type="Animation" id=8]
-resource_name = "transition"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
-}
+[ext_resource path="res://audio/music/hub world.wav" type="AudioStream" id=23]
 
 [node name="HubWorld" type="Node2D"]
 modulate = Color( 0.321569, 0.321569, 0.321569, 1 )
@@ -164,6 +41,10 @@ color_splash_strength = 2.0
 bloom_radius = 2.0
 chromatc_aberration_strength = 0.1
 fog_overlay_show = true
+fog_overlay_octaves = 16
+fog_overlay_starting_frequency = 0.5
+fog_overlay_shift = -0.1
+fog_overlay_velocity = Vector2( 0.5, 0.5 )
 fog_overlay_color = Color( 1, 0.996078, 0.996078, 1 )
 fog_overlay_noise_texture = ExtResource( 10 )
 
@@ -293,45 +174,6 @@ position = Vector2( -328, -224 )
 
 [node name="BeachUmbrella4" parent="BeachAssets" instance=ExtResource( 15 )]
 position = Vector2( -488, -64 )
-
-[node name="ArcadeMachine" parent="BeachAssets" instance=ExtResource( 16 )]
-position = Vector2( -56, -216 )
-next_world_scene = "res://levels/hub/DiscGolfAracde.tscn"
-
-[node name="Label" parent="BeachAssets/ArcadeMachine" index="4"]
-text = "Project Disc"
-
-[node name="ArcadeMachine2" parent="BeachAssets" instance=ExtResource( 16 )]
-position = Vector2( -40, -1000 )
-next_world_scene = "res://levels/hub/BallGolfMountainAracde.tscn"
-
-[node name="Label" parent="BeachAssets/ArcadeMachine2" index="4"]
-text = "Project Mountain"
-
-[node name="LightSource" parent="BeachAssets/ArcadeMachine2" index="5"]
-position = Vector2( 1.19209e-06, 3.016e-05 )
-
-[node name="AnimationPlayer" parent="BeachAssets/ArcadeMachine2" index="6"]
-anims/fade = SubResource( 1 )
-anims/interaction = SubResource( 2 )
-anims/interactionoff = SubResource( 3 )
-anims/transition = SubResource( 4 )
-
-[node name="ArcadeMachine3" parent="BeachAssets" instance=ExtResource( 16 )]
-position = Vector2( -528, -704 )
-next_world_scene = "res://test/FlingGolfTest.tscn"
-
-[node name="Label" parent="BeachAssets/ArcadeMachine3" index="4"]
-text = "Project Mountain"
-
-[node name="LightSource" parent="BeachAssets/ArcadeMachine3" index="5"]
-position = Vector2( 1.19209e-06, 3.016e-05 )
-
-[node name="AnimationPlayer" parent="BeachAssets/ArcadeMachine3" index="6"]
-anims/fade = SubResource( 5 )
-anims/interaction = SubResource( 6 )
-anims/interactionoff = SubResource( 7 )
-anims/transition = SubResource( 8 )
 
 [node name="discright" type="Sprite" parent="BeachAssets"]
 position = Vector2( -40, -184 )
@@ -466,22 +308,26 @@ texture = ExtResource( 12 )
 
 [node name="OceanAnimation" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -432, 184 )
+frame = 0
 
 [node name="OceanAnimation2" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -80, 152 )
+frame = 0
 
 [node name="OceanAnimation3" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( 160, 224 )
+frame = 0
 
 [node name="OceanAnimation4" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( 672, 208 )
+frame = 0
 
 [node name="OceanAnimation5" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -112, 336 )
-frame = 0
 
 [node name="OceanAnimation6" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -512, 264 )
+frame = 0
 
 [node name="HouseYellow" parent="." instance=ExtResource( 9 )]
 position = Vector2( 128, -120 )
@@ -505,8 +351,17 @@ texture = ExtResource( 14 )
 stream = ExtResource( 7 )
 autoplay = true
 
-[editable path="BeachAssets/ArcadeMachine"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 23 )
 
-[editable path="BeachAssets/ArcadeMachine2"]
+[node name="ArcadeMachine" parent="." instance=ExtResource( 16 )]
+position = Vector2( -56, -216 )
+next_world_scene = "res://levels/hub/DiscGolfAracde.tscn"
 
-[editable path="BeachAssets/ArcadeMachine3"]
+[node name="ArcadeMachine2" parent="." instance=ExtResource( 16 )]
+position = Vector2( -40, -1000 )
+next_world_scene = "res://levels/hub/BallGolfMountainAracde.tscn"
+
+[node name="ArcadeMachine3" parent="." instance=ExtResource( 16 )]
+position = Vector2( -528, -704 )
+next_world_scene = "res://levels/FlingGolf/FlingGolfTest.tscn"

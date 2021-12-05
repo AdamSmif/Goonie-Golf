@@ -42,3 +42,7 @@ func _on_PlayerStats_no_health():
 	get_tree().change_scene("res://UI/GameOver.tscn")
 
 
+
+
+func _on_Timer_timeout():
+	motion.x += 1
