@@ -62,14 +62,14 @@ animations = [ {
 "name": "down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 32 ) ],
-"loop": true,
-"name": "shocked",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "boom",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 31 ), ExtResource( 18 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "move",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 3 ) ],
@@ -77,9 +77,9 @@ animations = [ {
 "name": "skate",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 31 ), ExtResource( 18 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 32 ) ],
 "loop": true,
-"name": "move",
+"name": "shocked",
 "speed": 5.0
 } ]
 

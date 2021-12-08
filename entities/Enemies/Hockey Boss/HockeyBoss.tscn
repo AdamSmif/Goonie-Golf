@@ -1,0 +1,98 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://audio/sound effects/explosion/ExplosionSound.tscn" type="PackedScene" id=1]
+[ext_resource path="res://engine/Collisions/Hurtbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://audio/sound effects/hit/HitBadGuy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://engine/Collisions/Hitbox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://engine/Autoloads/Stats.tscn" type="PackedScene" id=5]
+[ext_resource path="res://engine/Animations/Hit.tres" type="Animation" id=6]
+[ext_resource path="res://entities/Enemies/Hockey Boss/HockeyBoss1.png" type="Texture" id=7]
+[ext_resource path="res://entities/Enemies/Hockey Boss/HockeyBoss3.png" type="Texture" id=8]
+[ext_resource path="res://entities/Enemies/Hockey Boss/HockeyBoss2.png" type="Texture" id=9]
+[ext_resource path="res://entities/Assets/Explosion/explosion6.png" type="Texture" id=10]
+[ext_resource path="res://entities/Assets/Explosion/explosion4.png" type="Texture" id=11]
+[ext_resource path="res://entities/Assets/Explosion/explosion3.png" type="Texture" id=12]
+[ext_resource path="res://entities/Assets/Explosion/explosion5.png" type="Texture" id=13]
+[ext_resource path="res://entities/Assets/Explosion/explosion2.png" type="Texture" id=14]
+[ext_resource path="res://entities/Assets/Explosion/explosion1.png" type="Texture" id=15]
+[ext_resource path="res://engine/Animations/SprintEnemy.tres" type="Animation" id=16]
+[ext_resource path="res://engine/Animations/GrowEnemy.tres" type="Animation" id=17]
+[ext_resource path="res://entities/Enemies/Hockey Boss/HockeyBoss.gd" type="Script" id=18]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "boom",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8.59921, 9.42748 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 14.8797, 11.8515 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 6.01548, 8.97519 )
+
+[node name="HockeyBoss" type="KinematicBody2D"]
+scale = Vector2( 2, 2 )
+collision_layer = 16
+collision_mask = 99
+script = ExtResource( 18 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -1.10183, 3.52587 )
+shape = SubResource( 2 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 4 )]
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2( -0.550915, 1.87312 )
+shape = SubResource( 3 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 2 )]
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( -0.755753, 3.68427 )
+shape = SubResource( 4 )
+
+[node name="Stats" parent="." instance=ExtResource( 5 )]
+max_health = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/GrowEnemy = ExtResource( 17 )
+anims/Hit = ExtResource( 6 )
+anims/SprintEnemy = ExtResource( 16 )
+
+[node name="HitBadGuy" parent="." instance=ExtResource( 3 )]
+
+[node name="ExplosionSound" parent="." instance=ExtResource( 1 )]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+
+[editable path="Hitbox"]
+
+[editable path="Hurtbox"]
