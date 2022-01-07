@@ -1,10 +1,15 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://UI/HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://entities/Assets/Bottle/bottle.png" type="Texture" id=2]
 [ext_resource path="res://UI/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://entities/Player/discs/leftdisc/disc left.png" type="Texture" id=4]
 [ext_resource path="res://entities/Assets/heart/hearticon.png" type="Texture" id=5]
+[ext_resource path="res://entities/Player/discs/rightdisc/discright.png" type="Texture" id=6]
+[ext_resource path="res://entities/Assets/hud/X.png" type="Texture" id=7]
+[ext_resource path="res://entities/Assets/hud/Z.png" type="Texture" id=8]
+[ext_resource path="res://entities/Assets/hud/C.png" type="Texture" id=9]
+[ext_resource path="res://entities/Assets/questionmark/question2.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
@@ -20,10 +25,11 @@ script = ExtResource( 1 )
 bottle_world_scene = "res://Levels/World.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 margin_left = 3.0
 margin_top = 4.0
-margin_right = 71.0
-margin_bottom = 87.0
+margin_right = 632.0
+margin_bottom = 32.0
 color = Color( 0, 0, 0, 0.407843 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -45,8 +51,8 @@ margin_left = 32.0
 margin_top = 32.0
 margin_right = 81.391
 margin_bottom = 62.0
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "#"
 valign = 1
 __meta__ = {
@@ -58,8 +64,8 @@ margin_left = 42.7313
 margin_top = 31.0032
 margin_right = 92.1223
 margin_bottom = 61.0032
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "/8"
 valign = 1
 __meta__ = {
@@ -101,3 +107,29 @@ texture = ExtResource( 4 )
 [node name="icon" type="Sprite" parent="."]
 position = Vector2( 14.4, 16 )
 texture = ExtResource( 5 )
+
+[node name="C" type="Sprite" parent="."]
+position = Vector2( 608.5, 17 )
+texture = ExtResource( 9 )
+
+[node name="Z" type="Sprite" parent="."]
+position = Vector2( 544.5, 17 )
+texture = ExtResource( 8 )
+
+[node name="X" type="Sprite" parent="."]
+position = Vector2( 576.5, 17 )
+texture = ExtResource( 7 )
+
+[node name="Discright" type="Sprite" parent="."]
+position = Vector2( 583, 28 )
+texture = ExtResource( 6 )
+
+[node name="DiscLeft" type="Sprite" parent="."]
+position = Vector2( 552, 28 )
+texture = ExtResource( 4 )
+
+[node name="Question2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 619, 28 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://levels/hub/HubWorld.gd" type="Script" id=1]
 [ext_resource path="res://entities/tiles/WorldHubTile/WorldMap.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://entities/Assets/driftwood/DriftwoodLeft.tscn" type="PackedScene" id=21]
 [ext_resource path="res://entities/Assets/driftwood/DriftWoodLong.tscn" type="PackedScene" id=22]
 [ext_resource path="res://audio/music/hub world.wav" type="AudioStream" id=23]
+[ext_resource path="res://ui/HUD/MobileControls.tscn" type="PackedScene" id=24]
 
 [node name="HubWorld" type="Node2D"]
 modulate = Color( 0.321569, 0.321569, 0.321569, 1 )
@@ -361,3 +362,5 @@ next_world_scene = "res://levels/hub/BallGolfMountainAracde.tscn"
 [node name="ArcadeMachine3" parent="." instance=ExtResource( 16 )]
 position = Vector2( -528, -704 )
 next_world_scene = "res://levels/FlingGolf/FlingGolfTest.tscn"
+
+[node name="MobileControls" parent="." instance=ExtResource( 24 )]

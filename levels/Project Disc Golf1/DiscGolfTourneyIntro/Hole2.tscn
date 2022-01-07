@@ -32,6 +32,9 @@ position = Vector2( -48, -176 )
 [node name="Raining2" parent="Player/PlayerCamera" index="3" instance=ExtResource( 7 )]
 position = Vector2( 104, -64 )
 
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 0
+
 [node name="FallZone" parent="." instance=ExtResource( 4 )]
 position = Vector2( 480, 1000 )
 lose_level_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole2.tscn"
@@ -47,8 +50,11 @@ next_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole3.t
 position = Vector2( 32, 80 )
 
 [node name="RainEffect" parent="." instance=ExtResource( 9 )]
+
 [connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
 [editable path="Player"]
-
+[editable path="Player/Hurtbox"]
 [editable path="Player/PlayerCamera"]
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]
