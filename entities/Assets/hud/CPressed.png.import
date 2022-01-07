@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/left.png-3c51da3c266d2562f882cd168992e9c4.stex"
+path="res://.import/CPressed.png-3d6d417276461d54bdf8462474cb2d91.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/Assets/mobilehud/left.png"
-dest_files=[ "res://.import/left.png-3c51da3c266d2562f882cd168992e9c4.stex" ]
+source_file="res://entities/Assets/hud/CPressed.png"
+dest_files=[ "res://.import/CPressed.png-3d6d417276461d54bdf8462474cb2d91.stex" ]
 
 [params]
 

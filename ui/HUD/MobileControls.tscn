@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://entities/Assets/mobilehud/normal/normalarrowkey.png" type="Texture" id=1]
 [ext_resource path="res://entities/Assets/mobilehud/pressed/pressedarrowkey.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://entities/Assets/hud/Z.png" type="Texture" id=4]
 [ext_resource path="res://entities/Assets/hud/XPressed.png" type="Texture" id=5]
 [ext_resource path="res://entities/Assets/hud/ZPressed.png" type="Texture" id=6]
+[ext_resource path="res://entities/Assets/hud/C.png" type="Texture" id=7]
+[ext_resource path="res://entities/Assets/hud/CPressed.png" type="Texture" id=8]
 
 [node name="MobileControls" type="CanvasLayer"]
 
@@ -46,6 +48,13 @@ scale = Vector2( 3, 3 )
 normal = ExtResource( 4 )
 pressed = ExtResource( 6 )
 action = "throwleft_1"
+
+[node name="Talk" type="TouchScreenButton" parent="."]
+position = Vector2( 392, 296 )
+scale = Vector2( 3, 3 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 8 )
+action = "talk"
 
 [node name="RightThrow" type="TouchScreenButton" parent="."]
 position = Vector2( 552, 296 )
