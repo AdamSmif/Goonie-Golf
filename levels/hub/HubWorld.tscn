@@ -309,22 +309,26 @@ texture = ExtResource( 12 )
 
 [node name="OceanAnimation" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -432, 184 )
+frame = 0
 
 [node name="OceanAnimation2" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -80, 152 )
+frame = 0
 
 [node name="OceanAnimation3" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( 160, 224 )
+frame = 0
 
 [node name="OceanAnimation4" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( 672, 208 )
+frame = 0
 
 [node name="OceanAnimation5" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -112, 336 )
-frame = 0
 
 [node name="OceanAnimation6" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -512, 264 )
+frame = 0
 
 [node name="HouseYellow" parent="." instance=ExtResource( 9 )]
 position = Vector2( 128, -120 )

@@ -20,15 +20,21 @@ func _physics_process(delta):
 	get_input()
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
+	if Input.is_action_pressed('right_%s' % id):
+		$Sprite.flip_h = false
+		$Shadow.flip_h = false
+	if Input.is_action_pressed('left_%s' % id):
+		$Sprite.flip_h = true
+		$Shadow.flip_h = true
 	if Input.is_action_just_pressed('up_%s' % id):
 		if is_on_floor():
-			$Sprite.play("jump")
+			$Sprite.play("default")
 			velocity.y = jump_speed
 
 		if velocity.y > jump_speed: 
-			$Sprite.play("jump")
+			$Sprite.play("default")
 		else:
-			$Sprite.play("fall")
+			$Sprite.play("default")
 
 func _on_Hurtbox_area_entered(area):
 	stats.health -= 1

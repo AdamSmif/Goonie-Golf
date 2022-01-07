@@ -88,23 +88,30 @@ func _physics_process(_delta):
 	if Input.is_action_pressed('right_%s' % id):
 		motion.x = lerp(motion.x + ACCELERATION, MAX_SPEED, .75)
 		$Sprite.flip_h = false
+		$Shadow.flip_h = false
 		$Sprite.play("move")
+		$Shadow.play("move")
 		if sign($Position2D.position.x) == -1:
 			$Position2D.position.x *= -1
 	elif Input.is_action_pressed('left_%s' % id):
 		motion.x = lerp(motion.x - ACCELERATION, -MAX_SPEED, .75)
 		$Sprite.flip_h = true
+		$Shadow.flip_h = true
 		$Sprite.play("move")
+		$Shadow.play("move")
 		if sign($Position2D.position.x) == 1:
 			$Position2D.position.x *= -1
 	else:
 		motion.x = 0
 		$Sprite.play("idle")
+		$Shadow.play("idle")
 		friction = true
 		
 	if Input.is_action_pressed('down_%s' % id):
 		$Sprite.flip_h = false
+		$Shadow.flip_h = false
 		$Sprite.play("down")
+		$Shadow.play("down")
 		if sign($Position2D.position.x) == -1:
 			$Position2D.position.x *= 1
 		Input.action_release("left_%s" % id)
@@ -127,8 +134,10 @@ func _physics_process(_delta):
 		coyoteTime()
 		if motion.y < 0: 
 			$Sprite.play("jump")
+			$Shadow.play("jump")
 		else:
 			$Sprite.play("fall")
+			$Shadow.play("fall")
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.2)
 
@@ -139,6 +148,7 @@ func _physics_process(_delta):
 	# if the player goes really fast the player's animation will get spoked
 	if motion.y > 1350 or motion.y < -1350:
 		$Sprite.play("shocked")
+		$Shadow.play("shocked")
 
 func coyoteTime():
 	coyoteTimer

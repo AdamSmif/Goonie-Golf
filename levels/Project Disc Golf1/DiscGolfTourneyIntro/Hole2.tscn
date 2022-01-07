@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://entities/Player/main player wade/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/Assets/Disc Golf Basket/DiscGolfBasket.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://entities/Assets/Background/rain effect/Raining.tscn" type="PackedScene" id=7]
 [ext_resource path="res://levels/Levels.gd" type="Script" id=8]
 [ext_resource path="res://audio/sound effects/raineffect/RainEffect.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ui/HUD/MobileControls.tscn" type="PackedScene" id=10]
 
 [node name="Hole2" type="Node2D"]
 modulate = Color( 0.4, 0.466667, 0.458824, 1 )
@@ -23,7 +24,7 @@ tile_data = PoolIntArray( -4259937, 0, 0, -4259936, 0, 2, -4194401, 0, 65536, -4
 position = Vector2( 328, 176 )
 texture = ExtResource( 6 )
 
-[node name="PlayerCamera" parent="Player" index="10"]
+[node name="PlayerCamera" parent="Player" index="11"]
 offset = Vector2( 125, -125 )
 
 [node name="Raining" parent="Player/PlayerCamera" index="2" instance=ExtResource( 7 )]
@@ -50,6 +51,8 @@ next_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole3.t
 position = Vector2( 32, 80 )
 
 [node name="RainEffect" parent="." instance=ExtResource( 9 )]
+
+[node name="MobileControls" parent="." instance=ExtResource( 10 )]
 
 [connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 

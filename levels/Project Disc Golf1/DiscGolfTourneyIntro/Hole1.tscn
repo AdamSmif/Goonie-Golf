@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://entities/Assets/Disc Golf Basket/DiscGolfBasket.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/Player/main player wade/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://entities/tiles/GreenBackGroundPlatform/GrassPlatform.tscn" type="PackedScene" id=8]
 [ext_resource path="res://entities/Assets/Background/rain effect/Raining.tscn" type="PackedScene" id=9]
 [ext_resource path="res://audio/sound effects/raineffect/RainEffect.tscn" type="PackedScene" id=10]
+[ext_resource path="res://entities/Assets/lightray/LightRay.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 288, 8.01881 )
@@ -97,12 +98,19 @@ position = Vector2( -58.3294, 46.4268 )
 
 [node name="TeeTimeIntro1Pos" type="Position2D" parent="."]
 position = Vector2( -58.3294, 46.4268 )
+
+[node name="LightRay" parent="." instance=ExtResource( 11 )]
+margin_left = 1621.0
+margin_top = -375.0
+margin_right = 1813.0
+margin_bottom = -73.0
+
 [connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
 [editable path="Player"]
-
+[editable path="Player/Hurtbox"]
 [editable path="Player/PlayerCamera"]
-
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]
 [editable path="HUD"]
-
 [editable path="DiscGolfBasket"]

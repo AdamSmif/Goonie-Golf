@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://entities/NPCs/ADefaultNPC/defaultNPC.tscn" type="PackedScene" id=21]
 [ext_resource path="res://entities/Assets/Bush/Bush.tscn" type="PackedScene" id=22]
 [ext_resource path="res://entities/Enemies/Hockey Boss/HockeyBoss.tscn" type="PackedScene" id=23]
+[ext_resource path="res://ui/HUD/HUD.tscn" type="PackedScene" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25.0757, 1.54135 )
@@ -66,51 +67,53 @@ __meta__ = {
 
 [node name="NightSkyAnimated" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 144, -952 )
-frame = 1
 
 [node name="NightSkyAnimated2" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 784, -952 )
+frame = 1
 
 [node name="NightSkyAnimated3" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 1424, -952 )
+frame = 1
 
 [node name="NightSkyAnimated4" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 2064, -952 )
-frame = 1
 
 [node name="NightSkyAnimated5" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 2704, -952 )
-frame = 1
 
 [node name="NightSkyAnimated6" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 3344, -952 )
+frame = 1
 
 [node name="NightSkyAnimated7" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 3984, -952 )
+frame = 1
 
 [node name="NightSkyAnimated14" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 184, -1322 )
-frame = 1
 
 [node name="NightSkyAnimated13" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 824, -1322 )
+frame = 1
 
 [node name="NightSkyAnimated12" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 1464, -1322 )
+frame = 1
 
 [node name="NightSkyAnimated11" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 2104, -1322 )
-frame = 1
 
 [node name="NightSkyAnimated10" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 2744, -1322 )
-frame = 1
 
 [node name="NightSkyAnimated9" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 3384, -1322 )
+frame = 1
 
 [node name="NightSkyAnimated8" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 4024, -1322 )
+frame = 1
 
 [node name="Houses" type="YSort" parent="."]
 
@@ -309,7 +312,10 @@ position = Vector2( 1540.58, -293.68 )
 [node name="defaultNPC" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 2144, 240 )
 
-[node name="AnimatedSprite" parent="NPCs/defaultNPC" index="0"]
+[node name="Shadow" parent="NPCs/defaultNPC" index="0"]
+frame = 0
+
+[node name="AnimatedSprite" parent="NPCs/defaultNPC" index="1"]
 position = Vector2( 16, -64 )
 scale = Vector2( 1.25, 1.25 )
 animation = "OJ Moss"
@@ -318,7 +324,10 @@ frame = 1
 [node name="defaultNPC2" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 1816, 240 )
 
-[node name="AnimatedSprite" parent="NPCs/defaultNPC2" index="0"]
+[node name="Shadow" parent="NPCs/defaultNPC2" index="0"]
+frame = 0
+
+[node name="AnimatedSprite" parent="NPCs/defaultNPC2" index="1"]
 position = Vector2( -0.540405, -2.7018 )
 scale = Vector2( 0.75, 0.75 )
 animation = "Douglas Ramond"
@@ -327,7 +336,10 @@ frame = 1
 [node name="defaultNPC3" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 1416, 240 )
 
-[node name="AnimatedSprite" parent="NPCs/defaultNPC3" index="0"]
+[node name="Shadow" parent="NPCs/defaultNPC3" index="0"]
+frame = 0
+
+[node name="AnimatedSprite" parent="NPCs/defaultNPC3" index="1"]
 position = Vector2( 17.0808, 4.75784 )
 scale = Vector2( 0.75, 0.75 )
 animation = "Vern Avocado"
@@ -336,7 +348,10 @@ frame = 1
 [node name="defaultNPC4" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 2569.63, 238.304 )
 
-[node name="AnimatedSprite" parent="NPCs/defaultNPC4" index="0"]
+[node name="Shadow" parent="NPCs/defaultNPC4" index="0"]
+frame = 0
+
+[node name="AnimatedSprite" parent="NPCs/defaultNPC4" index="1"]
 position = Vector2( 2.09058, -2.50871 )
 scale = Vector2( 1.25, 1.25 )
 animation = "Dot Williams"
@@ -345,17 +360,19 @@ frame = 1
 [node name="defaultNPC5" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 2778.32, 239.505 )
 
-[node name="AnimatedSprite" parent="NPCs/defaultNPC5" index="0"]
+[node name="Shadow" parent="NPCs/defaultNPC5" index="0"]
+frame = 0
+
+[node name="AnimatedSprite" parent="NPCs/defaultNPC5" index="1"]
 position = Vector2( 2.39233, -3.31245 )
 scale = Vector2( 1.25, 1.25 )
 animation = "Dorris"
-frame = 0
 flip_h = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1384, 208 )
 
-[node name="PlayerCamera" parent="Player" index="13"]
+[node name="PlayerCamera" parent="Player" index="14"]
 offset = Vector2( 150, -125 )
 
 [node name="Raining" parent="Player/PlayerCamera" index="2" instance=ExtResource( 5 )]
@@ -370,6 +387,9 @@ position = Vector2( 200, -16 )
 [node name="Raining4" parent="Player/PlayerCamera" index="5" instance=ExtResource( 5 )]
 position = Vector2( 0, -152 )
 
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 2
+
 [node name="Props" type="YSort" parent="."]
 scale = Vector2( 1, 1.02225 )
 
@@ -380,21 +400,27 @@ texture = ExtResource( 9 )
 
 [node name="EverGreenNoCollision" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 1048, 248 )
+frame = 0
 
 [node name="EverGreenNoCollision5" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 648, 280 )
+frame = 0
 
 [node name="EverGreenNoCollision6" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 2608, 240 )
+frame = 0
 
 [node name="EverGreenNoCollision2" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 2280, 248 )
+frame = 0
 
 [node name="EverGreenNoCollision3" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 2912, 248 )
+frame = 0
 
 [node name="EverGreenNoCollision4" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 256, 264 )
+frame = 0
 
 [node name="golfcart" type="Sprite" parent="Props"]
 position = Vector2( 1232, 224 )
@@ -481,14 +507,14 @@ texture = ExtResource( 20 )
 [node name="HockeyBoss" parent="." instance=ExtResource( 23 )]
 position = Vector2( 1322.71, 226.372 )
 
+[node name="HUD" parent="." instance=ExtResource( 24 )]
+
 [editable path="NPCs/defaultNPC"]
-
 [editable path="NPCs/defaultNPC2"]
-
 [editable path="NPCs/defaultNPC3"]
-
 [editable path="NPCs/defaultNPC4"]
-
 [editable path="NPCs/defaultNPC5"]
-
 [editable path="Player"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]
