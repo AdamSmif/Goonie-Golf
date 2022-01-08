@@ -29,6 +29,16 @@ scale = Vector2( 1, 1 )
 amount = 25
 preprocess = 29.13
 
+[node name="Shadow" type="AnimatedSprite" parent="."]
+modulate = Color( 0, 0, 0, 0.25098 )
+position = Vector2( 2, 0 )
+frames = SubResource( 1 )
+speed_scale = 0.2
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 speed_scale = 0.2

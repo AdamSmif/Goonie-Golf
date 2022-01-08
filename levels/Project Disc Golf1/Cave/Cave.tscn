@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://engine/Entrance/Entrance.tscn" type="PackedScene" id=7]
 [ext_resource path="res://entities/Assets/Cards/Graham Pondexter.png" type="Texture" id=8]
 [ext_resource path="res://levels/Levels.gd" type="Script" id=9]
+[ext_resource path="res://engine/day night cycle/daycycle.tscn" type="PackedScene" id=10]
 
 [node name="Cave" type="Node2D"]
 script = ExtResource( 9 )
@@ -21,6 +22,9 @@ game_over_scene = "res://levels/intro/LockerRoomStart/LockerRoomStart.tscn"
 [node name="Sprite" parent="Player/ParallaxBackground" index="0"]
 modulate = Color( 0.890196, 0.65098, 0.396078, 1 )
 texture = ExtResource( 3 )
+
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 0
 
 [node name="GroundTile" parent="." instance=ExtResource( 1 )]
 position = Vector2( 188.474, 270.841 )
@@ -55,4 +59,9 @@ position = Vector2( 1672.32, 278.463 )
 scale = Vector2( 0.2, 0.2 )
 next_world_scene = "res://levels/Project Disc Golf1/Cave/GotCardCave.tscn"
 
+[node name="daycycle" parent="." instance=ExtResource( 10 )]
+
 [editable path="Player"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]

@@ -65,15 +65,15 @@ scale = Vector2( 1, 1 )
 amount = 30
 
 [node name="Shadow" type="AnimatedSprite" parent="."]
-modulate = Color( 0, 0, 0, 0.109804 )
+modulate = Color( 0, 0, 0, 0.25098 )
 position = Vector2( 2, 0 )
 frames = SubResource( 1 )
-frame = 1
 speed_scale = 0.3
 playing = true
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
+frame = 1
 speed_scale = 0.3
 playing = true
 

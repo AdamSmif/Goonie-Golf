@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Enemies+Allies/baseballbot/baseballbot2.png" type="Texture" id=1]
-[ext_resource path="res://Enemies+Allies/baseballbot/baseballbot1.png" type="Texture" id=2]
+[ext_resource path="res://entities/Enemies/Standing Baseball Bot/baseballbot2.png" type="Texture" id=1]
+[ext_resource path="res://entities/Enemies/Standing Baseball Bot/baseballbot1.png" type="Texture" id=2]
+[ext_resource path="res://engine/Autoloads/Stats.tscn" type="PackedScene" id=3]
+[ext_resource path="res://engine/Collisions/Hitbox.tscn" type="PackedScene" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -14,14 +16,35 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 9.01962, 13.1407 )
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10.5, 11.5 )
+
 [node name="BaseballBot" type="KinematicBody2D"]
+
+[node name="Shadow" type="AnimatedSprite" parent="."]
+modulate = Color( 0, 0, 0, 0.25098 )
+position = Vector2( 2, 0 )
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.1
+playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 1
 speed_scale = 0.1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.874115, 2.62235 )
 shape = SubResource( 2 )
+
+[node name="Stats" parent="." instance=ExtResource( 3 )]
+max_health = 8
+
+[node name="Hitbox" parent="." instance=ExtResource( 4 )]
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2( 0.5, -1.5 )
+shape = SubResource( 3 )
+
+[editable path="Hitbox"]

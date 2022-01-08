@@ -1,9 +1,11 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://entities/Player/player camera/PlayerCamera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/Player/FlingGolfer/TopDownPlayerTemplate.gd" type="Script" id=2]
 [ext_resource path="res://entities/Player/HubPlayer/HubPlayer.png" type="Texture" id=3]
 [ext_resource path="res://ui/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://engine/day night cycle/DayNightCycle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://engine/day night cycle/LightSource.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.80797, 10 )
@@ -299,7 +301,7 @@ script = ExtResource( 2 )
 texture = ExtResource( 3 )
 flip_h = true
 hframes = 12
-frame = 3
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.564053, 7.26999 )
@@ -340,3 +342,7 @@ parameters/Walk/blend_position = Vector2( -0.358382, 0.0603448 )
 
 [node name="PlayerCamera" parent="." instance=ExtResource( 1 )]
 offset = Vector2( 0, 0 )
+
+[node name="DayNightCycle" parent="." instance=ExtResource( 5 )]
+
+[node name="LightSource" parent="." instance=ExtResource( 6 )]

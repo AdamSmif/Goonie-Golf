@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://entities/Player/FlingGolfer/FlingGolfer.gd" type="Script" id=1]
 [ext_resource path="res://entities/Player/FlingGolfer/FlingGolfer-Sheet.png" type="Texture" id=2]
 [ext_resource path="res://engine/day night cycle/LightSource.tscn" type="PackedScene" id=3]
+[ext_resource path="res://engine/day night cycle/DayNightCycle.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6.80797, 10 )
@@ -331,3 +332,6 @@ parameters/Walk/blend_position = Vector2( -0.358382, 0.0603448 )
 position = Vector2( 1.86862, 6.61798 )
 energy = 1.5
 range_height = 268.2
+
+[node name="DayNightCycle" parent="." instance=ExtResource( 4 )]
+visible = false

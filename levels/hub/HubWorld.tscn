@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://levels/hub/HubWorld.gd" type="Script" id=1]
 [ext_resource path="res://entities/tiles/WorldHubTile/WorldMap.tscn" type="PackedScene" id=2]
@@ -23,10 +23,9 @@
 [ext_resource path="res://entities/Assets/driftwood/DriftwoodLeft.tscn" type="PackedScene" id=21]
 [ext_resource path="res://entities/Assets/driftwood/DriftWoodLong.tscn" type="PackedScene" id=22]
 [ext_resource path="res://audio/music/hub world.wav" type="AudioStream" id=23]
-[ext_resource path="res://ui/HUD/MobileControls.tscn" type="PackedScene" id=24]
 
 [node name="HubWorld" type="Node2D"]
-modulate = Color( 0.321569, 0.321569, 0.321569, 1 )
+modulate = Color( 0.560784, 0.509804, 0.509804, 1 )
 script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -309,26 +308,22 @@ texture = ExtResource( 12 )
 
 [node name="OceanAnimation" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -432, 184 )
-frame = 0
 
 [node name="OceanAnimation2" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -80, 152 )
-frame = 0
 
 [node name="OceanAnimation3" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( 160, 224 )
-frame = 0
 
 [node name="OceanAnimation4" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( 672, 208 )
-frame = 0
 
 [node name="OceanAnimation5" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -112, 336 )
+frame = 0
 
 [node name="OceanAnimation6" parent="OceanAssets" instance=ExtResource( 19 )]
 position = Vector2( -512, 264 )
-frame = 0
 
 [node name="HouseYellow" parent="." instance=ExtResource( 9 )]
 position = Vector2( 128, -120 )
@@ -366,5 +361,3 @@ next_world_scene = "res://levels/hub/BallGolfMountainAracde.tscn"
 [node name="ArcadeMachine3" parent="." instance=ExtResource( 16 )]
 position = Vector2( -528, -704 )
 next_world_scene = "res://levels/FlingGolf/FlingGolfTest.tscn"
-
-[node name="MobileControls" parent="." instance=ExtResource( 24 )]

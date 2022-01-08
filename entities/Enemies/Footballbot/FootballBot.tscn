@@ -29,14 +29,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "explosion",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "squashed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "explosion",
 "speed": 5.0
 } ]
 
@@ -55,6 +55,13 @@ collision_mask = 99
 script = ExtResource( 3 )
 JUMP_HEIGHT = -100
 
+[node name="Shadow" type="AnimatedSprite" parent="."]
+modulate = Color( 0, 0, 0, 0.25098 )
+position = Vector2( 2, 0.797 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.159576, 0.797058 )
 frames = SubResource( 1 )
@@ -62,6 +69,7 @@ frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0.257019, 10.3774 )
 shape = SubResource( 2 )
 
@@ -71,6 +79,7 @@ cast_to = Vector2( 0, 40 )
 collision_mask = 2
 
 [node name="Hurtbox" parent="." instance=ExtResource( 14 )]
+visible = false
 collision_layer = 256
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
@@ -78,6 +87,7 @@ position = Vector2( 0.514007, 15.9045 )
 shape = SubResource( 3 )
 
 [node name="Hitbox" parent="." instance=ExtResource( 15 )]
+visible = false
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2( 1.14245, 3.6405 )
@@ -101,10 +111,10 @@ anims/SprintEnemy = ExtResource( 20 )
 
 [node name="JumpSound" parent="." instance=ExtResource( 21 )]
 volume_db = 1.753
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
 [editable path="Hurtbox"]
-
 [editable path="Hitbox"]

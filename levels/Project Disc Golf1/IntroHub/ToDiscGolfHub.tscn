@@ -48,14 +48,12 @@ extents = Vector2( 17.5731, 8.98416 )
 extents = Vector2( 112, 64 )
 
 [node name="ToDiscGolfHub" type="Node2D"]
-modulate = Color( 0.4, 0.466667, 0.458824, 1 )
 script = ExtResource( 7 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PostProcessing_tool" parent="CanvasLayer" instance=ExtResource( 18 )]
 white_balance_temperature = 1.0
-color_splash_show = true
 color_splash_strength = 1.0
 bloom_intensity = 0.3
 chromatc_aberration_strength = 1.0
@@ -297,7 +295,6 @@ position = Vector2( 1179.69, -904.235 )
 
 [node name="AbanonedTrainNoCollision" parent="Enviroment" instance=ExtResource( 17 )]
 position = Vector2( 72, -520 )
-frame = 1
 
 [node name="RainEffect" parent="." instance=ExtResource( 4 )]
 
@@ -445,21 +442,21 @@ shape = SubResource( 9 )
 
 [node name="OceanAnimation" parent="." instance=ExtResource( 19 )]
 position = Vector2( 32, 536 )
+frame = 0
 
 [node name="OceanAnimation2" parent="." instance=ExtResource( 19 )]
 position = Vector2( 528, 544 )
+frame = 0
 
 [node name="OceanAnimation3" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1056, 528 )
-frame = 0
 
 [node name="OceanAnimation4" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1184, 256 )
+frame = 0
 
 [node name="OceanAnimation5" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1144, -32 )
-frame = 0
 
 [editable path="Player"]
-
 [editable path="Player/PlayerCamera"]

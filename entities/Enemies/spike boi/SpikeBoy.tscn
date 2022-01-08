@@ -30,8 +30,19 @@ explosiveness = 0.38
 randomness = 0.07
 visibility_rect = Rect2( -100, -100, 150, 200 )
 
+[node name="Shadow" type="AnimatedSprite" parent="."]
+modulate = Color( 0, 0, 0, 0.25098 )
+position = Vector2( 2, 0 )
+frames = SubResource( 1 )
+speed_scale = 0.15
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
+frame = 1
 speed_scale = 0.15
 playing = true
 __meta__ = {

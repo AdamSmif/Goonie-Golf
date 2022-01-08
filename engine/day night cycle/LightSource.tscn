@@ -1,10 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://engine/day night cycle/flash.png" type="Texture" id=1]
+[ext_resource path="res://entities/Assets/light/light.png" type="Texture" id=1]
+[ext_resource path="res://entities/Player/autorunwade/playerautorun1.png" type="Texture" id=3]
 
 [node name="LightSource" type="Light2D"]
-position = Vector2( 302.402, 178.996 )
+scale = Vector2( 0.83, 0.83 )
 texture = ExtResource( 1 )
-texture_scale = 5.4
-mode = 2
-shadow_enabled = true
+texture_scale = 0.8
+color = Color( 0.705882, 0.784314, 0.952941, 1 )
+energy = 0.6
+shadow_gradient_length = 3.0
+shadow_filter = 2
+shadow_filter_smooth = 50.0
+
+[node name="Playerautorun1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1.20482, -2.40964 )
+texture = ExtResource( 3 )

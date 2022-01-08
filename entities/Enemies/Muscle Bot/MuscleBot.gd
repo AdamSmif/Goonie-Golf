@@ -16,6 +16,7 @@ func _ready():
 	#if moving right move sprite to the right
 	if direction == 1:
 		$Sprite.flip_h = true
+		$Shadow.flip_h = true
 	$floor_checker.position.x = $CollisionShape2D.shape.get_extents().x * direction
 	$floor_checker.enabled = detects_cliffs
 	
@@ -38,6 +39,7 @@ func _physics_process(delta):
 		if is_on_wall() or not $floor_checker.is_colliding() and detects_cliffs and is_on_floor():
 			direction = direction * -1
 			$Sprite.flip_h = not $Sprite.flip_h
+			$Shadow.flip_h = not $Shadow.flip_h
 			$floor_checker.position.x = $CollisionShape2D.shape.get_extents().x * direction 
 	
 	#gravity
@@ -81,6 +83,7 @@ func _on_Hurtbox_area_entered(area):
 
 func _on_Stats_no_health():
 	$Sprite.play("boom")
+	$Shadow.play("boom")
 	$ExplosionSound.play()
 	speed = 0
 	set_collision_layer_bit(4,false)
