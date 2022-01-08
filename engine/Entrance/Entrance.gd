@@ -10,9 +10,12 @@ export(String, FILE, "*.tscn") var next_world_scene
 #			get_tree().change_scene(next_world_scene)
 #			Global.player_pos = spawn_pos
 
-func _on_Entrance_body_entered(_area: Area2D) -> void:
+func _input(event):
 	Global.from = get_parent().name 
+	if event.is_action_pressed("talk") and len(get_overlapping_bodies()) > 0:
 #	$BottleSound.play() 
-	$AnimationPlayer.play("transition")
-	yield(get_tree().create_timer(.50), "timeout")
-	get_tree().change_scene(next_world_scene)
+		$AnimationPlayer.play("transition")
+		yield(get_tree().create_timer(.50), "timeout")
+		get_tree().change_scene(next_world_scene)
+
+	Global.level_name = name

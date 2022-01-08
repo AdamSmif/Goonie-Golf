@@ -340,8 +340,8 @@ position = Vector2( 448.371, 286.543 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 10 )
 
-[node name="LockerRoomStart" parent="." instance=ExtResource( 6 )]
-position = Vector2( 448, 321.015 )
+[node name="Locker" parent="." instance=ExtResource( 6 )]
+position = Vector2( 460, 350 )
 scale = Vector2( 0.1, 0.1 )
 next_world_scene = "res://levels/Project Disc Golf1/LockerRoomStart/LockerRoomStart.tscn"
 
@@ -355,29 +355,8 @@ position = Vector2( 767.402, 69.9378 )
 scale = Vector2( 0.1, 0.1 )
 next_world_scene = "res://levels/Project Disc Golf1/Cave/Cave.tscn"
 
-[node name="LockerRoomStartPos" type="Position2D" parent="."]
-position = Vector2( 447.157, 355.361 )
-
-[node name="DrewHousePos" type="Position2D" parent="."]
-position = Vector2( 48.7437, 176.833 )
-
-[node name="Train1Pos" type="Position2D" parent="."]
-position = Vector2( 80, -352 )
-
-[node name="VillagePos" type="Position2D" parent="."]
-position = Vector2( 80, -56 )
-
-[node name="CavePos" type="Position2D" parent="."]
-position = Vector2( 768, 96 )
-
-[node name="TeeTimeIntro1Pos" type="Position2D" parent="."]
-position = Vector2( 224, -592 )
-
-[node name="IntroWorldKsateLevelPos" type="Position2D" parent="."]
-position = Vector2( 552, -176 )
-
 [node name="Entrance" parent="." instance=ExtResource( 6 )]
-position = Vector2( 224, -656 )
+position = Vector2( 225, -611 )
 scale = Vector2( 0.5, 0.5 )
 next_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/TeeTimeIntro1.tscn"
 
@@ -392,8 +371,8 @@ scale = Vector2( 0.5, 0.5 )
 next_world_scene = "res://levels/Project Disc Golf1/Village/Village.tscn"
 
 [node name="Entrance4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 72, -432 )
-scale = Vector2( 2, 1 )
+position = Vector2( 109, -373 )
+scale = Vector2( 0.25, 0.25 )
 next_world_scene = "res://levels/Project Disc Golf1/Train/Train1.tscn"
 
 [node name="YSort" type="YSort" parent="."]

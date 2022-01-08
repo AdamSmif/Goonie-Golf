@@ -34,7 +34,7 @@ position = Vector2( -48, -176 )
 position = Vector2( 104, -64 )
 
 [node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
-frame = 0
+frame = 2
 
 [node name="FallZone" parent="." instance=ExtResource( 4 )]
 position = Vector2( 480, 1000 )

@@ -13,6 +13,7 @@
 [ext_resource path="res://entities/Assets/Tree 2/tree.png" type="Texture" id=11]
 [ext_resource path="res://levels/Levels.gd" type="Script" id=12]
 
+
 [node name="SkateTutorial" type="Node2D"]
 modulate = Color( 0.4, 0.466667, 0.458824, 1 )
 script = ExtResource( 12 )

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://engine/Entrance/Entrance.gd" type="Script" id=1]
 [ext_resource path="res://audio/sound effects/coin/BottleSound.tscn" type="PackedScene" id=2]
 [ext_resource path="res://engine/Animations/fade.anim" type="Animation" id=3]
+[ext_resource path="res://entities/Assets/House/Village House/Door1.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 56 )
@@ -29,4 +30,10 @@ anims/fade = ExtResource( 3 )
 anims/transition = ExtResource( 3 )
 
 [node name="BottleSound" parent="." instance=ExtResource( 2 )]
+
+[node name="Door1" type="Sprite" parent="."]
+position = Vector2( -4.76837e-07, -23 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 4 )
+
 [connection signal="body_entered" from="." to="." method="_on_Entrance_body_entered"]

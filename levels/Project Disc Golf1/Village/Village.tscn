@@ -1,10 +1,9 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/Assets/Background/Blue Low Poly Sky/villagebackground.PNG" type="Texture" id=3]
 [ext_resource path="res://levels/Levels.gd" type="Script" id=4]
-[ext_resource path="res://entities/Assets/Background/rain effect/Raining.tscn" type="PackedScene" id=5]
 [ext_resource path="res://entities/Assets/Evergreen Tree/EverGreenNoCollision.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/Assets/House/Village House/HouseYellowWithWindowAndDoors.tscn" type="PackedScene" id=7]
 [ext_resource path="res://audio/sound effects/raineffect/RainEffect.tscn" type="PackedScene" id=8]
@@ -22,7 +21,6 @@
 [ext_resource path="res://entities/Assets/Clouds/Cloud1.png" type="Texture" id=20]
 [ext_resource path="res://entities/NPCs/ADefaultNPC/defaultNPC.tscn" type="PackedScene" id=21]
 [ext_resource path="res://entities/Assets/Bush/Bush.tscn" type="PackedScene" id=22]
-[ext_resource path="res://entities/Enemies/Hockey Boss/HockeyBoss.tscn" type="PackedScene" id=23]
 [ext_resource path="res://ui/HUD/HUD.tscn" type="PackedScene" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -312,6 +310,7 @@ position = Vector2( 2144, 240 )
 
 [node name="Shadow" parent="NPCs/defaultNPC" index="0"]
 animation = "OJ Moss"
+frame = 0
 
 [node name="AnimatedSprite" parent="NPCs/defaultNPC" index="1"]
 position = Vector2( 16, -64 )
@@ -324,6 +323,7 @@ position = Vector2( 1816, 240 )
 
 [node name="Shadow" parent="NPCs/defaultNPC2" index="0"]
 animation = "Douglas Ramond"
+frame = 0
 
 [node name="AnimatedSprite" parent="NPCs/defaultNPC2" index="1"]
 position = Vector2( -0.540405, -2.7018 )
@@ -362,32 +362,17 @@ position = Vector2( 2778.32, 239.505 )
 
 [node name="Shadow" parent="NPCs/defaultNPC5" index="0"]
 animation = "Dorris"
-frame = 2
+frame = 0
 
 [node name="AnimatedSprite" parent="NPCs/defaultNPC5" index="1"]
 position = Vector2( 2.39233, -3.31245 )
 scale = Vector2( 1.25, 1.25 )
 animation = "Dorris"
-frame = 2
+frame = 0
 flip_h = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1384, 208 )
-
-[node name="PlayerCamera" parent="Player" index="14"]
-offset = Vector2( 150, -125 )
-
-[node name="Raining" parent="Player/PlayerCamera" index="2" instance=ExtResource( 5 )]
-position = Vector2( 16, 0 )
-
-[node name="Raining2" parent="Player/PlayerCamera" index="3" instance=ExtResource( 5 )]
-position = Vector2( 176, -152 )
-
-[node name="Raining3" parent="Player/PlayerCamera" index="4" instance=ExtResource( 5 )]
-position = Vector2( 200, -16 )
-
-[node name="Raining4" parent="Player/PlayerCamera" index="5" instance=ExtResource( 5 )]
-position = Vector2( 0, -152 )
+position = Vector2( 862, 96 )
 
 [node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
 frame = 0
@@ -402,27 +387,21 @@ texture = ExtResource( 9 )
 
 [node name="EverGreenNoCollision" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 1048, 248 )
-frame = 0
 
 [node name="EverGreenNoCollision5" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 648, 280 )
-frame = 0
 
 [node name="EverGreenNoCollision6" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 2608, 240 )
-frame = 0
 
 [node name="EverGreenNoCollision2" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 2280, 248 )
-frame = 0
 
 [node name="EverGreenNoCollision3" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 2912, 248 )
-frame = 0
 
 [node name="EverGreenNoCollision4" parent="Props" instance=ExtResource( 6 )]
 position = Vector2( 256, 264 )
-frame = 0
 
 [node name="golfcart" type="Sprite" parent="Props"]
 position = Vector2( 1232, 224 )
@@ -495,7 +474,7 @@ tile_data = PoolIntArray( -2293775, 0, 0, -2293774, 0, 1, -2293773, 0, 1, -22937
 [node name="RainEffect" parent="." instance=ExtResource( 8 )]
 
 [node name="ToDiscGolfHubPos" type="Area2D" parent="."]
-position = Vector2( 1288, 216 )
+position = Vector2( 1169, 211 )
 
 [node name="Entrance" parent="." instance=ExtResource( 11 )]
 position = Vector2( 3192, 192 )
@@ -505,9 +484,6 @@ next_world_scene = "res://levels/Project Disc Golf1/IntroHub/ToDiscGolfHub.tscn"
 position = Vector2( 1712, -736 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 20 )
-
-[node name="HockeyBoss" parent="." instance=ExtResource( 23 )]
-position = Vector2( 1322.71, 226.372 )
 
 [node name="HUD" parent="." instance=ExtResource( 24 )]
 

@@ -46,14 +46,9 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 13 ) ],
 "loop": true,
-"name": "skate",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "move",
+"name": "shocked",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
@@ -66,14 +61,19 @@ animations = [ {
 "name": "throw",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "skate",
+"speed": 1.0
+}, {
 "frames": [ ExtResource( 31 ) ],
 "loop": true,
 "name": "down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "shocked",
+"name": "move",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
@@ -191,8 +191,10 @@ position = Vector2( 0, 8 )
 [node name="AllPlayers" parent="." instance=ExtResource( 1 )]
 position = Vector2( 48, -24 )
 
+[node name="Sprite" parent="AllPlayers/OtherPlayers3" index="0"]
+frame = 1
+
 [node name="DayNightCycle" parent="." instance=ExtResource( 10 )]
-color = Color( 0.00784314, 0.027451, 0.2, 1 )
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
