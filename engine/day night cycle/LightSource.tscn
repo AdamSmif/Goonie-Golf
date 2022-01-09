@@ -6,7 +6,7 @@
 [node name="LightSource" type="Light2D"]
 scale = Vector2( 0.83, 0.83 )
 texture = ExtResource( 1 )
-texture_scale = 0.8
+texture_scale = 0.4
 color = Color( 0.705882, 0.784314, 0.952941, 1 )
 energy = 0.6
 shadow_gradient_length = 3.0

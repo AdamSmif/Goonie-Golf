@@ -57,10 +57,8 @@ white_balance_temperature = 1.0
 color_splash_strength = 1.0
 bloom_intensity = 0.3
 chromatc_aberration_strength = 1.0
-fog_overlay_show = true
 fog_overlay_octaves = 1
 fog_overlay_color = Color( 0.262745, 0.254902, 0.254902, 1 )
-vignette_show = true
 vignette_scale = 0.75
 vignette_softness = 5.0
 
@@ -96,6 +94,9 @@ position = Vector2( 0, 8 )
 [node name="cave" type="Sprite" parent="Enviroment/Foliage"]
 position = Vector2( 768, 56 )
 texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="City" type="StaticBody2D" parent="Enviroment/Foliage"]
 
@@ -137,15 +138,15 @@ scale = Vector2( 6, 6 )
 texture = ExtResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Foliage/SpookyHouse"]
-position = Vector2( 118.642, -714.786 )
+position = Vector2( 98, -717 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Enviroment/Foliage/SpookyHouse"]
-position = Vector2( 320.007, -717.101 )
+position = Vector2( 352, -718 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Enviroment/Foliage/SpookyHouse"]
-position = Vector2( 222.279, -761.105 )
+position = Vector2( 222, -791 )
 shape = SubResource( 4 )
 
 [node name="YellowHouse" type="StaticBody2D" parent="Enviroment/Foliage"]
@@ -295,6 +296,7 @@ position = Vector2( 1179.69, -904.235 )
 
 [node name="AbanonedTrainNoCollision" parent="Enviroment" instance=ExtResource( 17 )]
 position = Vector2( 72, -520 )
+frame = 1
 
 [node name="RainEffect" parent="." instance=ExtResource( 4 )]
 
@@ -340,41 +342,6 @@ position = Vector2( 448.371, 286.543 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 10 )
 
-[node name="Locker" parent="." instance=ExtResource( 6 )]
-position = Vector2( 460, 350 )
-scale = Vector2( 0.1, 0.1 )
-next_world_scene = "res://levels/Project Disc Golf1/LockerRoomStart/LockerRoomStart.tscn"
-
-[node name="DrewHouse" parent="." instance=ExtResource( 6 )]
-position = Vector2( 48.4989, 136.786 )
-scale = Vector2( 0.2, 0.2 )
-next_world_scene = "res://levels/Project Disc Golf1/Drewzer Brewzer House/DrewHouse.tscn"
-
-[node name="Cave" parent="." instance=ExtResource( 6 )]
-position = Vector2( 767.402, 69.9378 )
-scale = Vector2( 0.1, 0.1 )
-next_world_scene = "res://levels/Project Disc Golf1/Cave/Cave.tscn"
-
-[node name="Entrance" parent="." instance=ExtResource( 6 )]
-position = Vector2( 225, -611 )
-scale = Vector2( 0.5, 0.5 )
-next_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/TeeTimeIntro1.tscn"
-
-[node name="Entrance2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 552, -216 )
-scale = Vector2( 0.6, 0.2 )
-next_world_scene = "res://levels/Project Disc Golf1/SkateBoardLevelIntro/SkateTutorial.tscn"
-
-[node name="Entrance3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 80, -120 )
-scale = Vector2( 0.5, 0.5 )
-next_world_scene = "res://levels/Project Disc Golf1/Village/Village.tscn"
-
-[node name="Entrance4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 109, -373 )
-scale = Vector2( 0.25, 0.25 )
-next_world_scene = "res://levels/Project Disc Golf1/Train/Train1.tscn"
-
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Area2D" type="Area2D" parent="YSort"]
@@ -382,60 +349,116 @@ next_world_scene = "res://levels/Project Disc Golf1/Train/Train1.tscn"
 [node name="HouseYellow4" type="Sprite" parent="YSort/Area2D"]
 position = Vector2( 80, -240 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="HouseYellow" type="Sprite" parent="YSort/Area2D"]
 position = Vector2( 24, -184 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="HouseYellow3" type="Sprite" parent="YSort/Area2D"]
 position = Vector2( 120, -200 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="HouseYellow2" type="Sprite" parent="YSort/Area2D"]
 position = Vector2( 80, -168 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="window1" type="Sprite" parent="YSort/Area2D"]
 position = Vector2( 48, -144 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="window2" type="Sprite" parent="YSort/Area2D"]
 position = Vector2( 104, -144 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="window3" type="Sprite" parent="YSort/Area2D"]
 position = Vector2( 160, -176 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="window4" type="Sprite" parent="YSort/Area2D"]
 position = Vector2( -8, -160 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Area2D"]
-position = Vector2( 80, -192 )
+position = Vector2( 80, -213 )
 shape = SubResource( 9 )
+
+[node name="Locker" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 448, 328 )
+next_world_scene = "res://levels/Project Disc Golf1/LockerRoomStart/LockerRoomStart.tscn"
+
+[node name="DrewHouse" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 48, 144 )
+scale = Vector2( 0.2, 0.2 )
+next_world_scene = "res://levels/Project Disc Golf1/Drewzer Brewzer House/DrewHouse.tscn"
+
+[node name="Cave" parent="." instance=ExtResource( 6 )]
+position = Vector2( 767, 65 )
+scale = Vector2( 0.25, 0.25 )
+next_world_scene = "res://levels/Project Disc Golf1/Cave/Cave.tscn"
+
+[node name="DiscManor" parent="." instance=ExtResource( 6 )]
+position = Vector2( 222, -737 )
+scale = Vector2( 3, 3 )
+next_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/TeeTimeIntro1.tscn"
+
+[node name="City" parent="." instance=ExtResource( 6 )]
+position = Vector2( 551, -240 )
+next_world_scene = "res://levels/Project Disc Golf1/SkateBoardLevelIntro/SkateTutorial.tscn"
+
+[node name="Village" parent="." instance=ExtResource( 6 )]
+position = Vector2( 79, -136 )
+next_world_scene = "res://levels/Project Disc Golf1/Village/Village.tscn"
+
+[node name="Train" parent="." instance=ExtResource( 6 )]
+position = Vector2( 38, -397 )
+next_world_scene = "res://levels/Project Disc Golf1/Train/Train1.tscn"
 
 [node name="OceanAnimation" parent="." instance=ExtResource( 19 )]
 position = Vector2( 32, 536 )
-frame = 0
 
 [node name="OceanAnimation2" parent="." instance=ExtResource( 19 )]
 position = Vector2( 528, 544 )
-frame = 0
 
 [node name="OceanAnimation3" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1056, 528 )
+frame = 0
 
 [node name="OceanAnimation4" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1184, 256 )
-frame = 0
 
 [node name="OceanAnimation5" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1144, -32 )
+frame = 0
 
 [editable path="Player"]
 [editable path="Player/PlayerCamera"]

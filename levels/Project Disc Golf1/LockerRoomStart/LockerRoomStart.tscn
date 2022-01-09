@@ -62,9 +62,11 @@ collision_mask = 513
 
 [node name="Shadow" parent="defaultNPC" index="0"]
 animation = "Joe Sanders"
+frame = 0
 
 [node name="AnimatedSprite" parent="defaultNPC" index="1"]
 animation = "Joe Sanders"
+frame = 0
 
 [node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 12 )]
 dialogue_file = "res://entities/Dialogue/introcoachlockerroomtalk.json"
@@ -74,9 +76,11 @@ position = Vector2( 1528, -143.731 )
 
 [node name="Shadow" parent="defaultNPC2" index="0"]
 animation = "Mike Schubert"
+frame = 0
 
 [node name="AnimatedSprite" parent="defaultNPC2" index="1"]
 animation = "Mike Schubert"
+frame = 0
 
 [node name="DialoguePlayer" parent="defaultNPC2" instance=ExtResource( 12 )]
 dialogue_file = "res://entities/Dialogue/mike/yeah_mike.json"
@@ -91,7 +95,7 @@ lose_level_world_scene = "res://levels/Project Disc Golf1/LockerRoomStart/Locker
 position = Vector2( 712, 144 )
 
 [node name="Locker" parent="." instance=ExtResource( 10 )]
-position = Vector2( -512, 102 )
+position = Vector2( -506, 130 )
 next_world_scene = "res://levels/Project Disc Golf1/IntroHub/ToDiscGolfHub.tscn"
 
 [connection signal="bottle_collected" from="YSort/Bottle" to="HUD" method="_on_Bottle_bottle_collected"]
