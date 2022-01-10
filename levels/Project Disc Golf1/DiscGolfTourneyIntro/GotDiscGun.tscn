@@ -1,12 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://engine/CutsceneDialogue/CutsceneDialogue.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entities/Player/main player wade/player_gun10.png" type="Texture" id=4]
-[ext_resource path="res://levels/Project Disc Golf1/DiscGolfTourneyIntro/GotDiscGun.gd" type="Script" id=5]
+[ext_resource path="res://levels/ControlLevels.gd" type="Script" id=5]
 [ext_resource path="res://audio/sound effects/raineffect/RainEffect.tscn" type="PackedScene" id=6]
-
+[ext_resource path="res://engine/Entrance/Entrance.tscn" type="PackedScene" id=7]
 
 [node name="GotDiscGun" type="Control"]
 anchor_right = 1.0
@@ -42,8 +42,11 @@ tile_data = PoolIntArray( 1048569, 0, 0, 1048570, 0, 1, 1048571, 0, 2, 983065, 0
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -104, 512 )
 
-[node name="PlayerCamera" parent="Player" index="13"]
+[node name="PlayerCamera" parent="Player" index="14"]
 current = false
+
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 320, 192 )
@@ -55,4 +58,9 @@ next_world_scene = "res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole1.t
 
 [node name="RainEffect" parent="." instance=ExtResource( 6 )]
 
+[node name="Disc" parent="." instance=ExtResource( 7 )]
+
 [editable path="Player"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]

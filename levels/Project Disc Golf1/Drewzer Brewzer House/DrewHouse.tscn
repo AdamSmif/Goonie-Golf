@@ -21,12 +21,12 @@ position = Vector2( 512, 96 )
 [node name="Shadow" parent="defaultNPC" index="0"]
 position = Vector2( 4, 9 )
 animation = "Drewzer Brewzer"
-frame = 0
+frame = 1
 
 [node name="AnimatedSprite" parent="defaultNPC" index="1"]
 position = Vector2( 2.948, 8.484 )
 animation = "Drewzer Brewzer"
-frame = 1
+frame = 0
 
 [node name="DialoguePlayer" parent="defaultNPC" instance=ExtResource( 8 )]
 dialogue_file = "res://entities/Dialogue/introcutscene/JoeSandersIntroHouse.json"
@@ -36,12 +36,12 @@ position = Vector2( 1112, -48 )
 
 [node name="Shadow" parent="defaultNPC2" index="0"]
 animation = "Clarence"
-frame = 1
+frame = 0
 
 [node name="AnimatedSprite" parent="defaultNPC2" index="1"]
 position = Vector2( 0.598755, 1.79622 )
 animation = "Clarence"
-frame = 1
+frame = 0
 
 [node name="DialoguePlayer" parent="defaultNPC2" instance=ExtResource( 8 )]
 dialogue_file = "res://entities/Dialogue/introcutscene/ClarenceIntroHouse.json"
@@ -51,12 +51,12 @@ position = Vector2( 1288.86, 237.254 )
 
 [node name="Shadow" parent="defaultNPC3" index="0"]
 animation = "Blue Guy"
-frame = 1
+frame = 0
 
 [node name="AnimatedSprite" parent="defaultNPC3" index="1"]
 modulate = Color( 0.113725, 0.0235294, 0.0235294, 1 )
 animation = "Blue Guy"
-frame = 1
+frame = 0
 
 [node name="DialoguePlayer" parent="defaultNPC3" instance=ExtResource( 8 )]
 dialogue_file = "res://entities/Dialogue/introcutscene/MysteriousVoiceIntroHouse.json"
@@ -69,6 +69,9 @@ dialogue_file = "res://entities/Dialogue/introcutscene/MysteriousVoiceIntroHouse
 position = Vector2( 296, 168 )
 scale = Vector2( 10.75, 8 )
 texture = ExtResource( 7 )
+
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 2
 
 [node name="RainEffect" parent="." instance=ExtResource( 1 )]
 
