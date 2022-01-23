@@ -22,7 +22,8 @@ script = ExtResource( 5 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PostProcessing_tool" parent="CanvasLayer" instance=ExtResource( 15 )]
-chromatc_aberration_show = true
+bloom_show = true
+chromatc_aberration_strength = 0.2
 glitch_show = true
 glitch_power = 0.01
 glitch_rate = 0.001
@@ -92,6 +93,12 @@ scale = Vector2( 5, 20.2969 )
 position = Vector2( 8, -672 )
 GRAVITY = 10
 
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 0
+
+[node name="DayNightCycle" parent="Player" index="16"]
+visible = false
+
 [node name="Hole5Pos" type="Position2D" parent="."]
 position = Vector2( 8, -536 )
 
@@ -107,7 +114,7 @@ lose_level_world_scene = "res://levels/Project Disc Golf1/Void/IntoTheVoid.tscn"
 [node name="defaultNPC" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1976, -208 )
 
-[node name="AnimatedSprite" parent="defaultNPC" index="0"]
+[node name="AnimatedSprite" parent="defaultNPC" index="1"]
 animation = "Green Void Man"
 frame = 1
 
@@ -120,7 +127,7 @@ position = Vector2( 4048, -504 )
 [node name="defaultNPC2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 4824.68, -496.134 )
 
-[node name="AnimatedSprite" parent="defaultNPC2" index="0"]
+[node name="AnimatedSprite" parent="defaultNPC2" index="1"]
 animation = "Green Void Man"
 frame = 1
 
@@ -132,6 +139,9 @@ position = Vector2( 6112, 296 )
 scale = Vector2( 3, 3 )
 next_world_scene = "res://levels/Project Disc Golf1/Void/VoidBoss.tscn"
 
+[editable path="Player"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]
 [editable path="defaultNPC"]
-
 [editable path="defaultNPC2"]

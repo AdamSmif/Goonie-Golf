@@ -19,7 +19,6 @@ script = ExtResource( 5 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PostProcessing_tool" parent="CanvasLayer" instance=ExtResource( 15 )]
-chromatc_aberration_show = true
 glitch_show = true
 glitch_power = 0.01
 glitch_rate = 0.001
@@ -33,12 +32,10 @@ vignette_softness = 2.0
 [node name="NightSkyAnimated" parent="Sky" instance=ExtResource( 4 )]
 position = Vector2( 432, -248 )
 scale = Vector2( 10, 10 )
-frame = 1
 
 [node name="NightSkyAnimated2" parent="Sky" instance=ExtResource( 4 )]
 position = Vector2( 6800, -264 )
 scale = Vector2( 10, 10 )
-frame = 1
 
 [node name="Props" type="YSort" parent="."]
 
@@ -116,15 +113,24 @@ scale = Vector2( 8.0625, 20.2969 )
 position = Vector2( 2040, -136 )
 scale = Vector2( 4, 4 )
 
-[node name="Sprite" parent="Enemies/GrunkoBot" index="0"]
-frame = 3
+[node name="Shadow" parent="Enemies/GrunkoBot" index="0"]
+frame = 2
 
-[node name="Stats" parent="Enemies/GrunkoBot" index="6"]
+[node name="Sprite" parent="Enemies/GrunkoBot" index="1"]
+frame = 0
+
+[node name="Stats" parent="Enemies/GrunkoBot" index="7"]
 max_health = 4
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 8, -672 )
 GRAVITY = 10
+
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 1
+
+[node name="DayNightCycle" parent="Player" index="16"]
+visible = false
 
 [node name="IntoTheVoidPos" type="Position2D" parent="."]
 position = Vector2( 8, -536 )
@@ -140,3 +146,9 @@ position = Vector2( 4304, -136 )
 scale = Vector2( 4, 4 )
 
 [editable path="Enemies/GrunkoBot"]
+[editable path="Enemies/GrunkoBot/Hurtbox"]
+[editable path="Enemies/GrunkoBot/Hitbox"]
+[editable path="Player"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]

@@ -9,7 +9,6 @@
 [ext_resource path="res://levels/Project Disc Golf1/DiscGolfTourneyIntro/Hole5.gd" type="Script" id=8]
 
 [node name="Hole5" type="Node2D"]
-modulate = Color( 0.4, 0.466667, 0.458824, 1 )
 script = ExtResource( 8 )
 
 [node name="GolfTile" parent="." instance=ExtResource( 1 )]
@@ -46,6 +45,13 @@ position = Vector2( -200, -24 )
 
 [node name="Raining6" parent="Player/PlayerCamera" index="7" instance=ExtResource( 3 )]
 position = Vector2( 152, -192 )
+
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 2
+
 [connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
 [editable path="Player"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]

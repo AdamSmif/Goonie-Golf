@@ -28,7 +28,6 @@ extents = Vector2( 190.882, 9.18864 )
 extents = Vector2( 160.327, 10 )
 
 [node name="Hole1" type="Node2D"]
-modulate = Color( 0.4, 0.466667, 0.458824, 1 )
 script = ExtResource( 3 )
 
 [node name="GrassPlatform2" parent="." instance=ExtResource( 8 )]

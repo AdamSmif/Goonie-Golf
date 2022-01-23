@@ -18,7 +18,6 @@ font_data = ExtResource( 6 )
 default_font = SubResource( 1 )
 
 [node name="Hole3" type="Node2D"]
-modulate = Color( 0.4, 0.466667, 0.458824, 1 )
 script = ExtResource( 9 )
 
 [node name="DiscGolfBasket" parent="." instance=ExtResource( 2 )]
@@ -42,6 +41,9 @@ position = Vector2( 29.9784, -151.033 )
 
 [node name="Raining3" parent="Player/PlayerCamera" index="4" instance=ExtResource( 5 )]
 position = Vector2( 63.4616, -93.6337 )
+
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 0
 
 [node name="FallZone" parent="." instance=ExtResource( 4 )]
 position = Vector2( 416, 1168 )
@@ -67,8 +69,11 @@ __meta__ = {
 position = Vector2( -32.9999, 56.9999 )
 
 [node name="RainEffect" parent="." instance=ExtResource( 10 )]
+
 [connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
 [editable path="Player"]
-
+[editable path="Player/Hurtbox"]
 [editable path="Player/PlayerCamera"]
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]

@@ -24,15 +24,16 @@ texture = ExtResource( 3 )
 [node name="EverBlueNoCollision" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 656, 64 )
 scale = Vector2( 5, 5 )
+frame = 0
 
 [node name="EverBlueNoCollision2" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( -136, 168 )
 scale = Vector2( 5, 5 )
-frame = 0
 
 [node name="EverBlueNoCollision3" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 488, 248 )
 scale = Vector2( 5, 5 )
+frame = 0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 

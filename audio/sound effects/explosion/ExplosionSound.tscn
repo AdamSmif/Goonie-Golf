@@ -2,5 +2,6 @@
 
 [ext_resource path="res://audio/sound effects/explosion/Explosion.ogg" type="AudioStream" id=1]
 
-[node name="ExplosionSound" type="AudioStreamPlayer2D"]
+[node name="ExplosionSound" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )
+volume_db = -20.727

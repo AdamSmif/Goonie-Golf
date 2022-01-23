@@ -74,6 +74,7 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 material = SubResource( 2 )
 margin_left = -154.0
 margin_top = -61.0

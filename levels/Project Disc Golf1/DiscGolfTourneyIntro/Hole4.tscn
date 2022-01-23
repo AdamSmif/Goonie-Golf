@@ -13,7 +13,6 @@
 [ext_resource path="res://audio/sound effects/raineffect/RainEffect.tscn" type="PackedScene" id=11]
 
 [node name="hole4" type="Node2D"]
-modulate = Color( 0.4, 0.466667, 0.458824, 1 )
 script = ExtResource( 10 )
 
 [node name="DiscGolfBasket" parent="." instance=ExtResource( 9 )]
@@ -57,6 +56,10 @@ position = Vector2( 1304, -72 )
 position = Vector2( -33.9773, 30.3251 )
 
 [node name="RainEffect" parent="." instance=ExtResource( 11 )]
+
 [connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
 [editable path="Player"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]

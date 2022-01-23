@@ -30,22 +30,23 @@ to_minigames_scene = "res://ui/Charity/Charity.tscn"
 [node name="NightSkyAnimated" parent="." instance=ExtResource( 2 )]
 position = Vector2( 320, 184 )
 scale = Vector2( 1.075, 1.13158 )
+frame = 1
 
 [node name="Ocean" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, 320 )
-frame = 1
+frame = 2
 
 [node name="Ocean4" parent="." instance=ExtResource( 3 )]
 position = Vector2( -128, 320 )
-frame = 1
+frame = 2
 
 [node name="Ocean2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 376, 320 )
-frame = 1
+frame = 2
 
 [node name="Ocean3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 632, 320 )
-frame = 1
+frame = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
@@ -122,9 +123,6 @@ position = Vector2( 200, 288 )
 
 [node name="OtherPlayers3" parent="AllPlayers" index="1"]
 position = Vector2( 232, 288 )
-
-[node name="Sprite" parent="AllPlayers/OtherPlayers3" index="0"]
-frame = 1
 
 [node name="OtherPlayers4" parent="AllPlayers" index="2"]
 position = Vector2( 264, 288 )

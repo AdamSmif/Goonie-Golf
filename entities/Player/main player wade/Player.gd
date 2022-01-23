@@ -152,7 +152,7 @@ func _physics_process(_delta):
 		if jumpWasPressed == true:
 			motion.y = JUMP_HEIGHT
 		pass
-		if Input.is_action_pressed('up_%s' % id):
+		if Input.is_action_pressed('jump_%s' % id):
 			jumpWasPressed = true
 			rememberJumpTime()
 			if CoyoteJump == true:
