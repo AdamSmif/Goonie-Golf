@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://entities/Assets/Background/HD Backgrounds/Rainier (Sourdough Ridge)-62.jpg" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform int pixel_size : hint_range(1, 100) = 50;
+
+void fragment(){
+	vec2 pos = UV / TEXTURE_PIXEL_SIZE;
+	vec2 square = vec2(float(pixel_size), float(pixel_size));
+	vec2 top_left = floor(pos / square) * square;
+	vec4 total = vec4(0., 0., 0., 0.);
+	for (int x = int(top_left.x); x < int(top_left.x) + pixel_size; x++){
+		for (int y = int(top_left.y); y < int(top_left.y) + pixel_size; y++){
+			total += texture(TEXTURE, vec2(float(x), float(y)) * TEXTURE_PIXEL_SIZE);
+		}
+	}
+	COLOR = total / float(pixel_size * pixel_size);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/pixel_size = 50
+
+[node name="Sprite" type="Sprite"]
+material = SubResource( 2 )
+position = Vector2( 344, 198 )
+scale = Vector2( 0.0774625, 0.0964912 )
+texture = ExtResource( 1 )

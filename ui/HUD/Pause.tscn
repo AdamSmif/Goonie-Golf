@@ -104,6 +104,7 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="MainMenu" to="." method="_on_MainMenu_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

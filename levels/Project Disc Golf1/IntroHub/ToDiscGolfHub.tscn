@@ -296,6 +296,7 @@ position = Vector2( 1179.69, -904.235 )
 
 [node name="AbanonedTrainNoCollision" parent="Enviroment" instance=ExtResource( 17 )]
 position = Vector2( 72, -520 )
+frame = 1
 
 [node name="RainEffect" parent="." instance=ExtResource( 4 )]
 
@@ -444,21 +445,20 @@ next_world_scene = "res://levels/Project Disc Golf1/Train/Train1.tscn"
 
 [node name="OceanAnimation" parent="." instance=ExtResource( 19 )]
 position = Vector2( 32, 536 )
-frame = 0
 
 [node name="OceanAnimation2" parent="." instance=ExtResource( 19 )]
 position = Vector2( 528, 544 )
-frame = 0
 
 [node name="OceanAnimation3" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1056, 528 )
+frame = 0
 
 [node name="OceanAnimation4" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1184, 256 )
-frame = 0
 
 [node name="OceanAnimation5" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1144, -32 )
+frame = 0
 
 [editable path="Player"]
 [editable path="Player/PlayerCamera"]

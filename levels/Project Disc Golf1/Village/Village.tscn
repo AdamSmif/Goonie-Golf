@@ -310,72 +310,63 @@ position = Vector2( 2144, 240 )
 
 [node name="Shadow" parent="NPCs/defaultNPC" index="0"]
 animation = "OJ Moss"
-frame = 0
+frame = 2
 
 [node name="AnimatedSprite" parent="NPCs/defaultNPC" index="1"]
 position = Vector2( 16, -64 )
 scale = Vector2( 1.25, 1.25 )
 animation = "OJ Moss"
-frame = 0
+frame = 2
 
 [node name="defaultNPC2" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 1816, 240 )
 
 [node name="Shadow" parent="NPCs/defaultNPC2" index="0"]
 animation = "Douglas Ramond"
-frame = 0
 
 [node name="AnimatedSprite" parent="NPCs/defaultNPC2" index="1"]
 position = Vector2( -0.540405, -2.7018 )
 scale = Vector2( 0.75, 0.75 )
 animation = "Douglas Ramond"
-frame = 0
 
 [node name="defaultNPC3" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 1416, 240 )
 
 [node name="Shadow" parent="NPCs/defaultNPC3" index="0"]
 animation = "Vern Avocado"
-frame = 0
 
 [node name="AnimatedSprite" parent="NPCs/defaultNPC3" index="1"]
 position = Vector2( 17.0808, 4.75784 )
 scale = Vector2( 0.75, 0.75 )
 animation = "Vern Avocado"
-frame = 0
 
 [node name="defaultNPC4" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 2569.63, 238.304 )
 
 [node name="Shadow" parent="NPCs/defaultNPC4" index="0"]
 animation = "Dot Williams"
-frame = 0
 
 [node name="AnimatedSprite" parent="NPCs/defaultNPC4" index="1"]
 position = Vector2( 2.09058, -2.50871 )
 scale = Vector2( 1.25, 1.25 )
 animation = "Dot Williams"
-frame = 0
 
 [node name="defaultNPC5" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 2778.32, 239.505 )
 
 [node name="Shadow" parent="NPCs/defaultNPC5" index="0"]
 animation = "Dorris"
-frame = 0
+frame = 2
 
 [node name="AnimatedSprite" parent="NPCs/defaultNPC5" index="1"]
 position = Vector2( 2.39233, -3.31245 )
 scale = Vector2( 1.25, 1.25 )
 animation = "Dorris"
-frame = 0
+frame = 2
 flip_h = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 862, 96 )
-
-[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
-frame = 0
 
 [node name="Props" type="YSort" parent="."]
 scale = Vector2( 1, 1.02225 )

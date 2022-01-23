@@ -1,10 +1,39 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/Player/main player wade/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/Levels.gd" type="Script" id=3]
 [ext_resource path="res://engine/Entrance/Entrance.tscn" type="PackedScene" id=4]
 [ext_resource path="res://entities/Assets/icon/icon.png" type="Texture" id=5]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform vec4 lightest : hint_color;
+uniform vec4 light : hint_color;
+uniform vec4 dark : hint_color;
+uniform vec4 darkest : hint_color;
+
+void fragment() {
+	COLOR = texture(SCREEN_TEXTURE, SCREEN_UV);
+	float rgb_avg = (COLOR.r + COLOR.g + COLOR.b) / 3.0;
+	if (rgb_avg < .25) {
+		COLOR = darkest;
+	} else if (rgb_avg < .5) {
+		COLOR = dark;
+	} else if (rgb_avg < .75) {
+		COLOR = light;
+	} else {
+		COLOR = lightest;
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/lightest = null
+shader_param/light = null
+shader_param/dark = null
+shader_param/darkest = null
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 3 )
@@ -13,6 +42,12 @@ script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 104, 240 )
+
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 0
+
+[node name="DayNightCycle" parent="Player" index="16"]
+visible = false
 
 [node name="Bleh" parent="." instance=ExtResource( 4 )]
 position = Vector2( 464, 232 )
@@ -24,6 +59,9 @@ texture = ExtResource( 5 )
 
 [node name="Level2Pos" type="Position2D" parent="."]
 position = Vector2( 184, 168 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="icon" type="Sprite" parent="Level2Pos"]
 scale = Vector2( 0.3125, 0.3125 )
@@ -31,3 +69,21 @@ texture = ExtResource( 5 )
 
 [node name="DialogicTestPos" type="Position2D" parent="."]
 position = Vector2( 826.764, 56.8452 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource( 2 )
+margin_left = -154.0
+margin_top = -61.0
+margin_right = 1119.0
+margin_bottom = 667.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[editable path="Player"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/AllPlayers"]
+[editable path="Player/AllPlayers/OtherPlayers3"]

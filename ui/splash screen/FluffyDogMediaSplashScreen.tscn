@@ -50,7 +50,7 @@ margin_left = -64.0
 margin_top = -48.0
 margin_right = 704.0
 margin_bottom = 448.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false

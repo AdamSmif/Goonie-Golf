@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://entities/Assets/Background/Night Sky/NightSkyAnimated.tscn" type="PackedScene" id=2]
@@ -6,13 +6,7 @@
 [ext_resource path="res://entities/Player/otherplayers/AllOtheerPlayers.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ui/main menu/MainMenuUI.gd" type="Script" id=5]
 [ext_resource path="res://audio/sound effects/Menu Select/MenuSelect.tscn" type="PackedScene" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-size = 32
-font_data = ExtResource( 1 )
-
-[sub_resource type="Theme" id=2]
-default_font = SubResource( 1 )
+[ext_resource path="res://ui/theme/kenneyUI-blue.tres" type="Theme" id=7]
 
 [sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 1 )
@@ -23,6 +17,7 @@ default_font = SubResource( 3 )
 [node name="MainMenuUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 7 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -38,24 +33,28 @@ scale = Vector2( 1.075, 1.13158 )
 
 [node name="Ocean" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, 320 )
+frame = 1
 
 [node name="Ocean4" parent="." instance=ExtResource( 3 )]
 position = Vector2( -128, 320 )
+frame = 1
 
 [node name="Ocean2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 376, 320 )
+frame = 1
 
 [node name="Ocean3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 632, 320 )
+frame = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -76.0
-margin_top = 24.0
-margin_right = 76.0
-margin_bottom = 96.0
-theme = SubResource( 2 )
+margin_left = -64.0
+margin_top = 4.0
+margin_right = 70.0
+margin_bottom = 43.0
+theme = ExtResource( 7 )
 text = "Goonie Golf"
 scroll_active = false
 __meta__ = {
@@ -68,8 +67,10 @@ margin_top = 96.0
 margin_right = 392.0
 margin_bottom = 128.0
 theme = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Games"
-flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -80,8 +81,10 @@ margin_top = 152.0
 margin_right = 392.0
 margin_bottom = 184.0
 theme = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Charity"
-flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -92,8 +95,10 @@ margin_top = 208.0
 margin_right = 200.0
 margin_bottom = 240.0
 theme = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Options"
-flat = true
 
 [node name="Credits" type="Button" parent="."]
 margin_left = 440.0
@@ -101,8 +106,10 @@ margin_top = 208.0
 margin_right = 584.0
 margin_bottom = 240.0
 theme = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Credits"
-flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -115,6 +122,9 @@ position = Vector2( 200, 288 )
 
 [node name="OtherPlayers3" parent="AllPlayers" index="1"]
 position = Vector2( 232, 288 )
+
+[node name="Sprite" parent="AllPlayers/OtherPlayers3" index="0"]
+frame = 1
 
 [node name="OtherPlayers4" parent="AllPlayers" index="2"]
 position = Vector2( 264, 288 )
@@ -132,9 +142,11 @@ position = Vector2( 360, 288 )
 position = Vector2( 392, 288 )
 
 [node name="MenuSelect" parent="." instance=ExtResource( 6 )]
+
 [connection signal="pressed" from="Start Game" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Charity" to="." method="_on_Mini_Game_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
 
 [editable path="AllPlayers"]
+[editable path="AllPlayers/OtherPlayers3"]

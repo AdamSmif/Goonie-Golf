@@ -60,7 +60,7 @@ func _physics_process(_delta):
 	var friction = false
 
 # Spawn All Players
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("spawn_1"):
 		$AllPlayers/OtherPlayers2.visible = true
 		$AllPlayers/OtherPlayers3.visible = true
 		$AllPlayers/OtherPlayers4.visible = true
@@ -122,7 +122,7 @@ func _physics_process(_delta):
 		if jumpWasPressed == true:
 			motion.y = JUMP_HEIGHT
 		pass
-		if Input.is_action_pressed('up_%s' % id):
+		if Input.is_action_pressed('jump_%s' % id):
 			jumpWasPressed = true
 			rememberJumpTime()
 			if CoyoteJump == true:

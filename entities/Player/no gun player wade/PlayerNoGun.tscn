@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://entities/Player/otherplayers/AllOtheerPlayers.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/Player/no gun player wade/player1_jump1.png" type="Texture" id=2]
@@ -46,21 +46,6 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "shocked",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "boom",
-"speed": 5.0
-}, {
-"frames": [ null ],
-"loop": true,
-"name": "throw",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "skate",
@@ -71,16 +56,33 @@ animations = [ {
 "name": "down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 6 ) ],
+"frames": [ null ],
 "loop": true,
-"name": "move",
+"name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "shocked",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "jump",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "boom",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "move",
+"speed": 5.0
 } ]
+
+[sub_resource type="ShaderMaterial" id=8]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 18.0369 )
@@ -112,6 +114,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
+material = SubResource( 8 )
 frames = SubResource( 1 )
 animation = "idle"
 __meta__ = {
@@ -192,7 +195,7 @@ position = Vector2( 0, 8 )
 position = Vector2( 48, -24 )
 
 [node name="Sprite" parent="AllPlayers/OtherPlayers3" index="0"]
-frame = 1
+frame = 0
 
 [node name="DayNightCycle" parent="." instance=ExtResource( 10 )]
 
