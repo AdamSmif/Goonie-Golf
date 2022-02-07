@@ -39,3 +39,7 @@ func _on_Credits_pressed():
 	$MenuSelect.play()
 	yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene(to_credits_scene)
+
+
+func _on_Test_pressed():
+	get_tree().change_scene("res://test/Multiplayer/lobby.tscn")

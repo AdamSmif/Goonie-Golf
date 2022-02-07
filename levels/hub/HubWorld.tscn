@@ -3,7 +3,7 @@
 [ext_resource path="res://levels/hub/HubWorld.gd" type="Script" id=1]
 [ext_resource path="res://entities/tiles/WorldHubTile/WorldMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://engine/Post Processing tool/PostProcessing_tool.tscn" type="PackedScene" id=3]
-[ext_resource path="res://entities/Player/HubPlayer/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://test/Multiplayer/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://entities/Assets/Mountains/Snowmountain.tscn" type="PackedScene" id=5]
 [ext_resource path="res://entities/tiles/Path/RoadPath/Path.tscn" type="PackedScene" id=6]
 [ext_resource path="res://audio/sound effects/oceansounds/wave_01_cc0-18363__jasinski__alkaibeach.wav" type="AudioStream" id=7]
