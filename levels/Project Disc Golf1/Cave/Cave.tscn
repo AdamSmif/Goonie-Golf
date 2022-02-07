@@ -16,14 +16,14 @@ script = ExtResource( 9 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 65.8022, 320.786 )
 lose_level_world_scene = "res://levels/intro/LockerRoomStart/LockerRoomStart.tscn"
-game_over_scene = "res://levels/intro/LockerRoomStart/LockerRoomStart.tscn"
+game_over_scene = "res://levels/hub/HubWorld.tscn"
 
 [node name="Sprite" parent="Player/ParallaxBackground" index="0"]
 modulate = Color( 0.890196, 0.65098, 0.396078, 1 )
 texture = ExtResource( 3 )
 
 [node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
-frame = 0
+frame = 2
 
 [node name="GroundTile" parent="." instance=ExtResource( 1 )]
 position = Vector2( 188.474, 270.841 )

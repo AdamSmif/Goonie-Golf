@@ -67,3 +67,4 @@ volume_db = -11.101
 autoplay = true
 
 [editable path="Player"]
+[editable path="Player/Hurtbox"]

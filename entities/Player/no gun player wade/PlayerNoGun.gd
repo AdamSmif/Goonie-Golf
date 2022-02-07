@@ -52,7 +52,7 @@ var vel := Vector2(0, 0)
 export (int, 0, 200) var push = 5    
 
 func _ready():
-	stats.connect("no_health", self, "queue_free")
+	stats.connect("no_health", self, "dying_state")
 
 
 func _physics_process(_delta):
@@ -216,36 +216,18 @@ func _on_Hurtbox_area_entered(area):
 	motion.y = JUMP_HEIGHT * 0.2
 	knockback = Vector2.RIGHT * 150
 	knockback = Vector2.LEFT * 150
-	if stats.health == 0:
-		$Sprite.play("boom")
-		motion.x = 0
-		$Timer.start()
-		GameOver.set_visible(true)
-	
 
-
-func _on_GameOverTimer_timeout():
-	get_tree().change_scene(lose_level_world_scene)
-
-
-func _on_PlayerStats_no_health():
-	$Sprite.play("boom")
+func dying_state():
 	motion.x = 0
-	get_tree().change_scene(lose_level_world_scene)
-	
+	$Sprite.play("boom")
+	yield(get_tree().create_timer(.25), "timeout")
+	$Sprite.hide()
+	$Shadow.hide()
+	$AnimationPlayer.play("fade")
+	yield(get_tree().create_timer(.50), "timeout")
+	get_tree().change_scene(game_over_scene)
 
-### Save Data ####
 
-func _get_save_stats():
-	return {
-		'filename': get_filename(),
-		'parent' : get_parent().get_path(),
-		'x_pos' : global_transform.origin.x,
-		'y_pos' : global_transform.origin.y,
-		'stats' : {
-			'stats' : stats
-		}
-	}
 
 
 

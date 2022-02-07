@@ -71,7 +71,7 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "dialogic" )
+enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg", "res://addons/pixel_ever/plugin.cfg" )
 
 [importer_defaults]
 
