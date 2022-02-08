@@ -3,7 +3,7 @@ extends KinematicBody2D
 # Player Number
 export var id = 1
 export(int) var speed = 80.0
-onready var player_label = $Label
+#onready var player_label = $Label
 onready var camera = $PlayerCamera
 
 var motion = Vector2.ZERO

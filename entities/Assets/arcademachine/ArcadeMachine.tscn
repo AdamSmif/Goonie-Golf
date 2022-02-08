@@ -126,5 +126,6 @@ anims/fade = ExtResource( 6 )
 anims/interaction = SubResource( 5 )
 anims/interactionoff = SubResource( 6 )
 anims/transition = SubResource( 7 )
+
 [connection signal="body_entered" from="." to="." method="_on_ArcadeMachine_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_ArcadeMachine_body_exited"]

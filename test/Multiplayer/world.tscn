@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://entities/tiles/WorldHubTile/WorldMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/Assets/arcademachine/ArcadeMachine.tscn" type="PackedScene" id=2]
 
 [node name="World" type="Node2D"]
 
@@ -22,3 +23,9 @@ position = Vector2( 64, 96 )
 position = Vector2( 80, 56 )
 
 [node name="Players" type="Node2D" parent="."]
+
+[node name="Aracde" type="Node2D" parent="."]
+
+[node name="ArcadeMachine" parent="Aracde" instance=ExtResource( 2 )]
+position = Vector2( 208, 88 )
+next_world_scene = "res://test/Multiplayer/world2.tscn"

@@ -43,3 +43,7 @@ func _on_Credits_pressed():
 
 func _on_Test_pressed():
 	get_tree().change_scene("res://test/Multiplayer/lobby.tscn")
+
+
+func _on_Make_Games_pressed():
+	get_tree().change_scene("res://engine/level editor/item_select.tscn")

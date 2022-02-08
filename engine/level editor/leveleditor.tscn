@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="main" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+
+[node name="EditorObject" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="EditorObject"]

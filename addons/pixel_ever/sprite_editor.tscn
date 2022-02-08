@@ -249,7 +249,7 @@ rect_min_size = Vector2( 256, 256 )
 margin_right = 256.0
 margin_bottom = 256.0
 rect_clip_content = true
-color = Color( 0.764706, 0.764706, 0.764706, 1 )
+color = Color( 0.470588, 0.458824, 0.458824, 1 )
 
 [node name="top" type="TextureRect" parent="scroll/hb/vb2/sc/center"]
 margin_right = 256.0

@@ -30,30 +30,31 @@ to_minigames_scene = "res://ui/Charity/Charity.tscn"
 [node name="NightSkyAnimated" parent="." instance=ExtResource( 2 )]
 position = Vector2( 320, 184 )
 scale = Vector2( 1.075, 1.13158 )
+frame = 1
 
 [node name="Ocean" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, 320 )
-frame = 1
+frame = 2
 
 [node name="Ocean4" parent="." instance=ExtResource( 3 )]
 position = Vector2( -128, 320 )
-frame = 1
+frame = 2
 
 [node name="Ocean2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 376, 320 )
-frame = 1
+frame = 2
 
 [node name="Ocean3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 632, 320 )
-frame = 1
+frame = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -64.0
-margin_top = 4.0
+margin_top = 16.0
 margin_right = 70.0
-margin_bottom = 43.0
+margin_bottom = 55.0
 theme = ExtResource( 7 )
 text = "Goonie Golf"
 scroll_active = false
@@ -63,28 +64,42 @@ __meta__ = {
 
 [node name="Start Game" type="Button" parent="."]
 margin_left = 248.0
-margin_top = 96.0
+margin_top = 72.0
 margin_right = 392.0
-margin_bottom = 128.0
+margin_bottom = 111.251
 theme = SubResource( 4 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Games"
+text = "Play Games"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Charity" type="Button" parent="."]
-margin_left = 248.0
-margin_top = 152.0
-margin_right = 392.0
-margin_bottom = 184.0
+margin_left = 247.0
+margin_top = 274.0
+margin_right = 391.0
+margin_bottom = 313.251
 theme = SubResource( 4 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Charity"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Make Games" type="Button" parent="."]
+margin_left = 248.0
+margin_top = 136.0
+margin_right = 392.0
+margin_bottom = 175.251
+theme = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Make Games"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -101,10 +116,10 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Options"
 
 [node name="Test" type="Button" parent="."]
-margin_left = 245.0
-margin_top = 208.0
-margin_right = 389.0
-margin_bottom = 247.251
+margin_left = 30.0
+margin_top = 24.0
+margin_right = 174.0
+margin_bottom = 63.251
 theme = SubResource( 4 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
@@ -135,7 +150,7 @@ position = Vector2( 200, 288 )
 position = Vector2( 232, 288 )
 
 [node name="Sprite" parent="AllPlayers/OtherPlayers3" index="0"]
-frame = 1
+frame = 0
 
 [node name="OtherPlayers4" parent="AllPlayers" index="2"]
 position = Vector2( 264, 288 )
@@ -156,6 +171,8 @@ position = Vector2( 392, 288 )
 
 [connection signal="pressed" from="Start Game" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Charity" to="." method="_on_Mini_Game_pressed"]
+[connection signal="pressed" from="Make Games" to="." method="_on_Mini_Game_pressed"]
+[connection signal="pressed" from="Make Games" to="." method="_on_Make_Games_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="Test" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="Test" to="." method="_on_Test_pressed"]
