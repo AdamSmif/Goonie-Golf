@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/godot_sfxr/SfxrStreamPlayer.gd" type="Script" id=1]
+[ext_resource path="res://ui/theme/kenneyUI-blue.tres" type="Theme" id=2]
+
+[node name="SoundEditor" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SfxrStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 1 )
+wave/type = 1
+sample_params/sound_vol = 0.5
+sample_params/sample_rate = 44100.0
+envelope/attack_time = 0.0
+envelope/sustain_time = 0.6641
+envelope/punch_time = 0.0
+envelope/decay_time = 0.0
+frequency/start_frequency = 0.351734
+frequency/min_freq_cutoff = 0.0
+frequency/slide = 0.0
+frequency/delta_slide = 0.0
+vibrato/depth = 0.0
+vibrato/speed = 0.0
+arpeggiation/frequency_mult = 0.0
+arpeggiation/change_speed = 0.0
+duty_cycle/duty_cycle = 0.0
+duty_cycle/sweep = 0.0
+retrigger/rate = 0.0
+flanger/offset = 0.0
+flanger/sweep = 0.0
+low_pass_filter/cutoff_frequency = 1.0
+low_pass_filter/cutoff_sweep = 0.0
+low_pass_filter/resonance = 0.0
+high_pass_filter/cutoff_frequency = 0.0
+high_pass_filter/cutoff_sweep = 0.0
+actions/generator = null
+actions/play = null
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -168.0
+margin_top = -128.0
+margin_right = 816.0
+margin_bottom = 416.0
+color = Color( 0.14902, 0.172549, 0.231373, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -304.0
+margin_top = -142.0
+margin_right = 184.0
+margin_bottom = -54.0
+text = "Coming Soon!
+
+For now, Use The SfxrSteamPlayer Node within the Engine!"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}

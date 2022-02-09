@@ -11,11 +11,11 @@ export(String, FILE, "*.tscn") var next_world_scene
 #			Global.player_pos = spawn_pos
 
 func _input(event):
-	Global.from = get_parent().name 
 	if event.is_action_pressed("talk") and len(get_overlapping_bodies()) > 0:
 #	$BottleSound.play() 
 		$AnimationPlayer.play("transition")
 		yield(get_tree().create_timer(.50), "timeout")
+		Global.from = get_parent().name 
 		get_tree().change_scene(next_world_scene)
 
 	Global.level_name = name

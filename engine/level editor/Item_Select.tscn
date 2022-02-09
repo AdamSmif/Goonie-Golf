@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ui/theme/kenneyUI-blue.tres" type="Theme" id=1]
+[ext_resource path="res://engine/level editor/items/item_musclebot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://engine/level editor/Editor_Object.gd" type="Script" id=3]
 
 [node name="Item_Select" type="Control"]
 anchor_right = 1.0
@@ -14,23 +16,49 @@ __meta__ = {
 margin_right = 224.0
 margin_bottom = 184.0
 theme = ExtResource( 1 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tabs" type="Tabs" parent="TabContainer"]
+[node name="Creatures" type="Tabs" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 36.0
-margin_right = -180.0
-margin_bottom = -120.0
+margin_right = -4.0
+margin_bottom = -4.0
 
-[node name="HScrollBar" type="HScrollBar" parent="TabContainer/Tabs"]
+[node name="HScrollBar" type="ScrollContainer" parent="TabContainer/Creatures"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 172.0
-margin_bottom = 112.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Creatures/HScrollBar"]
+margin_right = 64.0
+margin_bottom = 68.0
+
+[node name="item_musclebot" parent="TabContainer/Creatures/HScrollBar/VBoxContainer" instance=ExtResource( 2 )]
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Creatures/HScrollBar/VBoxContainer"]
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 68.0
+
+[node name="NPCs" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 36.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="HScrollBar" type="ScrollContainer" parent="TabContainer/NPCs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/NPCs/HScrollBar"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/NPCs/HScrollBar/VBoxContainer"]

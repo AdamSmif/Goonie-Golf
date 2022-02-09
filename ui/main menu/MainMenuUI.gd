@@ -46,4 +46,4 @@ func _on_Test_pressed():
 
 
 func _on_Make_Games_pressed():
-	get_tree().change_scene("res://engine/level editor/item_select.tscn")
+	get_tree().change_scene("res://ui/editormenu/GameMaker.tscn")
