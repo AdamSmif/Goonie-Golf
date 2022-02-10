@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/song.wav-0c0e0889b9bddce8f07ce75d60d959d2.sample"
+path="res://.import/song.wav-3593347fb42a78ad6b489ce53663c880.sample"
 
 [deps]
 
-source_file="res://engine/Music Editor/song.wav"
-dest_files=[ "res://.import/song.wav-0c0e0889b9bddce8f07ce75d60d959d2.sample" ]
+source_file="res://audio/music/Neural Composer/song.wav"
+dest_files=[ "res://.import/song.wav-3593347fb42a78ad6b489ce53663c880.sample" ]
 
 [params]
 

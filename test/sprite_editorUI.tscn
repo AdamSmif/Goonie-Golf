@@ -15,10 +15,10 @@
 [ext_resource path="res://addons/pixel_ever/crop.png" type="Texture" id=13]
 
 [node name="sprite_editor" type="Control"]
-anchor_right = 1.862
-anchor_bottom = 1.789
-margin_right = -543.68
-margin_bottom = -279.82
+anchor_right = 1.425
+anchor_bottom = 1.095
+margin_right = 7.99994
+margin_bottom = 95.9
 theme = ExtResource( 7 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -39,6 +39,8 @@ __meta__ = {
 [node name="scroll" type="ScrollContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -272.0
+margin_bottom = -120.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -279,10 +281,14 @@ __meta__ = {
 }
 
 [node name="FileDialog" type="FileDialog" parent="."]
-margin_right = 315.0
-margin_bottom = 232.0
+margin_top = 24.0
+margin_right = 640.0
+margin_bottom = 376.0
 rect_min_size = Vector2( 180, 63 )
 filters = PoolStringArray( "*.png ; PNG Images" )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PopupMenu" type="PopupMenu" parent="."]
 margin_right = 20.0

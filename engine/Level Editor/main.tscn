@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://engine/Level Editor/Editor_Object.gd" type="Script" id=1]
 [ext_resource path="res://engine/Level Editor/Item_Select.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/DefaultBackground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/Assets/Background/Blue Sky/bluesky.png" type="Texture" id=4]
 
 [node name="main" type="Node2D"]
+
+[node name="DefaultBackground" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="Bluesky" type="Sprite" parent="."]
+position = Vector2( 306, 167 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 4 )
 
 [node name="Level" type="Node2D" parent="."]
 

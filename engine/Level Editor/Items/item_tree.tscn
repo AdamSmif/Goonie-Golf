@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://entities/Assets/Evergreen Tree/EverGreenNoCollisionSmall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://engine/Level Editor/item_texture.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/Assets/Evergreen Tree/evergreentree1.png" type="Texture" id=3]
+
+[node name="item_vern" instance=ExtResource( 2 )]
+texture = ExtResource( 3 )
+this_scene = ExtResource( 1 )

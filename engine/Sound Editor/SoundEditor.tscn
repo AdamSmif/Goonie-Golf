@@ -67,3 +67,9 @@ scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="FileDialog" type="FileDialog" parent="."]
+margin_left = 152.0
+margin_top = 32.0
+margin_right = 624.0
+margin_bottom = 353.0

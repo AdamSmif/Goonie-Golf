@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://engine/Level Editor/Items/item_footballbot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://engine/Level Editor/TabContainer.gd" type="Script" id=2]
+[ext_resource path="res://engine/Level Editor/Items/item_muscle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/fonts/ChiKareGo2Font.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://engine/Level Editor/Items/item_vern.tscn" type="PackedScene" id=5]
+[ext_resource path="res://engine/Level Editor/Items/item_tree.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
 
 [node name="Item_Select" type="Control"]
 margin_right = 40.0
@@ -19,34 +28,40 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Creatures" type="Tabs" parent="TabContainer"]
+[node name="Enemies" type="Tabs" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
+theme = SubResource( 2 )
 
-[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Creatures"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Enemies"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Creatures/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Enemies/ScrollContainer"]
+margin_right = 132.0
+margin_bottom = 64.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Enemies/ScrollContainer/VBoxContainer"]
+margin_right = 132.0
+margin_bottom = 64.0
+
+[node name="item_footballbot" parent="TabContainer/Enemies/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
 margin_right = 64.0
 margin_bottom = 64.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Creatures/ScrollContainer/VBoxContainer"]
-margin_right = 64.0
+[node name="item_muscle" parent="TabContainer/Enemies/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 68.0
+margin_right = 132.0
 margin_bottom = 64.0
 
-[node name="item_footballbot" parent="TabContainer/Creatures/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
-margin_right = 64.0
-margin_bottom = 64.0
-
-[node name="Spikes" type="Tabs" parent="TabContainer"]
+[node name="NPCs" type="Tabs" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -55,20 +70,48 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Spikes"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/NPCs"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Spikes/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/NPCs/ScrollContainer"]
+margin_right = 64.0
+margin_bottom = 64.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Spikes/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/NPCs/ScrollContainer/VBoxContainer"]
 margin_right = 16.0
 margin_bottom = 32.0
 
-[node name="item_vern" parent="TabContainer/Spikes/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
+[node name="item_vern" parent="TabContainer/NPCs/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
+
+[node name="Props" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Props"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Props/ScrollContainer"]
+margin_right = 68.0
+margin_bottom = 64.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Props/ScrollContainer/VBoxContainer"]
+margin_right = 16.0
+margin_bottom = 32.0
+
+[node name="item_tree" parent="TabContainer/Props/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 6 )]
 
 [connection signal="mouse_entered" from="TabContainer" to="TabContainer" method="_on_TabContainer_mouse_entered"]
 [connection signal="mouse_exited" from="TabContainer" to="TabContainer" method="_on_TabContainer_mouse_exited"]

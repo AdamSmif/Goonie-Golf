@@ -26,3 +26,9 @@ func _on_LinkButton_pressed():
 
 func _on_Sound_pressed():
 	get_tree().change_scene("res://engine/Sound Editor/SoundEditor.tscn")
+
+
+func _on_Levels_pressed():
+	get_tree().change_scene("res://engine/Level Editor/main.tscn")
+	
+	
