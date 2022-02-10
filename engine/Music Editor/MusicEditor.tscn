@@ -56,5 +56,3 @@ margin_top = 360.0
 margin_right = 520.0
 margin_bottom = 378.0
 text = "Learn More About The App Here!"
-
-[connection signal="pressed" from="LinkButton" to="." method="_on_LinkButton_pressed"]
