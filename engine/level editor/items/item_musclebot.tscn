@@ -1,9 +1,0 @@
-[gd_scene load_steps=4 format=2]
-
-[ext_resource path="res://entities/Enemies/Muscle Bot/musclebot1.png" type="Texture" id=1]
-[ext_resource path="res://engine/level editor/item_texture.tscn" type="PackedScene" id=2]
-[ext_resource path="res://entities/Enemies/Muscle Bot/MuscleBot.tscn" type="PackedScene" id=3]
-
-[node name="item_musclebot" instance=ExtResource( 2 )]
-texture = ExtResource( 1 )
-this_scene = ExtResource( 3 )

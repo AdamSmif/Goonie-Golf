@@ -17,4 +17,3 @@ func _item_clicked(event):
 			cursor_sprite.texture = texture
 		
 	pass
-
