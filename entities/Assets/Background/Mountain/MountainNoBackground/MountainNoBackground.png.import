@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bubblegum-16.png-47035d788fa7623957b3284402577201.stex"
+path="res://.import/MountainNoBackground.png-3d31536cf19173687686ab831d82c0f3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/pixel_ever/pal/bubblegum-16.png"
-dest_files=[ "res://.import/bubblegum-16.png-47035d788fa7623957b3284402577201.stex" ]
+source_file="res://entities/Assets/Background/Mountain/MountainNoBackground/MountainNoBackground.png"
+dest_files=[ "res://.import/MountainNoBackground.png-3d31536cf19173687686ab831d82c0f3.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

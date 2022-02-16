@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lospecCDI-32.png-07fe1a003fc2ec3f696bbe7947a8531d.stex"
+path="res://.import/BeackRockNoBackground.png-492d51b47a49e00c3f5b38cca48ddbf5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/pixel_ever/pal/lospecCDI-32.png"
-dest_files=[ "res://.import/lospecCDI-32.png-07fe1a003fc2ec3f696bbe7947a8531d.stex" ]
+source_file="res://entities/Assets/Background/Beach/BeackRockNoBackground.png"
+dest_files=[ "res://.import/BeackRockNoBackground.png-492d51b47a49e00c3f5b38cca48ddbf5.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

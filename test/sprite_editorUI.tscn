@@ -10,9 +10,10 @@
 [ext_resource path="res://addons/pixel_ever/draw.png" type="Texture" id=8]
 [ext_resource path="res://addons/pixel_ever/pick.png" type="Texture" id=9]
 [ext_resource path="res://addons/pixel_ever/top_grid.gd" type="Script" id=10]
-[ext_resource path="res://addons/pixel_ever/pal/bubblegum-16.png" type="Texture" id=11]
 [ext_resource path="res://addons/pixel_ever/buck.png" type="Texture" id=12]
 [ext_resource path="res://addons/pixel_ever/crop.png" type="Texture" id=13]
+
+[sub_resource type="StreamTexture" id=1]
 
 [node name="sprite_editor" type="Control"]
 anchor_right = 1.425
@@ -47,29 +48,32 @@ __meta__ = {
 
 [node name="hb" type="HBoxContainer" parent="scroll"]
 margin_right = 1095.0
-margin_bottom = 431.0
+margin_bottom = 380.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="vb" type="VBoxContainer" parent="scroll/hb"]
 margin_right = 181.0
-margin_bottom = 431.0
+margin_bottom = 380.0
+alignment = 1
 
 [node name="Label2" type="Label" parent="scroll/hb/vb"]
+margin_top = 38.0
 margin_right = 181.0
-margin_bottom = 23.0
+margin_bottom = 61.0
 rect_min_size = Vector2( 0, 23 )
 text = "pos:"
 align = 1
 valign = 1
 
 [node name="Button0" type="Button" parent="scroll/hb/vb"]
-margin_top = 27.0
+margin_top = 65.0
 margin_right = 181.0
-margin_bottom = 69.251
+margin_bottom = 107.251
 rect_min_size = Vector2( 120, 0 )
 toggle_mode = true
 pressed = true
@@ -79,9 +83,9 @@ icon = ExtResource( 8 )
 expand_icon = true
 
 [node name="Button1" type="Button" parent="scroll/hb/vb"]
-margin_top = 73.0
+margin_top = 111.0
 margin_right = 181.0
-margin_bottom = 115.251
+margin_bottom = 153.251
 rect_min_size = Vector2( 120, 0 )
 toggle_mode = true
 group = ExtResource( 4 )
@@ -93,9 +97,9 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="scroll/hb/vb"]
-margin_top = 119.0
+margin_top = 157.0
 margin_right = 181.324
-margin_bottom = 161.251
+margin_bottom = 199.251
 rect_min_size = Vector2( 120, 0 )
 toggle_mode = true
 group = ExtResource( 4 )
@@ -104,9 +108,9 @@ icon = ExtResource( 5 )
 expand_icon = true
 
 [node name="Button3" type="Button" parent="scroll/hb/vb"]
-margin_top = 165.0
+margin_top = 203.0
 margin_right = 181.0
-margin_bottom = 207.251
+margin_bottom = 245.251
 toggle_mode = true
 group = ExtResource( 4 )
 text = "Paint Bucket"
@@ -114,26 +118,26 @@ icon = ExtResource( 12 )
 expand_icon = true
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="scroll/hb/vb"]
-margin_top = 211.0
+margin_top = 249.0
 margin_right = 181.0
-margin_bottom = 253.251
+margin_bottom = 291.251
 rect_min_size = Vector2( 120, 0 )
 text = "left"
 
 [node name="pal" type="TextureRect" parent="scroll/hb/vb"]
-margin_top = 257.0
+margin_top = 295.0
 margin_right = 181.0
-margin_bottom = 385.0
-texture = ExtResource( 11 )
+margin_bottom = 295.0
+texture = SubResource( 1 )
 
 [node name="pal_list" type="MenuButton" parent="scroll/hb/vb"]
-margin_top = 389.0
+margin_top = 299.0
 margin_right = 181.0
-margin_bottom = 431.251
+margin_bottom = 341.251
 rect_min_size = Vector2( 0, 26 )
 text = "palettes"
 flat = false
-items = [ "bubblegum-16.png", null, 2, false, false, 0, 0, null, "", false, "html-color.png", null, 2, false, false, 1, 0, null, "", false, "lospecCDI-32.png", null, 2, false, false, 2, 0, null, "", false, "main.png", null, 2, false, false, 3, 0, null, "", false, "pico8-16.png", null, 2, false, false, 4, 0, null, "", false, "resurrect-32.png", null, 2, false, false, 5, 0, null, "", false ]
+items = [ "main.png", null, 2, false, false, 0, 0, null, "", false ]
 
 [node name="option" type="OptionButton" parent="scroll/hb/vb"]
 visible = false
@@ -147,15 +151,15 @@ selected = 3
 [node name="seprator" type="Control" parent="scroll/hb"]
 margin_left = 185.0
 margin_right = 193.0
-margin_bottom = 431.0
+margin_bottom = 380.0
 rect_min_size = Vector2( 8, 0 )
 
 [node name="vb2" type="VBoxContainer" parent="scroll/hb"]
 margin_left = 197.0
-margin_right = 1095.0
-margin_bottom = 431.0
+margin_bottom = 380.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -163,6 +167,7 @@ __meta__ = {
 [node name="hb2" type="HBoxContainer" parent="scroll/hb/vb2"]
 margin_right = 898.0
 margin_bottom = 42.0
+alignment = 1
 
 [node name="grid" type="Button" parent="scroll/hb/vb2/hb2"]
 margin_right = 90.0
@@ -237,7 +242,7 @@ expand_icon = true
 [node name="sc" type="ScrollContainer" parent="scroll/hb/vb2"]
 margin_top = 46.0
 margin_right = 898.0
-margin_bottom = 431.0
+margin_bottom = 380.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {

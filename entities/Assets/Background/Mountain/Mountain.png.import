@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/resurrect-32.png-315fbf46fd32cb370f069d17c4f56ad8.stex"
+path="res://.import/Mountain.png-7b9054ec6c20b61c92d6292c0af4d235.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/pixel_ever/pal/resurrect-32.png"
-dest_files=[ "res://.import/resurrect-32.png-315fbf46fd32cb370f069d17c4f56ad8.stex" ]
+source_file="res://entities/Assets/Background/Mountain/Mountain.png"
+dest_files=[ "res://.import/Mountain.png-7b9054ec6c20b61c92d6292c0af4d235.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
