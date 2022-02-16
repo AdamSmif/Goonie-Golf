@@ -156,6 +156,7 @@ rect_min_size = Vector2( 8, 0 )
 
 [node name="vb2" type="VBoxContainer" parent="scroll/hb"]
 margin_left = 197.0
+margin_right = 1095.0
 margin_bottom = 380.0
 size_flags_horizontal = 3
 size_flags_vertical = 3

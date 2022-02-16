@@ -1,49 +1,32 @@
 extends Control
 
+
 #To Start Game
-export(String, FILE, "*.tscn") var next_world_scene
+export(String, FILE, "*.tscn") var to_hub_world
 
-#To Credits
-export(String, FILE, "*.tscn") var to_credits_scene
+#To Game Maker
+export(String, FILE, "*.tscn") var to_game_maker
 
-#To Options
-export(String, FILE, "*.tscn") var to_options_scene
-
-#To Minigames
-export(String, FILE, "*.tscn") var to_minigames_scene
-
+#To Disc Golf Game
+export(String, FILE, "*.tscn") var to_disc_golf_game
 
 func _ready():
 	MusicController.play_menu_music()
 
-# Main Game
-func _on_Button_pressed():
+
+func _on_Explore_pressed():
 	$MenuSelect.play()
 	yield(get_tree().create_timer(1), "timeout")
-	get_tree().change_scene(next_world_scene)
-
-
-func _on_Mini_Game_pressed():
-	$MenuSelect.play()
-	yield(get_tree().create_timer(1), "timeout")
-	get_tree().change_scene(to_minigames_scene)
-
-
-func _on_Options_pressed():
-	$MenuSelect.play()
-	yield(get_tree().create_timer(1), "timeout")
-	get_tree().change_scene(to_options_scene)
-
-
-func _on_Credits_pressed():
-	$MenuSelect.play()
-	yield(get_tree().create_timer(1), "timeout")
-	get_tree().change_scene(to_credits_scene)
-
-
-func _on_Test_pressed():
-	get_tree().change_scene("res://test/Multiplayer/lobby.tscn")
+	get_tree().change_scene(to_hub_world)
 
 
 func _on_Make_Games_pressed():
-	get_tree().change_scene("res://ui/editormenu/GameMaker.tscn")
+	$MenuSelect.play()
+	yield(get_tree().create_timer(1), "timeout")
+	get_tree().change_scene(to_game_maker)
+
+
+func _on_Disc_Golf_pressed():
+	$MenuSelect.play()
+	yield(get_tree().create_timer(1), "timeout")
+	get_tree().change_scene(to_disc_golf_game)
