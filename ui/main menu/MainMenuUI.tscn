@@ -47,16 +47,15 @@ texture = ExtResource( 15 )
 
 [node name="OceanAnimation" parent="." instance=ExtResource( 16 )]
 position = Vector2( 8, 320 )
+frame = 0
 
 [node name="OceanAnimation2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 80, 320 )
 rotation = 3.14159
-frame = 0
 
 [node name="OceanAnimation5" parent="." instance=ExtResource( 16 )]
 position = Vector2( 40, 320 )
 rotation = 3.14159
-frame = 0
 
 [node name="Background" type="YSort" parent="."]
 
@@ -85,11 +84,11 @@ flip_h = true
 
 [node name="OceanAnimation3" parent="Background" instance=ExtResource( 16 )]
 position = Vector2( 576, 320 )
-frame = 0
 
 [node name="OceanAnimation4" parent="Background" instance=ExtResource( 16 )]
 position = Vector2( 640, 320 )
 rotation = -3.14159
+frame = 0
 
 [node name="HillsNoBackground" type="Sprite" parent="."]
 position = Vector2( 360, 144 )

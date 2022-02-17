@@ -29,14 +29,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "squashed",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "explosion",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "squashed",
 "speed": 5.0
 } ]
 

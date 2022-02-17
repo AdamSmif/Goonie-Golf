@@ -52,14 +52,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 48 ), ExtResource( 49 ) ],
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
-"name": "Chet",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 43 ) ],
-"loop": true,
-"name": "Buck O'Driscol",
+"name": "Green Void Man",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 33 ), ExtResource( 32 ) ],
@@ -67,39 +62,9 @@ animations = [ {
 "name": "Dot Williams",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 37 ), ExtResource( 38 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "Mike Schubert",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 29 ), ExtResource( 28 ) ],
-"loop": true,
-"name": "Blue Void Man",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "Green Void Man",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 31 ), ExtResource( 34 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "Dorris",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 39 ), ExtResource( 40 ) ],
-"loop": true,
-"name": "Green Boi",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 42 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "JohnnyWizard",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Joe Sanders",
+"name": "Susan Solo",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
@@ -107,9 +72,14 @@ animations = [ {
 "name": "Vern Avocado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "Skateboard Joe",
+"name": "Clarence",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "Red Circle Guy",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 23 ) ],
@@ -117,29 +87,29 @@ animations = [ {
 "name": "Mr. Bill",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "Susan Solo",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "OJ Moss",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "Drewzer Brewzer",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 42 ), ExtResource( 41 ) ],
 "loop": true,
-"name": "Clarence",
+"name": "JohnnyWizard",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 35 ), ExtResource( 36 ) ],
+"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 43 ) ],
 "loop": true,
-"name": "Douglas Ramond",
+"name": "Buck O'Driscol",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "Green Boi",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Joe Sanders",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
@@ -147,9 +117,39 @@ animations = [ {
 "name": "Blue Guy",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 20 ) ],
 "loop": true,
-"name": "Red Circle Guy",
+"name": "OJ Moss",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "Douglas Ramond",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "Mike Schubert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 34 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "Dorris",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "Blue Void Man",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "Chet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "Skateboard Joe",
 "speed": 5.0
 } ]
 
@@ -196,12 +196,14 @@ modulate = Color( 0, 0, 0, 0.25098 )
 position = Vector2( 2, 0 )
 frames = SubResource( 1 )
 animation = "Chet"
+frame = 1
 speed_scale = 0.1
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Chet"
+frame = 1
 speed_scale = 0.1
 playing = true
 

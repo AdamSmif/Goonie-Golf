@@ -68,11 +68,6 @@ animations = [ {
 "name": "move",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "skate",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "jump",
@@ -82,6 +77,11 @@ animations = [ {
 "loop": true,
 "name": "shocked",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "skate",
+"speed": 1.0
 } ]
 
 [sub_resource type="ShaderMaterial" id=8]
@@ -211,7 +211,7 @@ position = Vector2( 0, 8 )
 [node name="AllPlayers" parent="." instance=ExtResource( 1 )]
 position = Vector2( 48, -24 )
 
-[node name="Sprite" parent="AllPlayers/OtherPlayers3" index="0"]
+[node name="Sprite" parent="AllPlayers/OtherPlayers3" index="1"]
 frame = 1
 
 [node name="DayNightCycle" parent="." instance=ExtResource( 10 )]

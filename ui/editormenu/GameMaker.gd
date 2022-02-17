@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_Art_pressed():
-	get_tree().change_scene("res://addons/pixel_ever/sprite_editor.tscn")
+	get_tree().change_scene("res://test/sprite_editorUI.tscn")
 
 
 func _on_LinkButton_pressed():

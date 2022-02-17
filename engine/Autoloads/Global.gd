@@ -11,6 +11,10 @@ var level_name = null
 var direction = Vector2.ZERO
 var current_level
 
+# character creator #
+var Eyes := 0
+const save_path = "user://save.dat"
+
 signal no_health
 signal health_changed(value)
 signal max_health_changed(value)
@@ -51,29 +55,44 @@ var gui: PackedScene # platform-dependent UI scenes.
 #else :
 #    gui = load("pc-ui.tscn"
 
-func save_game():
-	data = {
-		"current_level": current_level,
-		"from": from,
-		"player": player,
+func changeEyes(direction):
+	Eyes += direction
+	if Eyes > 10:
+		Eyes = 0
+	if Eyes < 0:
+		Eyes = 10
+			
+	else:
+		if Eyes > 4:
+			Eyes = 0
+		if Eyes < 0:
+			Eyes = 4
+
+func save_data():
+	var data = {
+		"Eyes": Eyes,
+#		"body": body,
+#		"legs": legs,
+#		"run": run,
+#		"child": child,
 	}
+	
 	var file = File.new()
-	file.open("user://savegame.json", File.WRITE)
-	var json = to_json(data)
-	file.store_line(json)
-	file.close()
-
-func load_game():
-	var file = File.new()
-	if file.file_exists("user://savegame.json"):
-		file.open("user://savegame.json", File.READ)
-		data = parse_json(file.get_as_text())
+	var error = file.open(save_path, File.WRITE)
+	if error == OK:
+		file.store_var(data)
 		file.close()
-
-		current_level = data.current_level
-		from = data.from
-		player = data.player
-func reset():
-	from = null
-	player = "Player"
-
+	
+func load_data():
+	var file = File.new()
+	if file.file_exists(save_path):
+		var error = file.open(save_path, File.READ)
+		if error == OK:
+			var data = file.get_var()
+			file.close()
+		
+			Eyes = data['Eyes']
+#			body = data['body']
+#			legs = data['legs']
+#			run = data['run']
+#			child = data['child']
