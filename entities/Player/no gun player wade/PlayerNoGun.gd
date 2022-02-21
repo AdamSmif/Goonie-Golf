@@ -85,6 +85,7 @@ func _physics_process(_delta):
 		$AllPlayers/OtherPlayers8.visible = true
 
 # Movment
+
 	if Input.is_action_pressed('right_%s' % id):
 		motion.x = lerp(motion.x + ACCELERATION, MAX_SPEED, .75)
 		$Sprite.flip_h = false
@@ -99,21 +100,21 @@ func _physics_process(_delta):
 		$Shadow.flip_h = true
 		$Sprite.play("move")
 		$Shadow.play("move")
-		if sign($Position2D.position.x) == 1:
-			$Position2D.position.x *= -1
+	if sign($Position2D.position.x) == 1:
+		$Position2D.position.x *= -1
 	else:
 		motion.x = 0
 		$Sprite.play("idle")
 		$Shadow.play("idle")
 		friction = true
-		
+			
 	if Input.is_action_pressed('down_%s' % id):
 		$Sprite.flip_h = false
 		$Shadow.flip_h = false
 		$Sprite.play("down")
 		$Shadow.play("down")
-		if sign($Position2D.position.x) == -1:
-			$Position2D.position.x *= 1
+	if sign($Position2D.position.x) == -1:
+		$Position2D.position.x *= 1
 		Input.action_release("left_%s" % id)
 		Input.action_release("right_%s" % id)
 

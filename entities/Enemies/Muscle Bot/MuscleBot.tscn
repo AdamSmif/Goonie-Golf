@@ -84,14 +84,12 @@ modulate = Color( 0, 0, 0, 0.25098 )
 position = Vector2( 2, -42.318 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
-frame = 3
 playing = true
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( -0.609443, -42.3179 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
-frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true

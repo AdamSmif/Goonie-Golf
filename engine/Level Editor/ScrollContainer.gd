@@ -5,7 +5,7 @@ onready var object_cursor = get_node("/root/main/Editor_Object")
 
 func _ready():
 	connect("mouse_entered",self,"mouse_enter")
-	connect("nouse_exited",self,"mouse_leave")
+	connect("mouse_exited",self,"mouse_leave")
 	pass # Replace with function body.
 
 

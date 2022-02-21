@@ -18,12 +18,13 @@ default_font = SubResource( 1 )
 [node name="Item_Select" type="CanvasLayer"]
 
 [node name="TabContainer" type="TabContainer" parent="."]
-margin_left = 421.0
+margin_left = 414.0
 margin_top = 9.0
-margin_right = 630.0
+margin_right = 623.0
 margin_bottom = 154.0
 script = ExtResource( 2 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -68,32 +69,6 @@ margin_right = 168.0
 margin_bottom = 64.0
 stretch_mode = 4
 
-[node name="NPCs" type="Tabs" parent="TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
-
-[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/NPCs"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/NPCs/ScrollContainer"]
-margin_right = 64.0
-margin_bottom = 64.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/NPCs/ScrollContainer/VBoxContainer"]
-margin_right = 16.0
-margin_bottom = 32.0
-
-[node name="item_vern" parent="TabContainer/NPCs/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
-
 [node name="Props" type="Tabs" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
@@ -119,6 +94,32 @@ margin_right = 16.0
 margin_bottom = 32.0
 
 [node name="item_tree" parent="TabContainer/Props/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 6 )]
+
+[node name="NPCs" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/NPCs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/NPCs/ScrollContainer"]
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/NPCs/ScrollContainer/VBoxContainer"]
+margin_right = 16.0
+margin_bottom = 32.0
+
+[node name="item_vern" parent="TabContainer/NPCs/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
 
 [connection signal="mouse_entered" from="TabContainer" to="TabContainer" method="_on_TabContainer_mouse_entered"]
 [connection signal="mouse_exited" from="TabContainer" to="TabContainer" method="_on_TabContainer_mouse_exited"]
