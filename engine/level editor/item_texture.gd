@@ -17,3 +17,8 @@ func _item_clicked(event):
 			cursor_sprite.texture = texture
 		
 	pass
+	
+func _process(delta):
+	if(EditorGlobal.playing):
+		this_scene = true
+	pass

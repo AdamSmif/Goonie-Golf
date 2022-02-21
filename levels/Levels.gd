@@ -1,5 +1,6 @@
 extends Node2D
 
+#EditorGlobal.playing = true
 
 func _ready():
 	print(Global.level_name)

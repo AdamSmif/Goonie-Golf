@@ -59,11 +59,13 @@ JUMP_HEIGHT = -100
 modulate = Color( 0, 0, 0, 0.25098 )
 position = Vector2( 2, 0.797 )
 frames = SubResource( 1 )
+frame = 3
 playing = true
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.159576, 0.797058 )
 frames = SubResource( 1 )
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

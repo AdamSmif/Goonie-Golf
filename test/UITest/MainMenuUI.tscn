@@ -30,6 +30,7 @@ to_minigames_scene = "res://ui/Charity/Charity.tscn"
 [node name="NightSkyAnimated" parent="." instance=ExtResource( 2 )]
 position = Vector2( 320, 184 )
 scale = Vector2( 1.075, 1.13158 )
+frame = 1
 
 [node name="Ocean" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, 320 )
@@ -169,8 +170,8 @@ position = Vector2( 392, 288 )
 [connection signal="pressed" from="Charity" to="." method="_on_Mini_Game_pressed"]
 [connection signal="pressed" from="Make Games" to="." method="_on_Make_Games_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
-[connection signal="pressed" from="Test" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="Test" to="." method="_on_Test_pressed"]
+[connection signal="pressed" from="Test" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
 
 [editable path="AllPlayers"]

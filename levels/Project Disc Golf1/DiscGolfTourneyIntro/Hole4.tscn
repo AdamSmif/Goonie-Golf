@@ -37,6 +37,12 @@ position = Vector2( 8.02402, -210.171 )
 [node name="Raining3" parent="Player/PlayerCamera" index="4" instance=ExtResource( 5 )]
 position = Vector2( -213.293, -172.721 )
 
+[node name="Shadow" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 0
+
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="1"]
+frame = 2
+
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 
 [node name="MuscleBot" parent="." instance=ExtResource( 6 )]

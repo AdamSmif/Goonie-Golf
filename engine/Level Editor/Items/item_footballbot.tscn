@@ -6,4 +6,5 @@
 
 [node name="item_footballbot" instance=ExtResource( 2 )]
 texture = ExtResource( 1 )
+stretch_mode = 4
 this_scene = ExtResource( 3 )

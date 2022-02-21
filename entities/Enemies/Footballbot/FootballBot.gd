@@ -28,7 +28,7 @@ func _ready():
 	$floor_checker.enabled = detects_cliffs
 	
 func _physics_process(delta):
-	
+
 	
 	# Player Control
 	if Input.is_action_pressed("enemyGrow"):
@@ -49,11 +49,13 @@ func _physics_process(delta):
 		$Shadow.flip_h = not $Shadow.flip_h
 		$floor_checker.position.x = $CollisionShape2D.shape.get_extents().x * direction 
 	
-	#gravity
-	velocity.y += 5
 	
-	velocity.x = speed * direction
-	velocity = move_and_slide(velocity, Vector2.UP)
+	if(EditorGlobal.playing):
+	#gravity
+		velocity.y += 5
+	
+		velocity.x = speed * direction
+		velocity = move_and_slide(velocity, Vector2.UP)
 	
 	
 

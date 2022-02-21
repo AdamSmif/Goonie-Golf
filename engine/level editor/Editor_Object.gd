@@ -1,16 +1,16 @@
 extends Node2D
 
 var can_place = true
+var is_panning = true;
 onready var level = get_node("/root/main/Level")
+onready var editor = get_node("/root/main/cam_container")
+onready var editor_cam = editor.get_node("Camera2D")
 
+export var cam_speed = 10
 var current_item
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	editor_cam.current = true
 	pass # Replace with function body.
 
 
@@ -22,4 +22,30 @@ func _process(delta):
 		var new_item = current_item.instance()
 		level.add_child(new_item)
 		new_item.global_position = get_global_mouse_position()
+		
+	move_editor()
+	is_panning = Input.is_action_pressed("mb_middle")
+	pass
+
+func move_editor():
+	if Input.is_action_just_pressed("w"):
+		editor.global_position.y -= cam_speed
+	if Input.is_action_just_pressed("a"):
+		editor.global_position.x -= cam_speed
+	if Input.is_action_just_pressed("s"):
+		editor.global_position.y += cam_speed
+	if Input.is_action_just_pressed("d"):
+		editor.global_position.x += cam_speed
+	pass
+	
+func _unhandled_input(event):
+	if(event is InputEventMouseButton):
+		if(event.is_pressed()):
+			if(event.button_index == BUTTON_WHEEL_UP):
+				editor_cam.zoom -= Vector2(0.1,0.1)
+			if(event.button_index == BUTTON_WHEEL_DOWN):
+				editor_cam.zoom += Vector2(0.1,0.1)
+	if(event is InputEventMouseMotion):
+		if(is_panning):
+			editor.global_position -= event.relative * editor_cam.zoom
 	pass

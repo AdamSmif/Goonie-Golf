@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://engine/Character Creator/CharacterCreatorMenuSystem.gd" type="Script" id=1]
+[ext_resource path="res://engine/Character Creator/Buttons.tscn" type="PackedScene" id=2]
+
+[node name="CharacterCreatorMenuSystem" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Buttons1" parent="." instance=ExtResource( 2 )]
+margin_left = 408.0
+margin_top = -86.0
+margin_right = 619.0
+margin_bottom = -44.0
+
+[node name="Buttons2" parent="." instance=ExtResource( 2 )]
+margin_left = 408.0
+margin_top = -38.0
+margin_right = 619.0
+margin_bottom = 4.0
+
+[node name="Buttons3" parent="." instance=ExtResource( 2 )]
+margin_left = 408.0
+margin_top = 10.0
+margin_right = 619.0
+margin_bottom = 52.0
+
+[node name="Buttons4" parent="." instance=ExtResource( 2 )]
+margin_left = 408.0
+margin_top = 58.0
+margin_right = 619.0
+margin_bottom = 100.0

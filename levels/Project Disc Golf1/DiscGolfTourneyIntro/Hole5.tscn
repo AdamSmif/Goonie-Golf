@@ -46,8 +46,11 @@ position = Vector2( -200, -24 )
 [node name="Raining6" parent="Player/PlayerCamera" index="7" instance=ExtResource( 3 )]
 position = Vector2( 152, -192 )
 
-[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="0"]
-frame = 2
+[node name="Shadow" parent="Player/AllPlayers/OtherPlayers3" index="0"]
+frame = 0
+
+[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="1"]
+frame = 0
 
 [connection signal="disc_thrown" from="Player" to="HUD" method="_on_Player_disc_thrown"]
 
