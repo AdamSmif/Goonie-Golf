@@ -11,9 +11,11 @@ func _ready():
 
 func _on_Left_pressed():
 	emit_signal("change", -1)
+	print("signal left")
 	pass
 
 
 func _on_Right_pressed():
 	emit_signal("change", -1)
+	print("signal right")
 	pass

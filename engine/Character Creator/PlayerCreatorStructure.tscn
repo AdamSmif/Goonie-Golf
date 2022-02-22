@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://engine/Character Creator/HeadParts/HeadSpriteSheet.png" type="Texture" id=1]
+[ext_resource path="res://engine/Character Creator/Eyes.png" type="Texture" id=2]
+[ext_resource path="res://engine/Character Creator/Body/BodyAnimation.png" type="Texture" id=3]
+[ext_resource path="res://engine/Character Creator/SkinColor/SkinColor.png" type="Texture" id=4]
+
+[node name="PlayerCreatorStructure" type="Node2D"]
+
+[node name="Body" type="Sprite" parent="."]
+position = Vector2( 0, -1 )
+texture = ExtResource( 3 )
+hframes = 8
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Head" type="Sprite" parent="."]
+position = Vector2( 0, -1 )
+texture = ExtResource( 4 )
+hframes = 8
+frame = 6
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Eyes" type="Sprite" parent="."]
+position = Vector2( 0, -1 )
+texture = ExtResource( 2 )
+hframes = 6
+frame = 4
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Headwear" type="Sprite" parent="."]
+position = Vector2( 0, -1 )
+texture = ExtResource( 1 )
+hframes = 6
+frame = 2

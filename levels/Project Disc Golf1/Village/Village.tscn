@@ -1,10 +1,9 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://entities/Player/no gun player wade/PlayerNoGun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/tiles/groundtile/GroundTile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/Assets/Background/Blue Low Poly Sky/villagebackground.PNG" type="Texture" id=3]
 [ext_resource path="res://levels/Levels.gd" type="Script" id=4]
-[ext_resource path="res://test/DialogueTest/DialogueManager.tscn" type="PackedScene" id=5]
 [ext_resource path="res://entities/Assets/Evergreen Tree/EverGreenNoCollision.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/Assets/House/Village House/HouseYellowWithWindowAndDoors.tscn" type="PackedScene" id=7]
 [ext_resource path="res://audio/sound effects/raineffect/RainEffect.tscn" type="PackedScene" id=8]
@@ -65,51 +64,53 @@ __meta__ = {
 
 [node name="NightSkyAnimated" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 144, -952 )
-frame = 1
 
 [node name="NightSkyAnimated2" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 784, -952 )
+frame = 1
 
 [node name="NightSkyAnimated3" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 1424, -952 )
+frame = 1
 
 [node name="NightSkyAnimated4" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 2064, -952 )
-frame = 1
 
 [node name="NightSkyAnimated5" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 2704, -952 )
-frame = 1
 
 [node name="NightSkyAnimated6" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 3344, -952 )
+frame = 1
 
 [node name="NightSkyAnimated7" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 3984, -952 )
+frame = 1
 
 [node name="NightSkyAnimated14" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 184, -1322 )
-frame = 1
 
 [node name="NightSkyAnimated13" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 824, -1322 )
+frame = 1
 
 [node name="NightSkyAnimated12" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 1464, -1322 )
+frame = 1
 
 [node name="NightSkyAnimated11" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 2104, -1322 )
-frame = 1
 
 [node name="NightSkyAnimated10" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 2744, -1322 )
-frame = 1
 
 [node name="NightSkyAnimated9" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 3384, -1322 )
+frame = 1
 
 [node name="NightSkyAnimated8" parent="Sky" instance=ExtResource( 10 )]
 position = Vector2( 4024, -1322 )
+frame = 1
 
 [node name="Houses" type="YSort" parent="."]
 
@@ -310,11 +311,13 @@ position = Vector2( 2144, 240 )
 
 [node name="Shadow" parent="NPCs/defaultNPC" index="0"]
 animation = "OJ Moss"
+frame = 2
 
 [node name="AnimatedSprite" parent="NPCs/defaultNPC" index="1"]
 position = Vector2( 16, -64 )
 scale = Vector2( 1.25, 1.25 )
 animation = "OJ Moss"
+frame = 2
 
 [node name="defaultNPC2" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 1816, 240 )
@@ -338,9 +341,6 @@ position = Vector2( 17.0808, 4.75784 )
 scale = Vector2( 0.75, 0.75 )
 animation = "Vern Avocado"
 
-[node name="DialogueManager" parent="NPCs/Vern" instance=ExtResource( 5 )]
-dialogue = "res://test/DialogueTest/DialogueManager.tscn"
-
 [node name="defaultNPC4" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( 2569.63, 238.304 )
 
@@ -357,23 +357,15 @@ position = Vector2( 2778.32, 239.505 )
 
 [node name="Shadow" parent="NPCs/defaultNPC5" index="0"]
 animation = "Dorris"
-frame = 2
 
 [node name="AnimatedSprite" parent="NPCs/defaultNPC5" index="1"]
 position = Vector2( 2.39233, -3.31245 )
 scale = Vector2( 1.25, 1.25 )
 animation = "Dorris"
-frame = 2
 flip_h = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 862, 96 )
-
-[node name="Shadow" parent="Player/AllPlayers/OtherPlayers3" index="0"]
-frame = 0
-
-[node name="Sprite" parent="Player/AllPlayers/OtherPlayers3" index="1"]
-frame = 2
 
 [node name="Props" type="YSort" parent="."]
 scale = Vector2( 1, 1.02225 )

@@ -58,14 +58,14 @@ animations = [ {
 "name": "down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "throw",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 32 ) ],
 "loop": true,
 "name": "shocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "throw",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 30 ) ],
@@ -179,8 +179,8 @@ position = Vector2( 0, 8 )
 [node name="AllPlayers" parent="." instance=ExtResource( 5 )]
 position = Vector2( 27.1007, -43.4872 )
 
-[node name="Sprite" parent="AllPlayers/OtherPlayers3" index="0"]
-frame = 1
+[node name="Shadow" parent="AllPlayers/OtherPlayers3" index="0"]
+frame = 0
 
 [node name="DayNightCycle" parent="." instance=ExtResource( 6 )]
 

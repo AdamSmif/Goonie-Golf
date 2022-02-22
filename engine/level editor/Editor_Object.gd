@@ -2,11 +2,13 @@ extends Node2D
 
 var can_place = true
 var is_panning = true;
+onready var main = get_node("/root/main")
 onready var level = get_node("/root/main/Level")
 onready var editor = get_node("/root/main/cam_container")
 onready var editor_cam = editor.get_node("Camera2D")
 
-export var cam_speed = 10
+
+export var cam_speed = 50
 var current_item
 
 func _ready():

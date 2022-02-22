@@ -50,12 +50,11 @@ func _physics_process(delta):
 		$floor_checker.position.x = $CollisionShape2D.shape.get_extents().x * direction 
 	
 	
-	if(EditorGlobal.playing):
 	#gravity
-		velocity.y += 5
+	velocity.y += 5
 	
-		velocity.x = speed * direction
-		velocity = move_and_slide(velocity, Vector2.UP)
+	velocity.x = speed * direction
+	velocity = move_and_slide(velocity, Vector2.UP)
 	
 	
 

@@ -2,7 +2,7 @@ extends TextureRect
 
 export(PackedScene) var this_scene
 onready var object_cursor = get_node("/root/main/Editor_Object")
-
+onready var main = get_node("/root/main")
 onready var cursor_sprite = object_cursor.get_node("Sprite")
 
 func _ready():
@@ -19,6 +19,6 @@ func _item_clicked(event):
 	pass
 	
 func _process(delta):
-	if(EditorGlobal.playing):
+	if(main.playing):
 		this_scene = true
 	pass

@@ -14,7 +14,8 @@ var bottles_needed = 0
 export(String, FILE, "*.tscn") var lose_level_world_scene
 # Game Over
 export(String, FILE, "*.tscn") var game_over_scene
-
+# Next Level For Bottle Colelcting Levels
+export(String, FILE, "*.tscn") var bottle_world_scene
 
 # Movement
 
@@ -38,11 +39,13 @@ var CoyoteJump = true
 var jumpWasPressed = false
 onready var coyoteTimer := $CoyoteTimer
 
-
 # Stairs
 var stair_on = false
 
 
+# Attack Variables
+const throwright = preload("res://entities/Player/discs/rightdisc/DiscRight.tscn")
+const throwleft = preload("res://entities/Player/discs/leftdisc/DiscLeft.tscn")
 # Cool Down
 onready var discDelayTimer := $DiscTimer
 export var throwDelay: float = 0.8
@@ -51,23 +54,28 @@ var vel := Vector2(0, 0)
 # allows rigid bodies to stay rigid
 export (int, 0, 200) var push = 5    
 
+# Spawn Other Players
+var otherplayers = preload("res://entities/Player/otherplayers/AllOtheerPlayers.tscn")
+
 func _ready():
-	stats.connect("no_health", self, "dying_state")
+	stats.connect("no_health", self, "queue_free")
 
 
 func _physics_process(_delta):
 	motion.y += GRAVITY
 	var friction = false
 
+### Local Player Spawn ###
+#TODO: Clean Up ###
 # Spawn All Players
-	if Input.is_action_just_pressed("spawn_1"):
-		$AllPlayers/OtherPlayers2.visible = true
-		$AllPlayers/OtherPlayers3.visible = true
-		$AllPlayers/OtherPlayers4.visible = true
-		$AllPlayers/OtherPlayers5.visible = true
-		$AllPlayers/OtherPlayers6.visible = true
-		$AllPlayers/OtherPlayers7.visible = true
-		$AllPlayers/OtherPlayers8.visible = true
+	if Input.is_action_just_pressed("ui_accept"):
+		$AllPlayers.visible = true
+#		$AllPlayers/OtherPlayers3.visible = true
+#		$AllPlayers/OtherPlayers4.visible = true
+#		$AllPlayers/OtherPlayers5.visible = true
+#		$AllPlayers/OtherPlayers6.visible = true
+#		$AllPlayers/OtherPlayers7.visible = true
+#		$AllPlayers/OtherPlayers8.visible = true
 # Spawn Other Players
 	if Input.is_action_just_pressed("spawn_2"):
 		$AllPlayers/OtherPlayers2.visible = true
@@ -84,8 +92,30 @@ func _physics_process(_delta):
 	elif Input.is_action_just_pressed("spawn_8"):
 		$AllPlayers/OtherPlayers8.visible = true
 
-# Movment
+####### ######
 
+# Throw
+#	if Input.is_action_just_pressed("throwright_%s" % id) and discDelayTimer.is_stopped():
+#		emit_signal("disc_thrown")
+#		$Sprite.play("throw")
+#		$Shadow.play("throw")
+#		discDelayTimer.start(throwDelay)
+#		#spawn disc
+#		var throwInstance = throwright.instance()
+#		throwInstance.position = $Position2D.global_position
+#		get_tree().get_root().add_child(throwInstance)
+#
+#	if Input.is_action_just_pressed("throwleft_%s" % id) and discDelayTimer.is_stopped():
+#		emit_signal("disc_thrown")
+#		$Sprite.play("throw")
+#		$Shadow.play("throw")
+#		discDelayTimer.start(throwDelay)
+#		#spawn disc
+#		var throwLeftInstance = throwleft.instance()
+#		throwLeftInstance.position = $Position2D.global_position
+#		get_tree().get_root().add_child(throwLeftInstance)
+
+# Movment
 	if Input.is_action_pressed('right_%s' % id):
 		motion.x = lerp(motion.x + ACCELERATION, MAX_SPEED, .75)
 		$Sprite.flip_h = false
@@ -100,21 +130,20 @@ func _physics_process(_delta):
 		$Shadow.flip_h = true
 		$Sprite.play("move")
 		$Shadow.play("move")
-	if sign($Position2D.position.x) == 1:
-		$Position2D.position.x *= -1
+		if sign($Position2D.position.x) == 1:
+			$Position2D.position.x *= -1
 	else:
 		motion.x = 0
 		$Sprite.play("idle")
 		$Shadow.play("idle")
 		friction = true
-			
+		
 	if Input.is_action_pressed('down_%s' % id):
 		$Sprite.flip_h = false
-		$Shadow.flip_h = false
 		$Sprite.play("down")
 		$Shadow.play("down")
-	if sign($Position2D.position.x) == -1:
-		$Position2D.position.x *= 1
+		if sign($Position2D.position.x) == -1:
+			$Position2D.position.x *= 1
 		Input.action_release("left_%s" % id)
 		Input.action_release("right_%s" % id)
 
@@ -149,7 +178,6 @@ func _physics_process(_delta):
 	# if the player goes really fast the player's animation will get spoked
 	if motion.y > 1350 or motion.y < -1350:
 		$Sprite.play("shocked")
-		$Shadow.play("shocked")
 
 func coyoteTime():
 	coyoteTimer
@@ -186,9 +214,7 @@ func ouch(var enemyposx):
 	$Timer.start()
 	
 ### Signals ###
-	
-func _on_Timer_timeout():
-	get_tree().change_scene(lose_level_world_scene)
+
 
 
 func _on_DiscTimer_timeout():
@@ -197,7 +223,7 @@ func _on_DiscTimer_timeout():
 
 # Trampoline Signals
 
-func _on_Trampoline_body_entered(_body):
+func _on_Trampoline_body_entered(body):
 	motion.y = spring
 
 
@@ -217,18 +243,26 @@ func _on_Hurtbox_area_entered(area):
 	motion.y = JUMP_HEIGHT * 0.2
 	knockback = Vector2.RIGHT * 150
 	knockback = Vector2.LEFT * 150
-
-func dying_state():
-	motion.x = 0
-	$Sprite.play("boom")
-	yield(get_tree().create_timer(.25), "timeout")
-	$Sprite.hide()
-	$Shadow.hide()
-	$AnimationPlayer.play("fade")
-	yield(get_tree().create_timer(.50), "timeout")
-	get_tree().change_scene(game_over_scene)
+	if stats.health == 0:
+		$Sprite.play("boom")
+		motion.x = 0
+		GameOver.set_visible(true)
+	
 
 
+
+### Save Data ####
+
+func _get_save_stats():
+	return {
+		'filename': get_filename(),
+		'parent' : get_parent().get_path(),
+		'x_pos' : global_transform.origin.x,
+		'y_pos' : global_transform.origin.y,
+		'stats' : {
+			'stats' : stats
+		}
+	}
 
 
 

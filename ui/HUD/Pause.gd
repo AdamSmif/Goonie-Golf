@@ -10,7 +10,8 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		set_visible(!get_tree().paused)
 		get_tree().paused = !get_tree().paused
-
+	if event.is_action_pressed("select"):
+		OS.window_fullscreen = !OS.window_fullscreen
 
 func _on_Button_pressed():
 	get_tree().paused = false

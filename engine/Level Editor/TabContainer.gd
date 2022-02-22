@@ -1,7 +1,7 @@
 extends TabContainer
 
 onready var object_cursor = get_node("/root/main/Editor_Object")
-
+onready var main = get_node("/root/main")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,8 +9,8 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("toggle_editor"):
-		EditorGlobal.playing = !EditorGlobal.playing
-		visible = !EditorGlobal.playing
+		main.playing = !main.playing
+		visible = !main.playing
 		print("editor toggled")
 
 func _on_TabContainer_mouse_entered():

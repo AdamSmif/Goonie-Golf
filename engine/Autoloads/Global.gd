@@ -11,9 +11,14 @@ var level_name = null
 var direction = Vector2.ZERO
 var current_level
 
-# character creator #
+# Character Creator #
+
+var NPCCreator := false
+var body := 0
+var head := 0
 var Eyes := 0
-const save_path = "user://save.dat"
+var Headwear := 0
+var Skincolor := 0
 
 signal no_health
 signal health_changed(value)
@@ -55,26 +60,45 @@ var gui: PackedScene # platform-dependent UI scenes.
 #else :
 #    gui = load("pc-ui.tscn"
 
+const save_path = "user://save.dat"
+
+func _ready():
+	load_data()
+
+func changeBody(direction):
+	pass
+	
+func changehead(direction):
+	if head > 4:
+		head = 0
+	if head < 0:
+		head = 4
+	
 func changeEyes(direction):
-	Eyes += direction
-	if Eyes > 10:
+	if Eyes > 4:
 		Eyes = 0
 	if Eyes < 0:
-		Eyes = 10
-			
-	else:
-		if Eyes > 4:
-			Eyes = 0
-		if Eyes < 0:
-			Eyes = 4
-
+		Eyes = 4
+	
+func changeHeadwear(direction):
+	if Headwear > 4:
+		Headwear = 0
+	if Headwear < 0:
+		Headwear = 4
+		
+func changeSkincolor(direction):
+	if Skincolor > 4:
+		Skincolor = 0
+	if Skincolor < 0:
+		Skincolor = 4
+		
 func save_data():
 	var data = {
+		"head": head,
+		"body": body,
 		"Eyes": Eyes,
-#		"body": body,
-#		"legs": legs,
-#		"run": run,
-#		"child": child,
+		"Headwear": Headwear,
+		"Skincolor": Skincolor,
 	}
 	
 	var file = File.new()
@@ -91,8 +115,9 @@ func load_data():
 			var data = file.get_var()
 			file.close()
 		
+			head = data['head']
+			body = data['body']
 			Eyes = data['Eyes']
-#			body = data['body']
-#			legs = data['legs']
-#			run = data['run']
-#			child = data['child']
+			Headwear = data['Headwear']
+			Skincolor = data['Skincolor']
+
