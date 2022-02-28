@@ -16,7 +16,9 @@ var current_level
 var Body = 0
 var Skincolor = 0
 var Eyes = 0
+var Mouth = 0
 var Headwear = 0
+var Facialhair = 0
 
 # Health #
 signal no_health
@@ -72,6 +74,12 @@ func changeEyes(direction):
 		Eyes = 0
 	if Eyes < 0:
 		Eyes = 4
+		
+func changeMouth(direction):
+	if Mouth > 4:
+		Mouth = 0
+	if Mouth < 0:
+		Mouth = 4
 	
 func changeHeadwear(direction):
 	if Headwear > 4:
@@ -85,12 +93,20 @@ func changeSkincolor(direction):
 	if Skincolor < 0:
 		Skincolor = 4
 		
+func changeFacialhair(direction):
+	if Facialhair > 4:
+		Facialhair = 0
+	if Facialhair < 0:
+		Facialhair = 4
+		
 func save_data():
 	var data = {
 		"Body": Body,
 		"Eyes": Eyes,
+		"Mouth": Mouth,
 		"Headwear": Headwear,
 		"Skincolor": Skincolor,
+		"Facialhair": Facialhair,
 	}
 	
 	var file = File.new()
@@ -109,6 +125,8 @@ func load_data():
 		
 			Body = data['Body']
 			Eyes = data['Eyes']
+			Mouth = data['Mouth']
 			Headwear = data['Headwear']
 			Skincolor = data['Skincolor']
+			Facialhair = data['Facialhair']
 
