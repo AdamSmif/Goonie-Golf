@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/charactercreator.wav-a4c15abb7ee5011dc4ca46e89273b77b.sample"
+
+[deps]
+
+source_file="res://audio/music/Neural Composer/charactercreator.wav"
+dest_files=[ "res://.import/charactercreator.wav-a4c15abb7ee5011dc4ca46e89273b77b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

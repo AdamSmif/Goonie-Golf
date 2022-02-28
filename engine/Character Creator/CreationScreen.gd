@@ -1,12 +1,12 @@
 extends Control
 
 
-onready var Body = $PlayerCreation/PlayerParts/Body
-onready var SkinColor = $PlayerCreation/PlayerParts/SkinColor
-onready var Eyes = $PlayerCreation/PlayerParts/Eyes
-onready var Mouth = $PlayerCreation/PlayerParts/Mouth
-onready var Headwear = $PlayerCreation/PlayerParts/Headwear
-onready var Facialhair = $PlayerCreation/PlayerParts/FacialHair
+onready var Body = $PlayerParts/Body
+onready var SkinColor = $PlayerParts/SkinColor
+onready var Eyes = $PlayerParts/Eyes
+onready var Mouth = $PlayerParts/Mouth
+onready var Headwear = $PlayerParts/Headwear
+onready var Facialhair = $PlayerParts/FacialHair
 
 
 # Called when the node enters the scene tree for the first time.
