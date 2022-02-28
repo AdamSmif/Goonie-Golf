@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://engine/Character Creator/SkinColor/SkinColor.png" type="Texture" id=2]
+[ext_resource path="res://engine/Character Creator/Body/BodyAnimation.png" type="Texture" id=3]
+[ext_resource path="res://engine/Character Creator/Eyes/Eyes.png" type="Texture" id=4]
+[ext_resource path="res://engine/Character Creator/HeadParts/HeadSpriteSheet.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6, 7 )
+
+[node name="PlayerCreation" type="KinematicBody2D"]
+
+[node name="Body" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+hframes = 8
+
+[node name="SkinColor" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+hframes = 8
+
+[node name="Eyes" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+hframes = 6
+
+[node name="Headwear" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 9 )
+shape = SubResource( 1 )

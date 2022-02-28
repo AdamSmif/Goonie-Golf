@@ -13,13 +13,12 @@ var current_level
 
 # Character Creator #
 
-var NPCCreator := false
-var body := 0
-var head := 0
-var Eyes := 0
-var Headwear := 0
-var Skincolor := 0
+var Body = 0
+var Skincolor = 0
+var Eyes = 0
+var Headwear = 0
 
+# Health #
 signal no_health
 signal health_changed(value)
 signal max_health_changed(value)
@@ -68,12 +67,6 @@ func _ready():
 func changeBody(direction):
 	pass
 	
-func changehead(direction):
-	if head > 4:
-		head = 0
-	if head < 0:
-		head = 4
-	
 func changeEyes(direction):
 	if Eyes > 4:
 		Eyes = 0
@@ -94,8 +87,7 @@ func changeSkincolor(direction):
 		
 func save_data():
 	var data = {
-		"head": head,
-		"body": body,
+		"Body": Body,
 		"Eyes": Eyes,
 		"Headwear": Headwear,
 		"Skincolor": Skincolor,
@@ -115,8 +107,7 @@ func load_data():
 			var data = file.get_var()
 			file.close()
 		
-			head = data['head']
-			body = data['body']
+			Body = data['Body']
 			Eyes = data['Eyes']
 			Headwear = data['Headwear']
 			Skincolor = data['Skincolor']
