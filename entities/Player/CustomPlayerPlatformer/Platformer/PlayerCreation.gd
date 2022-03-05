@@ -18,6 +18,7 @@ export(String, FILE, "*.tscn") var bottle_world_scene
 
 
 # Movement #
+var velocity = Vector2(0,0)
 # The max jump height in pixels (holding jump)
 export var max_jump_height = 150 setget set_max_jump_height
 # The minimum jump height (tapping jump)
@@ -34,10 +35,10 @@ export var max_acceleration = 4000
 export var friction = 8
 export var can_hold_jump : bool = true
 # You can still jump this many seconds after falling off a ledge
-export var coyote_time : float = 0.1
+export var coyote_time : float = 0.2
 # Only neccessary when can_hold_jump is off
 # Pressing jump this many seconds before hitting the ground will still make you jump
-export var jump_buffer : float = 0.1
+export var jump_buffer : float = 0.2
 
 
 # These will be calcualted automatically
@@ -75,7 +76,7 @@ func _ready():
 
 
 func _physics_process(delta):
-
+	var input_vector = Vector2.ZERO
 	# Multiplayer Spawner #
 	if Input.is_action_just_pressed("ui_accept"):
 		$AllPlayers.visible = true
@@ -108,16 +109,21 @@ func _physics_process(delta):
 		coyote_timer.start()
 	if not coyote_timer.is_stopped():
 		jumps_left = max_jump_amount
-	
-	if Input.is_action_pressed('left_%s' % id):
-		acc.x = -max_acceleration
-	if Input.is_action_pressed('right_%s' % id):
-		acc.x = max_acceleration
-	if Input.is_action_pressed('up_%s' % id):
-		acc.y = -max_acceleration
-	if Input.is_action_pressed('down_%s' % id):
-		acc.y = max_acceleration
-	
+
+	input_vector.x = Input.get_action_strength('right_%s' % id) - Input.get_action_strength('left_%s' % id)
+	input_vector.y = Input.get_action_strength('down_%s' % id) - Input.get_action_strength('up_%s' % id)
+	input_vector = input_vector.normalized()	
+#	if Input.is_action_pressed('left_%s' % id):
+#		acc.x = -max_acceleration
+#	if Input.is_action_pressed('right_%s' % id):
+#		acc.x = max_acceleration
+#	if Input.is_action_pressed('up_%s' % id):
+#		acc.y = -max_acceleration
+#	if Input.is_action_pressed('down_%s' % id):
+#		acc.y = max_acceleration
+
+		
+	velocity = move_and_slide(velocity)
 	
 	# Check for ground jumps when we can hold jump
 	if can_hold_jump:

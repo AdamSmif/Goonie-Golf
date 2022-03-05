@@ -43,7 +43,13 @@ func _on_btn_Headwear_pressed():
 
 
 func _on_btn_Enterworld_pressed():
-	pass # Replace with function body.
+	Global.PlayerPartsBody = Body.frame
+	Global.PlayerPartsSkincolor = SkinColor.frame
+	Global.PlayerPartsEyes = Eyes.frame
+	Global.PlayerPartsMouth = Mouth.frame
+	Global.PlayerPartsHeadwear = Headwear.frame
+	Global.PlayerPartsFacialhair = Facialhair.frame
+	get_tree().change_scene("res://test/Level1.tscn")
 
 
 func _on_btn_Facialhair_pressed():

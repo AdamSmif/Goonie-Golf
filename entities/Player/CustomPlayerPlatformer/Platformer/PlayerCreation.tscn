@@ -102,12 +102,6 @@ visible = true
 [node name="OtherPlayers3" parent="AllPlayers" index="1"]
 visible = true
 
-[node name="Shadow" parent="AllPlayers/OtherPlayers3" index="0"]
-frame = 0
-
-[node name="Sprite" parent="AllPlayers/OtherPlayers3" index="1"]
-frame = 0
-
 [editable path="PlayerParts"]
 [editable path="AllPlayers"]
 [editable path="AllPlayers/OtherPlayers3"]
